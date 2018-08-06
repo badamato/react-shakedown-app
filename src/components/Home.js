@@ -5,9 +5,9 @@ class Home extends React.Component {
   render() {
     return (
       <div>
-        <Link to="/hikes">Pick a Hike</Link>
+        <Link to="/hikes">Gear Checklists</Link>
         <Link to="/mygear">My Gear</Link>
-        <a>Build A Pack </a>
+        <Link to="/buildapack">Build A Pack </Link>
       </div>
     );
   }

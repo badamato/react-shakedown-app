@@ -5,12 +5,21 @@ class Hikes extends React.Component {
   render() {
     return (
       <div>
+        <h1>Gear Checklists For Your Next Adventure</h1>
         <ul>
-          <li>Hike 1</li>
-          <li>Hike 2</li>
-          <li>Hike 3</li>
-          <li>Hike 4</li>
-          <li>Hike 5</li>
+          <li>
+            <Link to="/hikes/tenessentials">
+              The Ten Essentials for Every Trip
+            </Link>
+          </li>
+          <li>
+            <Link to="/hikes/threeseasongearlist">
+              Three-Season Backpacking Gear
+            </Link>
+          </li>
+          <li>Ultralight Backpacking Gear</li>
+          <li>Winter Backpacking Gear</li>
+          <li>Desert Backpacking Gear</li>
         </ul>
       </div>
     );
