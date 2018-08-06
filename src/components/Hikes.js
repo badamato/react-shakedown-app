@@ -22,7 +22,9 @@ class Hikes extends React.Component {
               Ultralight Backpacking Gear
             </Link>
           </li>
-          <li>Winter Backpacking Gear</li>
+          <li>
+            <Link to="/hikes/wintergearlist">Winter Backpacking Gear</Link>
+          </li>
           <li>Desert Backpacking Gear</li>
         </ul>
       </div>
