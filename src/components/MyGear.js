@@ -12,10 +12,14 @@ class MyGear extends React.Component {
         <hr />
         <div>
           <h4>Add to your Inventory</h4>
-          <NewGearForm />
+          <NewGearForm onSubmit={fields=>this.onSubmit(fields)}/>
         </div>
       </div>
     );
+  }
+
+  onSubmit = fields => {
+    console.log('App comp got:', fields );
   }
 }
 
