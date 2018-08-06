@@ -3,7 +3,8 @@ import { BrowserRouter as Router, Route, Link } from "react-router-dom";
 import Home from "./components/Home";
 import Hikes from "./components/Hikes";
 import TenEssentials from "./components/TenEssentials";
-import ThreeSeasonGearList from "./components/ThreeSeasonGearList"
+import ThreeSeasonGearList from "./components/ThreeSeasonGearList";
+import UltralightGearList from "./components/UltralightGearList";
 import MyGear from "./components/MyGear";
 import BuildAPack from "./components/BuildAPack";
 import logo from "./logo.svg";
@@ -23,6 +24,7 @@ class App extends Component {
           <Route exact path="/hikes" component={Hikes} />
           <Route exact path="/hikes/tenessentials" component={TenEssentials} />
           <Route exact path="/hikes/threeseasongearlist" component={ThreeSeasonGearList} />
+          <Route exact path="/hikes/ultralightgearlist" component={UltralightGearList} />
           {/* My Gear Inventory */}
           <Route exact path="/mygear" component={MyGear} />
           {/* Build a Pack */}

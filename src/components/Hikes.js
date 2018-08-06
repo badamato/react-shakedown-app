@@ -17,7 +17,11 @@ class Hikes extends React.Component {
               Three-Season Backpacking Gear
             </Link>
           </li>
-          <li>Ultralight Backpacking Gear</li>
+          <li>
+            <Link to="/hikes/ultralightgearlist">
+              Ultralight Backpacking Gear
+            </Link>
+          </li>
           <li>Winter Backpacking Gear</li>
           <li>Desert Backpacking Gear</li>
         </ul>
