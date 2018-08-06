@@ -6,6 +6,7 @@ import TenEssentials from "./components/TenEssentials";
 import ThreeSeasonGearList from "./components/ThreeSeasonGearList";
 import UltralightGearList from "./components/UltralightGearList";
 import WinterGearList from "./components/WinterGearList";
+import DesertGearList from "./components/DesertGearList";
 import MyGear from "./components/MyGear";
 import BuildAPack from "./components/BuildAPack";
 import logo from "./logo.svg";
@@ -27,6 +28,7 @@ class App extends Component {
           <Route exact path="/hikes/threeseasongearlist" component={ThreeSeasonGearList} />
           <Route exact path="/hikes/ultralightgearlist" component={UltralightGearList} />
           <Route exact path="/hikes/wintergearlist" component={WinterGearList} />
+          <Route exact path="/hikes/desertgearlist" component={DesertGearList} />
           {/* My Gear Inventory */}
           <Route exact path="/mygear" component={MyGear} />
           {/* Build a Pack */}
