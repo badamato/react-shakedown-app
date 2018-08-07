@@ -1,4 +1,4 @@
-name,gender,image,weight,gear_type,category
+name,gender,image,weight,gear_type,gear_category
 REI Co-op Traverse 70,M,,78,Backpack,Essentials
 REI Co-op Traverse 65 - Womens,W,,75,Backpack,Essentials
 Osprey Atmos AG 65,M,,73,Backpack,Essentials
@@ -41,37 +41,37 @@ Tarptent Double Rainbow,,,42,Shelter,Essentials
 Marmot Tugsten 2p,,,77,Shelter,Essentials
 Big Agnes Fly Creek HV UL2,,,31,Shelter,Essentials
 Kelty TrailLogic TN2,,,68,Shelter,Essentials
-Sierra Designs Backcountry Bed 700,M,,31,Sleeping Bag,Essentials
-Sierra Designs Backcountry Bed 700 - Womens,W,,39,Sleeping Bag,Essentials
-Mountain Hardwear Lamina Z,M,,43,Sleeping Bag,Essentials
-Mountain Hardwear Lamina Z Flame 22 -Womens,W,,55.7,Sleeping Bag,Essentials
-Katabatic Gear Flex 22,U,,22.5,Sleeping Bag,Essentials
-Nemo Disco 30,M,,37,Sleeping Bag,Essentials
-Nemo Rave 30 - Womens,W,,39,Sleeping Bag,Essentials
-Marmot Trestles 20 Elite,M,,39,Sleeping Bag,Essentials
-Marmot Trestles 20 Elite - Womens,W,,46.5,Sleeping Bag,Essentials
-Western Mountaineering UltraLite,U,,29,Sleeping Bag,Essentials
-REI Co-op Magma 10,M,,30,Sleeping Bag,Essentials
-REI Co-op Magma 17 -Womens,W,,36,Sleeping Bag,Essentials
-Feathered Friends UL 20 - Womens,W,,28,Sleeping Bag,Essentials
-The North Face Furnace 20,M,,44,Sleeping Bag,Essentials
-The North Face Furnace 20 - Womens,W,,50,Sleeping Bag,Essentials
-REI Co-op Radiant 19,M,,40,Sleeping Bag,Essentials
-REI Co-op Serrana 20 - Womens,W,,50,Sleeping Bag,Essentials
-Marmot Sawtooth,M,,40,Sleeping Bag,Essentials
-Marmot Angel Fire - Womens,W,,40.9,Sleeping Bag,Essentials
-Enlightened Equipment Revelation 20,U,,20.3,Sleeping Bag,Essentials
-Kelty Cosmic 20,M,,45,Sleeping Bag,Essentials
-Kelty Cosmic 20 - Womens,W,,45,Sleeping Bag,Essentials
-Therm-A-Rest NeoAir XLite,,,12,Sleeping Pad,Essentials
-Big Agnes Insulated AXL,,,10.6,Sleeping Pad,Essentials
-Therm-A-Rest NeoAir XTherm,,,15,Sleeping Pad,Essentials
-Sea to Summit UltraLight Insulated,,,15.5,Sleeping Pad,Essentials
-REI Co-op  Flash Insulated,,,15,Sleeping Pad,Essentials
-Therm-A-Rest Z Lite Sol,,,14,Sleeping Pad,Essentials
-Klymit Static V,,,18,Sleeping Pad,Essentials
-NEMO Tensor Insulated,,,15,Sleeping Pad,Essentials
-Big Agnes Q-Core SLX,,,16,Sleeping Pad,Essentials
+Sierra Designs Backcountry Bed 700,M,,31,Sleeping,Essentials
+Sierra Designs Backcountry Bed 700 - Womens,W,,39,Sleeping,Essentials
+Mountain Hardwear Lamina Z,M,,43,Sleeping,Essentials
+Mountain Hardwear Lamina Z Flame 22 -Womens,W,,55.7,Sleeping,Essentials
+Katabatic Gear Flex 22,U,,22.5,Sleeping,Essentials
+Nemo Disco 30,M,,37,Sleeping,Essentials
+Nemo Rave 30 - Womens,W,,39,Sleeping,Essentials
+Marmot Trestles 20 Elite,M,,39,Sleeping,Essentials
+Marmot Trestles 20 Elite - Womens,W,,46.5,Sleeping,Essentials
+Western Mountaineering UltraLite,U,,29,Sleeping,Essentials
+REI Co-op Magma 10,M,,30,Sleeping,Essentials
+REI Co-op Magma 17 -Womens,W,,36,Sleeping,Essentials
+Feathered Friends UL 20 - Womens,W,,28,Sleeping,Essentials
+The North Face Furnace 20,M,,44,Sleeping,Essentials
+The North Face Furnace 20 - Womens,W,,50,Sleeping,Essentials
+REI Co-op Radiant 19,M,,40,Sleeping,Essentials
+REI Co-op Serrana 20 - Womens,W,,50,Sleeping,Essentials
+Marmot Sawtooth,M,,40,Sleeping,Essentials
+Marmot Angel Fire - Womens,W,,40.9,Sleeping,Essentials
+Enlightened Equipment Revelation 20,U,,20.3,Sleeping,Essentials
+Kelty Cosmic 20,M,,45,Sleeping,Essentials
+Kelty Cosmic 20 - Womens,W,,45,Sleeping,Essentials
+Therm-A-Rest NeoAir XLite,,,12,Sleeping,Essentials
+Big Agnes Insulated AXL,,,10.6,Sleeping,Essentials
+Therm-A-Rest NeoAir XTherm,,,15,Sleeping,Essentials
+Sea to Summit UltraLight Insulated,,,15.5,Sleeping,Essentials
+REI Co-op  Flash Insulated,,,15,Sleeping,Essentials
+Therm-A-Rest Z Lite Sol,,,14,Sleeping,Essentials
+Klymit Static V,,,18,Sleeping,Essentials
+NEMO Tensor Insulated,,,15,Sleeping,Essentials
+Big Agnes Q-Core SLX,,,16,Sleeping,Essentials
 MSR Pocket Rocket 2,,,2.6,Stove,Essentials
 Jetboil MiniMo Cooking System,,,14,Stove,Essentials
 Jetboil Flash Cooking System,,,13.1,Stove,Essentials
@@ -83,7 +83,7 @@ Trail Designs Caldera Cone,,,3.25,Stove,Essentials
 Trangia Spirit Burner,,,3.9,Stove,Essentials
 Solo Stove Lite,,,9,Stove,Essentials
 Esbit Pocket Stove,,,3.25,Stove,Essentials
-"Fuel types(Gas, Liquid, Esbit)",,,0,Fuel,null
+"Fuel types(Gas, Liquid, Esbit)",,,0,Other,Essentials
 MSR Ceramic 2-Pot Set,,,16,Cookware,Essentials
 Primus PrimeTech 2.3L Pot Set,,,22,Cookware,Essentials
 Stanley Adventure Base Camp,,,72,Cookware,Essentials
@@ -113,62 +113,62 @@ Handheld GPS,,,0,Navigation,Essentials
 Adventure Medical Kits Ultralight and Watertight .3 First Aid Kit,,,2.32,First Aid,Essentials
 Adventure Medical Kits Ultralight and Watertight .7 First Aid Kit,,,8,First Aid,Essentials
 "Ibuprofen - ""Vitamin I""",,,0,First Aid,Essentials
-Sunglasses,,,1,Sun Protection,Essentials
-Banana Boat Sport Sunscreen SPF 30,,,1,Sun Protection,Essentials
-Montbell Sun Block Umbrella,,,7.1,Sun Protection,Essentials
+Sunglasses,,,1,Weather Protection,Essentials
+Banana Boat Sport Sunscreen SPF 30,,,1,Weather Protection,Essentials
+Montbell Sun Block Umbrella,,,7.1,Weather Protection,Essentials
 Tenacious Tape,,,0,Repair Kit,Essentials
 Duct tape - 3ft,,,0,Repair Kit,Essentials
 Tent pole repair sleeve,,,0,Repair Kit,Essentials
 Multitool w/ scissors,,,0,Repair Kit,Essentials
 Needle and thread(or dental floss),,,0,Repair Kit,Essentials
 Safety pins,,,0,Repair Kit,Essentials
-Osprey Ultralight Raincover,,,0.18,Pack Cover,Essentials
-Permit - if required,,,0,Permit,Essentials
-GSI Cathole Sanitation Trowel,,,3.1,Trowel,Essentials
-The TentLab The Deuce #2 Backcountry Trowel,,,0.6,Trowel,Essentials
+Osprey Ultralight Raincover,,,0.18,Weather Protection,Essentials
+Permit - if required,,,0,Other,Essentials
+GSI Cathole Sanitation Trowel,,,3.1,Tools,Essentials
+The TentLab The Deuce #2 Backcountry Trowel,,,0.6,Tools,Essentials
 "Weight (Lightweight, Midweight, Heavyweight)",,,0,Top Baselayer,Clothing
 "Fabric (Synthetic, Wool, Silk)",,,0,Top Baselayer,Clothing
 "Weight (Lightweight, Midweight, Heavyweight)",,,0,Bottom Baselayer,Clothing
 "Fabric (Synthetic, Wool, Silk)",,,0,Bottom Baselayer,Clothing
-ExOfficio Give-N-Go Sport Mesh Hipkini,W,,1.1,Underwear,Clothing
-Smartwool Merino 150 Bikini,W,,0.7,Underwear,Clothing
-Patagonia Barely Hipster,W,,0.8,Underwear,Clothing
-Smartwool NTS Micro 150 Boxer Brief,M,,2.6,Underwear,Clothing
-ExOfficio Give-N-Go Sport Boxer Briefs,M,,3.4,Underwear,Clothing
-Brooks Juno Bra,W,,0,Sports Bra,Clothing
-Patagonia Barely Bra,W,,0,Sports Bra,Clothing
-Shock Absorber Ultimate Fly Bra,W,,0,Sports Bra,Clothing
-Marmot Lobo's Convertible Pants,W,,0,Hiking Bottoms,Clothing
-Prana Halle,W,,0,Hiking Bottoms,Clothing
-Purple Rain Adventure Skirt,W,,0,Hiking Bottoms,Clothing
-Outdoor Reasearch Ferrosi Pants,M,,0,Hiking Bottoms,Clothing
-Columbia Silver Ridge Convertible,M,,0,Hiking Bottoms,Clothing
-Mountain Hardwear Elkommando Kilt,M,,0,Hiking Bottoms,Clothing
-ExOfficio Bugs Away,W,,0,Hiking Shirt,Clothing
-The North Face Better Than Naked Short Sleeve,W,,0,Hiking Shirt,Clothing
-Marmot Bridget Flannel,W,,0,Hiking Shirt,Clothing
-Columbia Silver Ridge,M,,0,Hiking Shirt,Clothing
-Mountain Hardwear Wicked,M,,0,Hiking Shirt,Clothing
-Nike Dri-FIT Tailwind,M,,0,Hiking Shirt,Clothing
-Mountain Harwear Ghost Whisperer Down Hooded Jacket,W,,4.5,Down/Synthetic Jacket,Clothing
-Arc'teryx  Atom LT Hoody,W,,12.7,Down/Synthetic Jacket,Clothing
-My Trail Co 850 Fill HL Hooded Down Jacket,M,,11,Down/Synthetic Jacket,Clothing
-Patagonia Nano-Air Hoody,M,,14,Down/Synthetic Jacket,Clothing
-Marmot Precip - Womens,W,,9.4,Rain Jacket,Clothing
-Outdoor Reasearch Helium II - Womens,W,,5.82,Rain Jacket,Clothing
-Outdoor Research Aspire - Womens,W,,14,Rain Jacket,Clothing
-Arc'teryx Beta SL,M,,11,Rain Jacket,Clothing
-Marmot PreCip,M,,10.5,Rain Jacket,Clothing
-Outdoor Research Helium II,M,,6.4,Rain Jacket,Clothing
-Buff - Original Multifunctional,,,1.28,Balaclava,Clothing
-Arc'teryx RHO AR Balaclava,,,1.2,Balaclava,Clothing
-Seirus Thermax Headliner Balaclava,,,1.6,Balaclava,Clothing
-Columbia Sportswear Bora Bora Booney II Sun Hat,,,3.5,Hat,Clothing
-Baseball Cap,,,3.9,Hat,Clothing
-Outdoor Research Sun Runner Cap,,,2.82,Hat,Clothing
-SmartWool Cuffed Beanie,,,2.4,Hat,Clothing
-Mountain Hardwear Micro Dome,,,1,Hat,Clothing
-Fox River Wool Glomitts,,,0,Gloves,Clothing
+ExOfficio Give-N-Go Sport Mesh Hipkini,W,,1.1,Undergarments,Clothing
+Smartwool Merino 150 Bikini,W,,0.7,Undergarments,Clothing
+Patagonia Barely Hipster,W,,0.8,Undergarments,Clothing
+Smartwool NTS Micro 150 Boxer Brief,M,,2.6,Undergarments,Clothing
+ExOfficio Give-N-Go Sport Boxer Briefs,M,,3.4,Undergarments,Clothing
+Brooks Juno Bra,W,,0,Undergarments,Clothing
+Patagonia Barely Bra,W,,0,Undergarments,Clothing
+Shock Absorber Ultimate Fly Bra,W,,0,Undergarments,Clothing
+Marmot Lobo's Convertible Pants,W,,0,Bottoms,Clothing
+Prana Halle,W,,0,Bottoms,Clothing
+Purple Rain Adventure Skirt,W,,0,Bottoms,Clothing
+Outdoor Reasearch Ferrosi Pants,M,,0,Bottoms,Clothing
+Columbia Silver Ridge Convertible,M,,0,Bottoms,Clothing
+Mountain Hardwear Elkommando Kilt,M,,0,Bottoms,Clothing
+ExOfficio Bugs Away,W,,0,Tops,Clothing
+The North Face Better Than Naked Short Sleeve,W,,0,Tops,Clothing
+Marmot Bridget Flannel,W,,0,Tops,Clothing
+Columbia Silver Ridge,M,,0,Tops,Clothing
+Mountain Hardwear Wicked,M,,0,Tops,Clothing
+Nike Dri-FIT Tailwind,M,,0,Tops,Clothing
+Mountain Harwear Ghost Whisperer Down Hooded Jacket,W,,4.5,Outerwear,Clothing
+Arc'teryx  Atom LT Hoody,W,,12.7,Outerwear,Clothing
+My Trail Co 850 Fill HL Hooded Down Jacket,M,,11,Outerwear,Clothing
+Patagonia Nano-Air Hoody,M,,14,Outerwear,Clothing
+Marmot Precip - Womens,W,,9.4,Outerwear,Clothing
+Outdoor Reasearch Helium II - Womens,W,,5.82,Outerwear,Clothing
+Outdoor Research Aspire - Womens,W,,14,Outerwear,Clothing
+Arc'teryx Beta SL,M,,11,Outerwear,Clothing
+Marmot PreCip,M,,10.5,Outerwear,Clothing
+Outdoor Research Helium II,M,,6.4,Outerwear,Clothing
+Buff - Original Multifunctional,,,1.28,Outerwear,Clothing
+Arc'teryx RHO AR Balaclava,,,1.2,Outerwear,Clothing
+Seirus Thermax Headliner Balaclava,,,1.6,Outerwear,Clothing
+Columbia Sportswear Bora Bora Booney II Sun Hat,,,3.5,Outerwear,Clothing
+Baseball Cap,,,3.9,Outerwear,Clothing
+Outdoor Research Sun Runner Cap,,,2.82,Outerwear,Clothing
+SmartWool Cuffed Beanie,,,2.4,Outerwear,Clothing
+Mountain Hardwear Micro Dome,,,1,Outerwear,Clothing
+Fox River Wool Glomitts,,,0,Outerwear,Clothing
 Saucony Peregrine 8,,,0,Boots/Shoes,Footwear
 Altra Lone Peak 3.5,,,0,Boots/Shoes,Footwear
 Brooks Cascadia 12,,,0,Boots/Shoes,Footwear
@@ -182,47 +182,47 @@ Darn Tough Micro Crew Cushion,,,0,Socks,Footwear
 REI Co-op Lightweight Merino,,,0,Socks,Footwear
 Smartwool Hike Light Crew,,,0,Socks,Footwear
 Injinji Outdoor Midweight NuWool,,,0,Socks,Footwear
-REI Co-op Traverse Power Lock Cork,,,20,Trekking Poles,Optional
-Black Diamond Distance Carbon Z,,,10.4,Trekking Poles,Optional
-Leki Micro Vario Ti Cor-Tec,,,19,Trekking Poles,Optional
-Black Diamond Trail Pro Shock,,,21,Trekking Poles,Optional
-Marmot PreCip Pants,W,,11.5,Rain Pants,Optional
-Patagonia Womens Torrentshell,W,,8.6,Rain Pants,Optional
-Outdoor Research Helium Pants,M,,5.4,Rain Pants,Optional
-REI Co-op Rain Pants,M,,11,Rain Pants,Optional
-Zpacks Ultralight StuffSacks,,,0.1,Stuff Sacks,Optional
-REI Co-op Lightweight Stuff Sack 10L,,,0.9,Stuff Sacks,Optional
-DIY/ Zip-Loc,,,0,Stuff Sacks,Optional
-Sea to Summit Ultra-Sil Compression Dry Sack 10L,,,2.6,Compression Sacks,Optional
-Sea to Summit eVent Compression Dry Sack 10L,,,4.5,Compression Sacks,Optional
-Outdoor Research Verglas,,,7.3,Gaiters,Optional
-Dirty Girl Gaiters,,,1.5,Gaiters,Optional
-SPOT Gen3 Satellite GPS Messenger,,,4,Personal Locator Beacon,Optional
-Garmin inReach Explorer+ 2-Way Satellite Communicator,,,7.5,Personal Locator Beacon,Optional
-Goal Zero Nomad 7 plus,,,13,External Battery/ Solar Charger,Optional
-Anker Astro E1 6700,,,4.3,External Battery/ Solar Charger,Optional
-Crocs,,,12,Camp Shoes,Optional
-Xero Shoes Z-Trail,,,8.6,Camp Shoes,Optional
-Sunglasses,,,0,Sunglasses,Optional
-Helinox Chair,,,17,Backpacking Chair,Optional
-REI Co-op Flexlite Chair,,,26,Backpacking Chair,Optional
-Banana Boat Sport Sunscreen SPF 30,,,1,Sunscreen,Optional
-Kiss My Face Sport Lip Balm - SPF 30,,,0.15,Lip Balm,Optional
-Cotton Buds Tissue To GO Toilet  Paper,,,1.3,Toilet Paper,Optional
-No Rinse Bathing Wipes,,,7,Body Wipes,Optional
-Aurelle TOOB Brush,,,1,Toothbrush/toothpaste,Optional
-Sawyer Jungle Juice 100 Pump Spray Insect Repellent,,,2,Insect repellent,Optional
-Rite in the Rain Journal Kit Box,,,5.6,Book/ Journal,Optional
-Garcia Bear- Resistant Container,,,44,Bear Canister,Optional
-BearVault BV500 Food Container,,,41,Bear Canister,Optional
-Coghlans Six-Function Whistle,,,1,Whistle,Optional
-BlueWater 3mm NiteLine Utility Cord - 50ft,,,3.5,Cord,Optional
-Nite Ize S-Biner Dual Carabiner Plastic # 4,,,0.42,Carabiners,Optional
-Nalgene Flask - 12 fl. oz.,,,4.3,Whiskey,Optional
-Bodyglide Anti-Chafe Formula Skin Protectant,,,1.5,Body Glide,Optional
-GoGirl,,,9.9,Feminine Hygiene,Optional
-Diva Cup,,,7.2,Feminine Hygiene,Optional
-Pee Rag,,,0,Feminine Hygiene,Optional
-Sea to Summit Aeros Pillow Premium,,,2.8,Pillow,Optional
-Cocoon Ultralight Air-Core Pillow,,,10.2,Pillow,Optional
-Adventure Medical Kits Hand Sanitizer,,,1.7,Hand Sanitizer,Optional
+REI Co-op Traverse Power Lock Cork,,,20,Tools,Optional
+Black Diamond Distance Carbon Z,,,10.4,Tools,Optional
+Leki Micro Vario Ti Cor-Tec,,,19,Tools,Optional
+Black Diamond Trail Pro Shock,,,21,Tools,Optional
+Marmot PreCip Pants,W,,11.5,Outerwear,Optional
+Patagonia Womens Torrentshell,W,,8.6,Outerwear,Optional
+Outdoor Research Helium Pants,M,,5.4,Outerwear,Optional
+REI Co-op Rain Pants,M,,11,Outerwear,Optional
+Zpacks Ultralight StuffSacks,,,0.1,Sacks,Optional
+REI Co-op Lightweight Stuff Sack 10L,,,0.9,Sacks,Optional
+DIY/ Zip-Loc,,,0,Sacks,Optional
+Sea to Summit Ultra-Sil Compression Dry Sack 10L,,,2.6,Sacks,Optional
+Sea to Summit eVent Compression Dry Sack 10L,,,4.5,Sacks,Optional
+Outdoor Research Verglas,,,7.3,Outerwear,Optional
+Dirty Girl Gaiters,,,1.5,Outerwear,Optional
+SPOT Gen3 Satellite GPS Messenger,,,4,Tools,Optional
+Garmin inReach Explorer+ 2-Way Satellite Communicator,,,7.5,Tools,Optional
+Goal Zero Nomad 7 plus,,,13,Tools,Optional
+Anker Astro E1 6700,,,4.3,Tools,Optional
+Crocs,,,12,Boots/Shoes,Optional
+Xero Shoes Z-Trail,,,8.6,Boots/Shoes,Optional
+Sunglasses,,,0,Weather Protection,Optional
+Helinox Chair,,,17,Other,Optional
+REI Co-op Flexlite Chair,,,26,Other,Optional
+Banana Boat Sport Sunscreen SPF 30,,,1,Weather Protection,Optional
+Kiss My Face Sport Lip Balm - SPF 30,,,0.15,Weather Protection,Optional
+Cotton Buds Tissue To GO Toilet  Paper,,,1.3,Personal,Optional
+No Rinse Bathing Wipes,,,7,Personal,Optional
+Aurelle TOOB Brush,,,1,Personal,Optional
+Sawyer Jungle Juice 100 Pump Spray Insect Repellent,,,2,Weather Protection,Optional
+Rite in the Rain Journal Kit Box,,,5.6,Other,Optional
+Garcia Bear- Resistant Container,,,44,Tools,Optional
+BearVault BV500 Food Container,,,41,Tools,Optional
+Coghlans Six-Function Whistle,,,1,Tools,Optional
+BlueWater 3mm NiteLine Utility Cord - 50ft,,,3.5,Tools,Optional
+Nite Ize S-Biner Dual Carabiner Plastic # 4,,,0.42,Tools,Optional
+Nalgene Flask - 12 fl. oz.,,,4.3,Personal  ,Optional
+Bodyglide Anti-Chafe Formula Skin Protectant,,,1.5,Personal,Optional
+GoGirl,,,9.9,Personal,Optional
+Diva Cup,,,7.2,Personal,Optional
+Pee Rag,,,0,Personal,Optional
+Sea to Summit Aeros Pillow Premium,,,2.8,Sleeping,Optional
+Cocoon Ultralight Air-Core Pillow,,,10.2,Sleeping,Optional
+Adventure Medical Kits Hand Sanitizer,,,1.7,First Aid,Optional

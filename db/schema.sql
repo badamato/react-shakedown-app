@@ -1,54 +1,46 @@
-DROP TABLE Inventory;
-DROP TABLE Categories;
+DROP TABLE Gear_Inventory;
+DROP TABLE Gear_Category;
+DROP TABLE Gear_Type;
+DROP TABLE temp;
 
-
-CREATE TABLE Inventory (
-    inv_id SERIAL PRIMARY KEY,
+CREATE TABLE temp (
+	inv_id SERIAL PRIMARY KEY,
     name character varying(200),
     gender character varying(1),
     image character varying(2083),
     weight numeric(5,2),
-    gear_type character varying(50),
-    category character varying(50)
-);
-
-CREATE TABLE Category (
-    cat_id SERIAL PRIMARY KEY,
+    type_name character varying(200),
     cat_name character varying(200)
 );
 
-CREATE TABLE Users (
-    user_id SERIAL PRIMARY KEY,
-    first_name character varying(200),
-    last_name character varying(200),
-    gender character varying(1),
-    created_at timestamptz NOT NULL DEFAULT now()
-);
-
-COPY Inventory (name, gender, image, weight, gear_type, category) 
+COPY temp (name, gender, image, weight, type_name, cat_name) 
     FROM '/Users/elizabethdamato/Documents/digitalcrafts/capstone/react-shakedown-app/db/Gear_Inventory.csv' 
     DELIMITER ',' 
     CSV HEADER
 ;
 
-INSERT INTO Category
-    (cat_name)
-VALUES
-    ('Essentials'),
-    ('Clothing'),
-    ('Footwear'),
-    ('Optional')
-;
+CREATE TABLE Gear_Type (
+    type_id SERIAL PRIMARY KEY,
+	type_name character varying(200)
+);
 
-INSERT INTO Users
-    (first_name, last_name, gender)
-VALUES
-    ('Bruce', 'Schootz', 'M'),
-    ('Sarah', 'Lee', 'F'),
-    ('Gabe', 'LaFave', 'M'),
-    ('Kinder', 'Bustle', 'F'),
-    ('Gretel', 'Foxtrot', 'F')
-;
+CREATE TABLE Gear_Category (
+    cat_id SERIAL PRIMARY KEY,
+    cat_name character varying(200)
+);
 
-select * from Inventory;
-select * from Category;
+CREATE TABLE Gear_Inventory (
+    inv_id SERIAL PRIMARY KEY,
+    name character varying(200),
+    gender character varying(1),
+    image character varying(2083),
+    weight numeric(5,2),
+    type_id INTEGER REFERENCES Gear_Type(type_id),
+	cat_id INTEGER REFERENCES Gear_Category(cat_id)
+);
+
+INSERT INTO Gear_Inventory
+SELECT inv_id::int, name, gender, image, weight
+FROM temp;
+
+DELETE FROM temp;
