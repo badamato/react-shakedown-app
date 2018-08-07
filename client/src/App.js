@@ -9,6 +9,7 @@ import WinterGearList from "./components/WinterGearList";
 import DesertGearList from "./components/DesertGearList";
 import MyGear from "./components/MyGear";
 import BuildAPack from "./components/BuildAPack";
+import Category from "./components/Category";
 
 import logo from "./logo.svg";
 import "./App.css";
@@ -50,7 +51,7 @@ class App extends Component {
           <Route exact path="/mygear" component={MyGear} />
           {/* Build a Pack */}
           <Route exact path="/buildapack" component={BuildAPack} />
-          {/* <Route exact path="/buildapack/:category" component={Category} /> */}
+          <Route exact path="/buildapack/:category" component={Category} />
         </div>
       </Router>
     );

@@ -3,7 +3,11 @@ import { BrowserRouter as Router, Route, Link } from "react-router-dom";
 
 class Category extends React.Component {
   render() {
-    return <div>This is a Category</div>
+    return (<div>
+      <h2>Category</h2>
+        
+          <p>Here goes your list of gear in the category</p>
+      </div>)
   }
 }
 
