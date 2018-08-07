@@ -1,18 +1,18 @@
 import React from "react";
 import { BrowserRouter as Router, Route, Link } from "react-router-dom";
+import Category from "./Category";
 
 class BuildAPack extends React.Component {
+  //make an AJAX request to retrieve all categories and render array to page
   render() {
     return (
       <div>
-        <ul>
-          <li>
-            <Link to="/buildapack/essentials">Essentials</Link>
-          </li>
-          <li>Clothing</li>
-          <li>Footwear</li>
-          <li>Optional</li>
-        </ul>
+        <div>
+          <Category />
+          <Category />
+          <Category />
+          <Category />
+        </div>
       </div>
     );
   }
