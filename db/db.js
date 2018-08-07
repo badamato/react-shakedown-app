@@ -5,7 +5,7 @@ const pgp = require('pg-promise')();
 //ENVIRONMENTAL VARIABLES
 const cn = {
   host: 'localhost',
-  port: 5432,
+  port: 3500,
   database: 'shakedown',
   user: 'postgres',
   password: ''
