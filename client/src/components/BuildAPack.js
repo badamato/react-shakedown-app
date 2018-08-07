@@ -6,7 +6,9 @@ class BuildAPack extends React.Component {
     return (
       <div>
         <ul>
-          <li>Essentials</li>
+          <li>
+            <Link to="/buildapack/essentials">Essentials</Link>
+          </li>
           <li>Clothing</li>
           <li>Footwear</li>
           <li>Optional</li>
