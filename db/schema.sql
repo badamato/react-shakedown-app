@@ -1,17 +1,75 @@
-DROP DATABASE shakedown
+DROP TABLE Gear_Inventory;
+DROP TABLE Gear_Category;
+DROP TABLE Gear_Type;
 
-CREATE DATABASE shadedown
 
-CREATE TABLE Inventory (
-    inv_id SERIAL PRIMARY KEY,
+CREATE TABLE Gear_Inventory (
+	inv_id SERIAL PRIMARY KEY,
     name character varying(200),
     gender character varying(1),
     image character varying(2083),
     weight numeric(5,2),
-    gear_type character varying(50),
-    category character varying(50)
+    type_name character varying(200),
+    cat_name character varying(200)
 );
 
-CREATE UNIQUE INDEX Inventory_pkey ON Inventory(inv_id int4_ops)
 
-select * from Inventory;
+COPY Gear_Inventory (name, gender, image, weight, type_name, cat_name) 
+    FROM '/Users/elizabethdamato/Downloads/Gear_Inventory.csv' 
+    DELIMITER ',' 
+    CSV HEADER
+;
+
+
+CREATE TABLE Gear_Type (
+    type_id SERIAL PRIMARY KEY,
+	type_name character varying(200)
+);
+
+
+INSERT INTO Gear_Type
+    (type_name)
+VALUES
+    ('backpack'),
+    ('shelter'),
+    ('sleepingBag'),
+    ('sleepingPad'),
+    ('stove'),
+    ('cookware'),
+    ('waterFilter'),
+    ('waterBottleReservoir'),
+    ('headlamp'),
+    ('navigation'),
+    ('firstAid'),
+    ('repairKit'),
+    ('otherEssentials'),
+    ('topBaselayer'),
+    ('bottomBaselayer'),
+    ('undergarments'),
+    ('bottoms'),
+    ('tops'),
+    ('outerwearClothing'),
+    ('bootsShoesFootwear'),
+    ('socks'),
+    ('tools'),
+    ('outerwearOptional'),
+    ('sacks'),
+    ('bootsShoesOptional'),
+    ('otherOptional'),
+    ('personal'),
+    ('sleeping')
+;
+
+CREATE TABLE Gear_Category (
+    cat_id SERIAL PRIMARY KEY,
+    cat_name character varying(200)
+);
+
+INSERT INTO Gear_Category
+    (cat_name)
+VALUES
+    ('Essentials'),
+    ('Clothing'),
+    ('Footwear'),
+    ('Optional')
+;
