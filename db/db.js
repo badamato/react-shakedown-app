@@ -1,17 +1,20 @@
 //DEPENDENCIES
-const pg = require('pg');
-const pgp = require('pg-promise')();
+const pg = require("pg");
+const pgp = require("pg-promise")();
 
 //ENVIRONMENTAL VARIABLES
 const cn = {
+
   host: 'localhost',
   port: 5432,
   database: 'shakedown',
   user: 'postgres',
   password: ''
+
 };
 
 const db = pgp(cn);
+
 
 //SHOW++++++++++++++++++++++++++++++++
 
@@ -41,3 +44,4 @@ function showAllCatTypes(cat_id) {
 showAllCatTypes(2)
   .then((data) => {console.log(data);})
   .catch((error) => {console.log(error);});
+
