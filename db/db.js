@@ -1,14 +1,13 @@
 //DEPENDENCIES
-const pg = require('pg');
-const pgp = require('pg-promise')();
+const pg = require("pg");
+const pgp = require("pg-promise")();
 
 //ENVIRONMENTAL VARIABLES
 const cn = {
-  host: 'localhost',
+  host: "localhost",
   port: 3500,
-  database: 'shakedown',
-  user: 'postgres',
-  password: ''
+  database: "shakedown",
+  user: "postgres",
+  password: ""
 };
 const db = pgp(cn);
-

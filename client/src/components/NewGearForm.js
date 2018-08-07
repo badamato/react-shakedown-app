@@ -1,7 +1,6 @@
 import React from "react";
 import { BrowserRouter as Router, Route, Link } from "react-router-dom";
 
-
 class NewGearForm extends React.Component {
   constructor(props) {
     super(props);
@@ -14,7 +13,6 @@ class NewGearForm extends React.Component {
     };
   }
   render() {
-  
     return (
       <form>
         <input
@@ -43,7 +41,7 @@ class NewGearForm extends React.Component {
         />
 
         {/* <Select /> */}
-        
+
         <button onClick={e => this._onSubmit(e)}>Submit</button>
       </form>
     );
@@ -66,7 +64,6 @@ class NewGearForm extends React.Component {
       //   category: ""
     });
   };
-
 }
 
 export default NewGearForm;
