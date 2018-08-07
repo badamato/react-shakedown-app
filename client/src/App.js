@@ -10,6 +10,7 @@ import DesertGearList from "./components/DesertGearList";
 import MyGear from "./components/MyGear";
 import BuildAPack from "./components/BuildAPack";
 import Category from "./components/Category";
+import GearType from "./components/GearType";
 
 import logo from "./logo.svg";
 import "./App.css";
@@ -52,6 +53,7 @@ class App extends Component {
           {/* Build a Pack */}
           <Route exact path="/buildapack" component={BuildAPack} />
           <Route exact path="/buildapack/:category" component={Category} />
+          <Route exact path="/buildapack/:category/:geartype" component={GearType}/>
         </div>
       </Router>
     );
