@@ -1,6 +1,7 @@
 import React from "react";
 import { BrowserRouter as Router, Route, Link } from "react-router-dom";
 
+
 class NewGearForm extends React.Component {
   constructor(props) {
     super(props);
@@ -9,11 +10,11 @@ class NewGearForm extends React.Component {
       gender: "",
       image: "",
       weight: 0,
-      gearType: "",
-      category: ""
+      gearType: ""
     };
   }
   render() {
+  
     return (
       <form>
         <input
@@ -40,18 +41,9 @@ class NewGearForm extends React.Component {
           value={this.state.weight}
           onChange={e => this._change(e)}
         />
-        <input
-          name="gearType"
-          placeholder="Gear Type"
-          value={this.state.gearType}
-          onChange={e => this._change(e)}
-        />
-        <input
-          name="category"
-          placeholder="Category"
-          value={this.state.category}
-          onChange={e => this._change(e)}
-        />
+
+        {/* <Select /> */}
+        
         <button onClick={e => this._onSubmit(e)}>Submit</button>
       </form>
     );
@@ -65,7 +57,16 @@ class NewGearForm extends React.Component {
     e.preventDefault();
     // console.log(this.state);
     this.props.onSubmit(this.state);
+    this.setState({
+      name: "",
+      gender: "",
+      image: "",
+      weight: 0,
+      gearType: ""
+      //   category: ""
+    });
   };
+
 }
 
 export default NewGearForm;
