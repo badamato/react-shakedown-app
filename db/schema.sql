@@ -1,9 +1,9 @@
 DROP TABLE Gear_Inventory;
 DROP TABLE Gear_Category;
 DROP TABLE Gear_Type;
-DROP TABLE temp;
 
-CREATE TABLE temp (
+
+CREATE TABLE Gear_Inventory (
 	inv_id SERIAL PRIMARY KEY,
     name character varying(200),
     gender character varying(1),
@@ -13,34 +13,63 @@ CREATE TABLE temp (
     cat_name character varying(200)
 );
 
-COPY temp (name, gender, image, weight, type_name, cat_name) 
-    FROM '/Users/elizabethdamato/Documents/digitalcrafts/capstone/react-shakedown-app/db/Gear_Inventory.csv' 
+
+COPY Gear_Inventory (name, gender, image, weight, type_name, cat_name) 
+    FROM '/Users/elizabethdamato/Downloads/Gear_Inventory.csv' 
     DELIMITER ',' 
     CSV HEADER
 ;
+
 
 CREATE TABLE Gear_Type (
     type_id SERIAL PRIMARY KEY,
 	type_name character varying(200)
 );
 
+
+INSERT INTO Gear_Type
+    (type_name)
+VALUES
+    ('backpack'),
+    ('shelter'),
+    ('sleepingBag'),
+    ('sleepingPad'),
+    ('stove'),
+    ('cookware'),
+    ('waterFilter'),
+    ('waterBottleReservoir'),
+    ('headlamp'),
+    ('navigation'),
+    ('firstAid'),
+    ('repairKit'),
+    ('otherEssentials'),
+    ('topBaselayer'),
+    ('bottomBaselayer'),
+    ('undergarments'),
+    ('bottoms'),
+    ('tops'),
+    ('outerwearClothing'),
+    ('bootsShoesFootwear'),
+    ('socks'),
+    ('tools'),
+    ('outerwearOptional'),
+    ('sacks'),
+    ('bootsShoesOptional'),
+    ('otherOptional'),
+    ('personal'),
+    ('sleeping')
+;
+
 CREATE TABLE Gear_Category (
     cat_id SERIAL PRIMARY KEY,
     cat_name character varying(200)
 );
 
-CREATE TABLE Gear_Inventory (
-    inv_id SERIAL PRIMARY KEY,
-    name character varying(200),
-    gender character varying(1),
-    image character varying(2083),
-    weight numeric(5,2),
-    type_id INTEGER REFERENCES Gear_Type(type_id),
-	cat_id INTEGER REFERENCES Gear_Category(cat_id)
-);
-
-INSERT INTO Gear_Inventory
-SELECT inv_id::int, name, gender, image, weight
-FROM temp;
-
-DELETE FROM temp;
+INSERT INTO Gear_Category
+    (cat_name)
+VALUES
+    ('Essentials'),
+    ('Clothing'),
+    ('Footwear'),
+    ('Optional')
+;
