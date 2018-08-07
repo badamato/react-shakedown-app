@@ -3,6 +3,7 @@
   "version": "0.1.0",
   "private": true,
   "dependencies": {
+    "nodemon": "^1.18.3",
     "pg": "^7.4.3",
     "pg-promise": "^8.4.5",
     "react": "^16.4.2",
