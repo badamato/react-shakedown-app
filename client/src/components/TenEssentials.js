@@ -11,7 +11,7 @@ class TenEssentials extends React.Component {
           the 10 essentials with you. Even on a day hike, it's good practice.
           You'll find the true value of carrying these items in a survival
           situtation. They'll ensure you're prepared in an emergency and keep
-          you safe if you're forced to spend extra time out in the wild!
+          you safe if you're forced to spend some extra time out in the wild!
         </p>
         <p>
           Depending on the type of trip you're taking, you can take a
@@ -19,6 +19,7 @@ class TenEssentials extends React.Component {
         </p>
         <div>
           <h4>Navigation</h4>
+          <p>The navigation system is going to help you plan your route before your trip, as well help you orient yourself on the trail. Be sure you familiarize yourself with these tools before you find yourself wandering.</p>
           <ul>
             <li>Maps</li>
             <li>Compass</li>
