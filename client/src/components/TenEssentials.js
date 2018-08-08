@@ -43,7 +43,7 @@ class TenEssentials extends React.Component {
             essential to finding your way in the night. A headlamp is a great
             option because it will allow you to be hands free and it's not too
             much weight to carry. Make sure to check the batteries before
-            heading out!{" "}
+            heading out!
           </p>
           <ul>
             <li>Headlamp</li>
@@ -60,7 +60,7 @@ class TenEssentials extends React.Component {
             cancer. Consider wearing sunscreen, a big sun hat or even a long
             sleeve shirt to minimize your exposure to the sun. Snow blindness
             can also occur without the right protection to your eyes, so
-            remember to throw on your sunglasses!{" "}
+            remember to throw on your sunglasses!
           </p>
           <ul>
             <li>Sunglasses</li>
@@ -117,7 +117,7 @@ class TenEssentials extends React.Component {
             trail. Packing some kind of firestarter can help jumpstart the fire
             and sustain a flame in bad weather conditions. The flames can be
             essential in a rescue when used as an emergency signal. Just be sure
-            you read up on fire use regulations before heading out.{" "}
+            you read up on fire use regulations before heading out.
           </p>
         </div>
         <ul>
@@ -156,7 +156,16 @@ class TenEssentials extends React.Component {
         </div>
         <div>
           <h4>Hydration</h4>
-          <p>Don't forget to hydrate! Your organs will thank you. Before you hit the trail, fill up your bottles or reservoir and make sure you're carrying enough. Be sure that your drinking at least half a liter about every hour. Depending on the climate and length, you'll probably want to drink more. Carry a filter or purifier to treat water from a stream or river, in case you run out of water along the way. Make sure to drink regularly to avoid dehydration, hypothermia or altitude sickness. </p>
+          <p>
+            Don't forget to hydrate! Your organs will thank you. Before you hit
+            the trail, fill up your bottles or reservoir and make sure you're
+            carrying enough. Be sure that your drinking at least half a liter
+            about every hour. Depending on the climate and length, you'll
+            probably want to drink more. Carry a filter or purifier to treat
+            water from a stream or river, in case you run out of water along the
+            way. Make sure to drink regularly to avoid dehydration, hypothermia
+            or altitude sickness.
+          </p>
           <ul>
             <li>Water bottle/ reservoir</li>
             <li>Water filter/ purifier</li>
@@ -165,6 +174,12 @@ class TenEssentials extends React.Component {
         </div>
         <div>
           <h4>Emergency Shelter</h4>
+          <p>In a survival sitution, shelter is one of the most important essentials. Having any type of lightweight emergency shelter with you could be the difference between life and death. It will keep you safe if you get stranded in a storm or if you're injured along the way.</p>
+          <ul>
+            <li>Space blanket</li>
+            <li>Ultralight tarp</li>
+            <li>Bivy sack</li>
+          </ul>
         </div>
       </div>
     );
