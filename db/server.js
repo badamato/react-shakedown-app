@@ -44,12 +44,19 @@ app.get('/api/:category', (req,res) => {
 
 
 
+////////////////////////////ROUTE TO GET ALL TYPES FROM ONE CATEGORY
+app.get('/api/:category/gearType', (req,res) => {
+    // res.send('Got a type of gear')
+    shakedown.showAllCatTypes(req.params.category)
+    .then((data) => {
+        console.log(data);
+        res.send(data);
+    })
 
+    .catch((error) => {
+        console.log(error);
+    })
 
-
-//get everything in a gear-type - Just show me All Backpacks
-app.get('/api/:catgory/:gearType', (req,res) => {
-    res.send('Got a type of gear')
 })
 
 
