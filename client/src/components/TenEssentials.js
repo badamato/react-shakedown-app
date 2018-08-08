@@ -156,6 +156,12 @@ class TenEssentials extends React.Component {
         </div>
         <div>
           <h4>Hydration</h4>
+          <p>Don't forget to hydrate! Your organs will thank you. Before you hit the trail, fill up your bottles or reservoir and make sure you're carrying enough. Be sure that your drinking at least half a liter about every hour. Depending on the climate and length, you'll probably want to drink more. Carry a filter or purifier to treat water from a stream or river, in case you run out of water along the way. Make sure to drink regularly to avoid dehydration, hypothermia or altitude sickness. </p>
+          <ul>
+            <li>Water bottle/ reservoir</li>
+            <li>Water filter/ purifier</li>
+            <li>Chemical treatment</li>
+          </ul>
         </div>
         <div>
           <h4>Emergency Shelter</h4>
