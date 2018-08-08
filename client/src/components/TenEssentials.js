@@ -142,6 +142,17 @@ class TenEssentials extends React.Component {
         </div>
         <div>
           <h4>Nutrition</h4>
+          <p>
+            Hiker hunger is no joke. You'll need to replenish the calories
+            you're burning off on your hike. If something causes your trip plan
+            to change, you'll want to make sure you have some extra snacks to
+            sustain both your energy and mood.
+          </p>
+          <ul>
+            <li>Energy Bars</li>
+            <li>Dried fruits and nuts</li>
+            <li>Jerky</li>
+          </ul>
         </div>
         <div>
           <h4>Hydration</h4>
