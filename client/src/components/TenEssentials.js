@@ -107,9 +107,24 @@ class TenEssentials extends React.Component {
             <li>Safety pins</li>
           </ul>
         </div>
+        {/* FIRE */}
         <div>
           <h4>Fire</h4>
+          <p>
+            It's getting hot, hot, hot! And that doesn't have to be a bad thing
+            when you're lost. Fire can be a heat source for staying warm or
+            cooking if you find yourself spending an unexpected evening on the
+            trail. Packing some kind of firestarter can help jumpstart the fire
+            and sustain a flame in bad weather conditions. The flames can be
+            essential in a rescue when used as an emergency signal. Just be sure
+            you read up on fire use regulations before heading out.{" "}
+          </p>
         </div>
+        <ul>
+          <li>Lighter</li>
+          <li>Waterproof matches</li>
+          <li>Firestarter</li>
+        </ul>
         <div>
           <h4>Insulation</h4>
         </div>
