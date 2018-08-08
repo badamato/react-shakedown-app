@@ -19,31 +19,62 @@ class ThreeSeasonGearList extends React.Component {
           </span>{" "}
           with you on every trip.
         </p>
+        {/* The Essentials */}
         <div>
-          {/* The Essentials */}
-        <h4>The Essenitals</h4>
-        <ul>
-          <li />
-          <li>Backpack</li>
-          <li>Shelter</li>
-          <li>Sleeping Bag (15-20 degrees)</li>
-          <li>Sleeping Pad</li>
-          <li> Stove</li>
-          <li>Fuel</li>
-          <li>Cookware</li>
-          <li>Water Filter/ Purifier</li>
-          <li>Water Bottle/ Reservoir</li>
-          <li>Headlamp</li>
-          <li>Navigation: Compass, Maps, Handheld GPS</li>
-          <li>First Aid Kit</li>
-          <li>Sun Protection: Sunglasses, Sunscreen, Sun Hat</li>
-          <li>Repair Kit</li>
-          <li>Pack cover</li>
-          <li>Permits( if required)</li>
-          <li>Trowel</li>
+          <h4>The Essenitals</h4>
+          <ul>
+            <li>Backpack</li>
+            <li>Shelter</li>
+            <li>Sleeping Bag (15-20 degrees)</li>
+            <li>Sleeping Pad</li>
+            <li> Stove</li>
+            <li>Fuel</li>
+            <li>Cookware</li>
+            <li>Water Filter/ Purifier</li>
+            <li>Water Bottle/ Reservoir</li>
+            <li>Headlamp</li>
+            <li>Navigation: Compass, Maps, Handheld GPS</li>
+            <li>First Aid Kit</li>
+            <li>Sun Protection: Sunglasses, Sunscreen, Sun Hat</li>
+            <li>Repair Kit</li>
+            <li>Pack cover</li>
+            <li>Permits( if required)</li>
+            <li>Trowel</li>
           </ul>
         </div>
-        </ul>
+        {/* Clothing */}
+        <div>
+          <h4>Clothing</h4>
+          <ul>
+            <li>Underwear</li>
+            <li>Sports Bra</li>
+            <li>Top Baselayer</li>
+            <li>Bottom Baselayer</li>
+            <li>Hiking Top</li>
+            <li>Hiking Bottom</li>
+            <li>Down/ Sythetic Jacket</li>
+            <li>Rain Jacket</li>
+            <li>Hat</li>
+            <li>Bandana/ Buff</li>
+          </ul>
+          <h5>Cold Weather/Extras</h5>
+          <ul>
+            <li>Fleece jacket or vest</li>
+            <li>Rain Pants</li>
+            <li>Gloves or mittens</li>
+            <li>Midweight to Heavyweight Baselayers</li>
+          </ul>
+        </div>
+        {/* Footwear */}
+        <div>
+          <h4>Footwear</h4>
+          <ul>
+            <li>Hiking Boots or Hiking Shoes</li>
+            <li>Socks(2-3pairs)</li>
+            <li>Camp Shoes</li>
+          </ul>
+        </div>
+        {/* Optional Items */}
       </div>
     );
   }
