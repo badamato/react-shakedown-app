@@ -5,19 +5,17 @@ class ThreeSeasonGearList extends React.Component {
   render() {
     return (
       <div>
-          <h1>Three-Season Backpacking Gear</h1>
-        <ul>
-          <li>1</li>
-          <li>2</li>
-          <li>3</li>
-          <li>4</li>
-          <li>5</li>
-          <li>6</li>
-          <li>7</li>
-          <li>8</li>
-          <li>9</li>
-          <li>10</li>
-        </ul>
+        <h1>Three-Season Backpacking Gear</h1>
+        <p>
+          This checklist will help you get ready for Spring, Summer and Fall.
+          Nothing can ruin a trip more than leaving behind an important piece of
+          gear. This is only a suggested checklist and should be modified to fit
+          your preferences. Your pack list should adjust to your personal needs,
+          the time of year, the length of your trip, and the location of your
+          trip. We recommend you talk with a local outfitter or gear expert for
+          any advice or questions you may have.
+        </p>
+          
       </div>
     );
   }

@@ -174,7 +174,13 @@ class TenEssentials extends React.Component {
         </div>
         <div>
           <h4>Emergency Shelter</h4>
-          <p>In a survival sitution, shelter is one of the most important essentials. Having any type of lightweight emergency shelter with you could be the difference between life and death. It will keep you safe if you get stranded in a storm or if you're injured along the way.</p>
+          <p>
+            In a survival sitution, shelter is one of the most important
+            essentials. Having any type of lightweight emergency shelter with
+            you could be the difference between life and death. It will keep you
+            safe if you get stranded in a storm or if you're injured along the
+            way.
+          </p>
           <ul>
             <li>Space blanket</li>
             <li>Ultralight tarp</li>
