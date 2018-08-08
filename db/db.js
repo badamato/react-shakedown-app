@@ -18,7 +18,6 @@ const db = pgp(cn);
 
 //SHOW++++++++++++++++++++++++++++++++
 
-
 function showAllCategories() {
   return db.any(`SELECT * FROM Gear_Category`)
 }
@@ -41,7 +40,7 @@ function showAllCatTypes(cat_id) {
   return db.any(`SELECT * FROM Gear_Type WHERE cat_id=$1`, [cat_id])
 }
 
-showAllCatTypes(2)
-  .then((data) => {console.log(data);})
-  .catch((error) => {console.log(error);});
+// showAllCatTypes(2)
+//   .then((data) => {console.log(data);})
+//   .catch((error) => {console.log(error);});
 
