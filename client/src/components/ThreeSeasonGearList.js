@@ -13,7 +13,7 @@ class ThreeSeasonGearList extends React.Component {
           your preferences. Your pack list should adjust to your personal needs,
           the time of year, the length of your trip, and the location of your
           trip. We recommend you talk with a local outfitter or gear expert for
-          any advice or questions you may have. Remember to always have the{" "}
+          any advice or questions you may have. Remember to always have the
           <span>
             <Link to="/hikes/tenessentials">ten essentials</Link>
           </span>{" "}
@@ -71,10 +71,53 @@ class ThreeSeasonGearList extends React.Component {
           <ul>
             <li>Hiking Boots or Hiking Shoes</li>
             <li>Socks(2-3pairs)</li>
+            <li>Liner Socks</li>
             <li>Camp Shoes</li>
           </ul>
         </div>
         {/* Optional Items */}
+        <div>
+          <h4>Optional Items</h4>
+          <ul>
+            <li>Extra Lighter/ Matches</li>
+            <li>Extra Batteries</li>
+            <li>Duct Tape (3 ft.)</li>
+            <li>Cell Phone</li>
+            <li>Camera</li>
+            <li>Trekking Poles</li>
+            <li>Stuff Sacks</li>
+            <li>Compression Sacks</li>
+            <li>Extra Ziploc Bags</li>
+            <li>Gaiters</li>
+            <li>Personal Locator Beacon</li>
+            <li>External Battery</li>
+            <li>Solar Charger</li>
+            <li>Backpacking Chair</li>
+            <li>Lip Balm</li>
+            <li>Biodegradable Soap</li>
+            <li>Quick-dry Towel</li>
+            <li>Hand Sanitizer</li>
+            <li>Toilet Paper</li>
+            <li>Body Wipes</li>
+            <li>Toothbrush/Toothpaste</li>
+            <li>Insect Repellent</li>
+            <li>Book/ Journal and Pen</li>
+            <li>Bear Canister</li>
+            <li>Scent-proof Bags</li>
+            <li>Whistle</li>
+            <li>Cord</li>
+            <li>Carabiners</li>
+            <li>Body Glide</li>
+            <li>Camp Pillow</li>
+            <li>Ear Plugs</li>
+            <li>GoGirl</li>
+            <li>Diva Cup</li>
+            <li>Tampons</li>
+            <li>Pads</li>
+            <li>Pee Rag</li>
+            <li>Whiskey</li>
+          </ul>
+        </div>
       </div>
     );
   }
