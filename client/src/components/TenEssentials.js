@@ -127,6 +127,18 @@ class TenEssentials extends React.Component {
         </ul>
         <div>
           <h4>Insulation</h4>
+          <p>
+            "I always trust the weatherman's forecast," said no one ever. Nature
+            is unpredictable. The conditions can turn wet or cold at any moment
+            and you'll want to be prepared if you end up having to spend an
+            evening out. Be sure to include some extra layers to help insulate
+            your body as well protect you from the elements. Dress in layers,
+            avoid cotton and always bring a hat.
+          </p>
+          <ul>
+            <li>Insulating layer: extra socks, hat, gloves, jacket </li>
+            <li>Weather protection: Rain jacket</li>
+          </ul>
         </div>
         <div>
           <h4>Nutrition</h4>
