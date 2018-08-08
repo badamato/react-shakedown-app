@@ -92,11 +92,19 @@ class TenEssentials extends React.Component {
           </ul>
         </div>
         <div>
+          {/* Repair kit and Tools */}
           <h4>Repair Kit and Tools</h4>
+          <p>
+            Splinters, broken glasses, ripped gear and lost parts are common
+            issues in the backcountry. You'll want to bring a small repair kit
+            and/or a knife to every outing, so you're prepared for if things go
+            wrong.
+          </p>
           <ul>
-            <li />
-            <li />
-            <li />
+            <li>Small Knife or Multi-tool</li>
+            <li>Cord</li>
+            <li>Duct tape</li>
+            <li>Safety pins</li>
           </ul>
         </div>
         <div>
