@@ -19,7 +19,12 @@ class TenEssentials extends React.Component {
         </p>
         <div>
           <h4>Navigation</h4>
-          <p>The navigation system is going to help you plan your route before your trip, as well help you orient yourself on the trail. Be sure you familiarize yourself with these tools before you find yourself wandering.</p>
+          <p>
+            The navigation system is going to help you plan your route before
+            your trip, as well help you orient yourself on the trail. Be sure
+            you familiarize yourself with these tools before you find yourself
+            wandering.
+          </p>
           <ul>
             <li>Maps</li>
             <li>Compass</li>
@@ -29,6 +34,7 @@ class TenEssentials extends React.Component {
         </div>
         <div>
           <h4>Illumination</h4>
+            <p>You'll be thanking yourself for bringing a light when the sun starts to go down earlier than you expected. When the sun dips behind the hills, the woods get dark. Really dark. Having a light source is essential to finding your way in the night. A headlamp is a great option because it will allow you to be hands free and its not too much weight to carry. Make sure to check the batteries before heading out! </p>
           <ul>
             <li>Headlamp</li>
             <li>Lantern</li>
@@ -49,10 +55,10 @@ class TenEssentials extends React.Component {
         <div>
           <h4>Repair Kit and Tools</h4>
           <ul>
-            <li></li>
-            <li></li>
-            <li></li>
-            </ul>
+            <li />
+            <li />
+            <li />
+          </ul>
         </div>
         <div>
           <h4>Fire</h4>
