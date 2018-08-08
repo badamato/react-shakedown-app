@@ -36,7 +36,15 @@ class TenEssentials extends React.Component {
         {/* ILLUMINATION */}
         <div>
           <h4>Illumination</h4>
-            <p>You'll be thanking yourself for bringing a light when the sun starts to go down earlier than you expected. When the sun dips behind the hills, the woods get dark. Really dark. Having a light source is essential to finding your way in the night. A headlamp is a great option because it will allow you to be hands free and it's not too much weight to carry. Make sure to check the batteries before heading out! </p>
+          <p>
+            You'll be thanking yourself for bringing a light when the sun starts
+            to go down earlier than you expected. When the sun dips behind the
+            hills, the woods get dark. Really dark. Having a light source is
+            essential to finding your way in the night. A headlamp is a great
+            option because it will allow you to be hands free and it's not too
+            much weight to carry. Make sure to check the batteries before
+            heading out!{" "}
+          </p>
           <ul>
             <li>Headlamp</li>
             <li>Lantern</li>
@@ -46,7 +54,14 @@ class TenEssentials extends React.Component {
         {/* SUN PROTECTION */}
         <div>
           <h4>Sun Protection</h4>
-          <p>Nobody likes leathery skin. So make sure you protect yourself from the harmful UV rays that are responsible for those sunburns and skin cancer. Consider wearing sunscreen, a big sun hat or even a long sleeve shirt to minimize your exposure to the sun. Snow blindness can also occur without the right protection to your eyes, so remember to throw on your sunglasses! </p>
+          <p>
+            Nobody likes leathery skin. So make sure you protect yourself from
+            the harmful UV rays that are responsible for those sunburns and skin
+            cancer. Consider wearing sunscreen, a big sun hat or even a long
+            sleeve shirt to minimize your exposure to the sun. Snow blindness
+            can also occur without the right protection to your eyes, so
+            remember to throw on your sunglasses!{" "}
+          </p>
           <ul>
             <li>Sunglasses</li>
             <li>Sunscreen</li>
@@ -54,7 +69,27 @@ class TenEssentials extends React.Component {
           </ul>
         </div>
         <div>
+          {/* First Aid */}
           <h4>First Aid</h4>
+          <p>
+            Accidents happen. Be prepared on your next trip by carrying a
+            first-aid kit. You can buy a pre-assembled kit first and then modify
+            it to fit your trip. Be sure to check expiration dates and make sure
+            you know how to use the items in your kit if you're faced with a
+            real emergency. You can even consider taking a wilderness first-aid
+            class so you can be really effective if faced with a real emergency.
+            Even though some folks think most accidents can be fixed with duct
+            tape and whiskey , we recommend that it's best to be ready for your
+            next adventure with an actual first aid kit!
+          </p>
+          <ul>
+            <li>First-aid kits</li>
+            <li>Treatment for blisters</li>
+            <li>Alcohol wipes</li>
+            <li>Guaze pads</li>
+            <li>Over-the-counter pain medicine</li>
+            <li>Personal medication</li>
+          </ul>
         </div>
         <div>
           <h4>Repair Kit and Tools</h4>
