@@ -12,22 +12,40 @@ const shakedown = require('./db');
 
 
 
-
-
-
-
-
-
-//get all the categories - Essentials, Clothing, Footwear, Optional
+////////////////////////////ROUTE TO GET ALL CATEGORIES
 app.get('/api', (req, res) => {
     
-    res.send('SERVER CONNECTED!')
+    // res.send('SERVER CONNECTED!')
+    shakedown.showAllCategories()
+        .then((data) => {
+            res.send(data);
+        })
+
+        .catch((error) => {
+            console.log(error);
+        })
+
 })
 
-//get one category from categories-Just show the essentials catgory
+
+////////////////////////////ROUTE TO GET ONE CATEGORY
 app.get('/api/:category', (req,res) => {
-    res.send('Got a category')
+    // res.send('Got a category')
+    shakedown.showOneCategory(req.params.category)
+    .then((data) => {
+        // console.log(data);
+        res.send(data);
+    })
+
+    .catch((error) => {
+        console.log(error);
+    })
 })
+
+
+
+
+
 
 //get everything in a gear-type - Just show me All Backpacks
 app.get('/api/:catgory/:gearType', (req,res) => {

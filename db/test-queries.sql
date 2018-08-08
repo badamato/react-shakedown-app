@@ -11,3 +11,6 @@ SELECT * FROM Gear_Category WHERE cat_id=2;
 -- get all types (in a single category)
 SELECT * from Gear_Types WHERE cat_id=1;
 
+
+-- get 
+

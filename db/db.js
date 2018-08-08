@@ -44,3 +44,9 @@ function showAllCatTypes(cat_id) {
 //   .then((data) => {console.log(data);})
 //   .catch((error) => {console.log(error);});
 
+
+module.exports = {
+  showAllCategories,
+  showOneCategory,
+  showAllCatTypes
+}
