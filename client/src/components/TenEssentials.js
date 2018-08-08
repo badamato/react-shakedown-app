@@ -17,6 +17,7 @@ class TenEssentials extends React.Component {
           Depending on the type of trip you're taking, you can take a
           combination of the items in each category.
         </p>
+        {/* NAVIGATION */}
         <div>
           <h4>Navigation</h4>
           <p>
@@ -32,17 +33,20 @@ class TenEssentials extends React.Component {
             <li>Personal Locator Beacon</li>
           </ul>
         </div>
+        {/* ILLUMINATION */}
         <div>
           <h4>Illumination</h4>
-            <p>You'll be thanking yourself for bringing a light when the sun starts to go down earlier than you expected. When the sun dips behind the hills, the woods get dark. Really dark. Having a light source is essential to finding your way in the night. A headlamp is a great option because it will allow you to be hands free and its not too much weight to carry. Make sure to check the batteries before heading out! </p>
+            <p>You'll be thanking yourself for bringing a light when the sun starts to go down earlier than you expected. When the sun dips behind the hills, the woods get dark. Really dark. Having a light source is essential to finding your way in the night. A headlamp is a great option because it will allow you to be hands free and it's not too much weight to carry. Make sure to check the batteries before heading out! </p>
           <ul>
             <li>Headlamp</li>
             <li>Lantern</li>
             <li>Flashlight</li>
           </ul>
         </div>
+        {/* SUN PROTECTION */}
         <div>
           <h4>Sun Protection</h4>
+          <p>Nobody likes leathery skin. So make sure you protect yourself from the harmful UV rays that are responsible for those sunburns and skin cancer. Consider wearing sunscreen, a big sun hat or even a long sleeve shirt to minimize your exposure to the sun. Snow blindness can also occur without the right protection to your eyes, so remember to throw on your sunglasses! </p>
           <ul>
             <li>Sunglasses</li>
             <li>Sunscreen</li>
