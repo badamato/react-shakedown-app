@@ -13,7 +13,7 @@ class ThreeSeasonGearList extends React.Component {
           your preferences. Your pack list should adjust to your personal needs,
           the time of year, the length of your trip, and the location of your
           trip. We recommend you talk with a local outfitter or gear expert for
-          any advice or questions you may have. Remember to always have the
+          any advice or questions you may have. Remember to always have the{" "}
           <span>
             <Link to="/hikes/tenessentials">ten essentials</Link>
           </span>{" "}
@@ -79,6 +79,7 @@ class ThreeSeasonGearList extends React.Component {
         <div>
           <h4>Optional Items</h4>
           <ul>
+            <li>Sleeping Bag Liner</li>
             <li>Extra Lighter/ Matches</li>
             <li>Extra Batteries</li>
             <li>Duct Tape (3 ft.)</li>
