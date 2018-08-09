@@ -5,14 +5,20 @@ import TenEssentials from "./TenEssentials";
 import TotalWeight from "./TotalWeight";
 
 import DummyCategories from "../Categories";
-import DummyListOfGearTypes from "../ListOfGearTypes";
+import DummyEssentialsList from "../EssentialsList";
+import DummyClothingList from "../ClothingList";
+import DummyFootwearList from "../FootwearList";
+import DummyOptionalList from "../OptionalList";
 
 class BuildAPack extends React.Component {
   constructor(props) {
     super(props);
     this.state = {
       category: DummyCategories,
-      gearType: DummyListOfGearTypes
+      EssentialsList: DummyEssentialsList,
+      ClothingList: DummyClothingList,
+      FootwearList: DummyFootwearList,
+      OptionalList: DummyOptionalList
     };
   }
   //make an AJAX request to API and retrieve all categories and render array to page
@@ -23,7 +29,10 @@ class BuildAPack extends React.Component {
 
   render() {
     let allcategories = this.state.category.map(singlecategory => {
-      return <Category name={singlecategory.cat_name} />;
+      return <Category 
+      name={singlecategory.cat_name} 
+
+      />;
     });
     return (
       <div>
