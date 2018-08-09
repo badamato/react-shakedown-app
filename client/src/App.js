@@ -11,6 +11,7 @@ import DesertGearList from "./components/DesertGearList";
 import MyGear from "./components/MyGear";
 import BuildAPack from "./components/BuildAPack";
 import Category from "./components/Category";
+import OneCategoryList from "./components/OneCategoryList";
 import GearType from "./components/GearType";
 import About from "./components/About";
 
@@ -77,13 +78,10 @@ class App extends Component {
           {/* My Gear Inventory */}
           <Route exact path="/mygear" component={MyGear} />
           {/* Build a Pack */}
-          <Route exact path="/buildapack" component={BuildAPack} />
-          <Route exact path="/buildapack/:category" component={Category} />
-          <Route
-            exact
-            path="/buildapack/:category/:geartype"
-            component={GearType}
-          />
+          <Route path="/buildapack" component={BuildAPack} />
+
+          <Route path="/buildapack/:categoryid" component= {OneCategoryList} />
+
           <Route exact path="/about" component={About} />
         </div>
       </Router>

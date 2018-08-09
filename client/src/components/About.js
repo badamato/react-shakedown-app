@@ -5,6 +5,7 @@ class About extends React.Component {
     return (
       <div>
         <h1>About Shakedown</h1>
+        
       </div>
     );
   }
