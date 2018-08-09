@@ -1,6 +1,5 @@
 import React from "react";
 import { BrowserRouter as Router, Route, Link } from "react-router-dom";
-import GearType from "./GearType"; 
 
 class Category extends React.Component {
   constructor(props) {
@@ -12,13 +11,7 @@ class Category extends React.Component {
   render() {
     return (
       <div>
-        <h2>Category</h2>
-
-        <p>Here goes your list of gear in the category</p>
-        {/* <Link to="/buildapack/:category/:geartype">
-          <p>{this.state.gearType[0].name}</p>
-        </Link> */}
-        <GearType />
+        <h2>{this.props.name}</h2>
       </div>
     );
   }
