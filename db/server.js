@@ -56,11 +56,25 @@ app.get('/api/:category/gearType', (req,res) => {
     .catch((error) => {
         console.log(error);
     })
-
 })
 
 
-//get my gear
+//get all my gear
+app.get('/api/:category/gearType', (req,res) => {
+    // res.send('Got a type of gear')
+    shakedown.addMyGearRecord(req.params.category)
+    .then((data) => {
+        console.log(data);
+        res.send(data);
+    })
+
+    .catch((error) => {
+        console.log(error);
+    })
+})
+
+
+
 //add my gear
 //delete my gear
 //edit my gear
