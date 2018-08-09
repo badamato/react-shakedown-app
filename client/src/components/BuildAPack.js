@@ -33,6 +33,7 @@ class BuildAPack extends React.Component {
       <div>
         <h1>Pick a category</h1>
         <h2>{allcategories}</h2>
+        <TotalWeight />
       </div>
     );
   }
