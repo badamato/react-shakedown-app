@@ -50,10 +50,11 @@ function showAllMyGear(user_id) {
 //   .catch((error) => {console.log(error);});
 
 
-function showMyGearWeight(user_id) {
+function showTotalGearWeight(user_id) {
   return db.any(`SELECT weight FROM Gear_Inventory WHERE user_id=$1`, [user_id])
 }
-// showMyGearWeight(2)
+
+// showTotalGearWeight(3)
 //   .then((data) => {console.log(data);})
 //   .catch((error) => {console.log(error);});
 
@@ -82,7 +83,7 @@ function deleteMyGearRecord(inv_id) {
 
 
 //UPDATE++++++++++++++++++++++++++++++++
-function updateMyGear(newWeight, inv_id, user_id) {
+function updateGearWeight(newWeight, inv_id, user_id) {
   return db.result(`update Gear_Inventory set weight='$1' where inv_id=$2 and user_id=$3`, [newWeight, inv_id, user_id])
 }
 // updateMyGear(5.55, 77, 2)
@@ -96,8 +97,9 @@ module.exports = {
   showAllCategories,
   showOneCategory,
   showAllCatTypes,
+  showAllMyGear,
+  showTotalGearWeight,
   addMyGearRecord,
   deleteMyGearRecord,
-  showMyGearWeight,
-  updateMyGear
+  updateGearWeight,
 }
