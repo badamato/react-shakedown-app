@@ -7,24 +7,7 @@ class BuildAPack extends React.Component {
   constructor(props) {
     super(props);
     this.state = {
-      category: [
-        {
-          name: "essentials",
-          content: 20
-        },
-        {
-          name: "clothing",
-          content: 6
-        },
-        {
-          name: "footwear",
-          content: 2
-        },
-        {
-          name: "optional",
-          content: 7
-        }
-      ]
+      
     };
   }
 
@@ -32,11 +15,13 @@ class BuildAPack extends React.Component {
   render() {
     return (
       <div>
-        <div>
+        {/* <div>
           <Link to="/buildapack/:category">
             <p>{this.state.category[0].name}</p>
           </Link>
-        </div>
+        </div> */}
+        <Category />
+       
       </div>
     );
   }
