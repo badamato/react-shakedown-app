@@ -7,7 +7,7 @@ class UltralightGearList extends React.Component {
       <div>
           <h1>Ultralight Backpacking Gear</h1>
           <p>"Ultralight" is all about deciding how you can backpack with less gear so you can move faster to cover more ground. You'll have to use your own judgement on going lighter to balance safety and comfort.</p>
-          <p>In the hiking, community, we say, "Hike your own hike," meaning there is no right or wrong way to hike the trail. </p>
+          <p>In the hiking, community, we say, "Hike your own hike," meaning there is no right or wrong way to hike the trail. You can use our </p>
         <ul>
           <li>1</li>
           <li>2</li>
