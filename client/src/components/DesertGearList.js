@@ -127,7 +127,7 @@ class DesertGearList extends React.Component {
             <li>Toothbrush/Toothpaste</li>
             <li>Insect Repellent</li>
             <li>Book/ Journal and Pen</li>
-            <li>Bear Canister</li>
+            <li>Bear Canister(if required)</li>
             <li>Scent-proof Bags</li>
             <li>Whistle</li>
             <li>Cord</li>

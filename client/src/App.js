@@ -1,5 +1,6 @@
 import React, { Component } from "react";
 import { BrowserRouter as Router, Route, Link } from "react-router-dom";
+import {NavLink} from 'react-router-dom';
 import Home from "./components/Home";
 import Hikes from "./components/Hikes";
 import TenEssentials from "./components/TenEssentials";
@@ -15,6 +16,19 @@ import GearType from "./components/GearType";
 import logo from "./logo.svg";
 import "./App.css";
 
+const Navigation = (props) => 
+  <nav>
+    <ul>
+      <li><NavLink to= '/'>Home</NavLink></li>
+      <li><NavLink to="/hikes">Gear Checklists</NavLink></li>
+    
+
+    </ul>
+  </nav>
+
+
+
+
 class App extends Component {
   render() {
     return (
@@ -24,6 +38,7 @@ class App extends Component {
             <img src={logo} className="App-logo" alt="logo" />
             <h1 className="App-title">Welcome to Shakedown</h1>
           </header>
+          <Navigation />
           <Route exact path="/" component={Home} />
           {/* Gear Checklists */}
           <Route exact path="/hikes" component={Hikes} />
