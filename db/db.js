@@ -45,7 +45,6 @@ function showAllCatTypes(cat_id) {
 //   .catch((error) => {console.log(error);});
 
 
-
 function showAllMyGear(user_id) {
   return db.any(`SELECT * FROM Gear_Inventory WHERE user_id=$1`, [user_id])
 }
@@ -54,13 +53,14 @@ function showAllMyGear(user_id) {
 //   .then((data) => {console.log(data);})
 //   .catch((error) => {console.log(error);});
 
+
 function showMyGearWeight(user_id) {
   return db.any(`SELECT weight FROM Gear_Inventory WHERE user_id=$1`, [user_id])
 }
 
-showMyGearWeight(2)
-  .then((data) => {console.log(data);})
-  .catch((error) => {console.log(error);});
+// showMyGearWeight(2)
+//   .then((data) => {console.log(data);})
+//   .catch((error) => {console.log(error);});
 
 
 
@@ -77,7 +77,6 @@ function addMyGearRecord(user_id, name, gender, image, weight, type_name, cat_na
 //   .catch((error) => {console.log(error);});
 
 
-
 //DELETE++++++++++++++++++++++++++++++++
 function deleteMyGearRecord(inv_id) {
   return db.result(`DELETE FROM Gear_Inventory WHERE inv_id = $1`, [inv_id])
@@ -90,10 +89,11 @@ function deleteMyGearRecord(inv_id) {
 
 
 //UPDATE++++++++++++++++++++++++++++++++
-function updateMyGear(inv_id, newWeight) {
-  return db.result("update inventory set weight='$1' where id=$2", [newWeight, inv_id]);
+function updateMyGear(newWeight, inv_id, user_id) {
+  return db.result(`update Gear_Inventory set weight='$1' where inv_id=$2 and user_id=$3`, [newWeight, inv_id, user_id])
 }
-// setWeight(6, '5.55')
+
+// updateMyGear(5.55, 77, 2)
 //   .then((data) => { console.log(data); })
 //   .catch((error) => { console.log(error); });
 
@@ -103,5 +103,7 @@ module.exports = {
   showOneCategory,
   showAllCatTypes,
   addMyGearRecord,
-  deleteMyGearRecord
+  deleteMyGearRecord,
+  showMyGearWeight,
+  updateMyGear
 }

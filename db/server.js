@@ -28,7 +28,7 @@ app.get('/api', (req, res) => {
 })
 
 
-////////////////////////////ROUTE TO GET ONE CATEGORY
+/////////////////////////////ROUTE TO GET ONE CATEGORY IN INVENTORY
 app.get('/api/:category', (req,res) => {
     // res.send('Got a category')
     shakedown.showOneCategory(req.params.category)
@@ -43,8 +43,7 @@ app.get('/api/:category', (req,res) => {
 })
 
 
-
-////////////////////////////ROUTE TO GET ALL TYPES FROM ONE CATEGORY
+/////////ROUTE TO GET ALL TYPES OF GEAR FROM ONE CATEGORY IN INVENTORY
 app.get('/api/:category/gearType', (req,res) => {
     // res.send('Got a type of gear')
     shakedown.showAllCatTypes(req.params.category)
@@ -59,25 +58,62 @@ app.get('/api/:category/gearType', (req,res) => {
 })
 
 
-//get all my gear
-app.get('/api/:category/gearType', (req,res) => {
-    // res.send('Got a type of gear')
-    shakedown.addMyGearRecord(req.params.category)
-    .then((data) => {
-        console.log(data);
-        res.send(data);
-    })
+/////////////////////////////////ROUTE TO ADD MY INITIAL GEAR RECORD
+// `http://10.150.50.222:3500/api/3/addRecord`
+app.post('/api/:user_id/myGear', (req,res) => {
+    // res.send('Got my record')
+    // open the package, pass it to addMyGearRecord form
+    let user_id = req.body.user_id
+    let name = req.body.name
+    let gender = req.body.gender
+    let image = req.body.image
+    let weight = req.body.weight
+    let type_name = req.body.type_name
+    let cat_name = req.body.cat_name
 
-    .catch((error) => {
-        console.log(error);
-    })
+    shakedown.addMyGearRecord(user_id, name, gender, image, weight, type_name, cat_name)
+        .then((data) => {
+        console.log(data)
+        // res.send(data);
+        res.redirect(`/api/${rec.body.user_id}`);
+        })       
+        .catch((error) => {console.log(error);
+        })
+})
+
+
+////////////////////////////ROUTE TO EDIT WEIGHT ON A PIECE OF MY GEAR RECORD (UPDATE)
+
+
+
+////////////////////////////ROUTE TO DELETE A PIECE OF MY GEAR
+app.get('/api/:user_id/myGear', (req,res) => {
+    // res.send('This is my inventory card to delete')
+    //get one record from inventory (stamped with user_id)
+
+    let user_id = req.params.user_id
+
+    flashcard.showAllMyGear(user_id)
+        .then((data) => {
+            res.render('my-gear-page',
+                data)
+        })
+        .catch((error) =>  console.log(error))
+})
+
+//delete the record
+app.post('/api/:inv_id/myGear', (req,res) => {
+    // res.send('You deleted it!')
+    let inv_id = req.params.inv_id
+    flashcard.deleteMyGearRecord(inv_id)
+        .then((data) => {
+            res.redirect(`/api/${req.body.user_id}`)
+        })
 })
 
 
 
-//add my gear
-//delete my gear
-//edit my gear
+////////////////////////////ROUTE TO GET THE WEIGHT ON A PIECE OF MY GEAR
 
 
 
