@@ -11,8 +11,7 @@ const shakedown = require('./db');
 
 
 
-
-////////////////////////////ROUTE TO GET ALL CATEGORIES
+//////////////////////Build-A-Pack: ROUTE TO GET ALL CATEGORIES
 app.get('/api', (req, res) => {
     
     // res.send('SERVER CONNECTED!')
@@ -27,8 +26,7 @@ app.get('/api', (req, res) => {
 
 })
 
-
-/////////////////////////////ROUTE TO GET ONE CATEGORY IN INVENTORY
+////////////Build-A-Pack: ROUTE TO GET ONE CATEGORY IN INVENTORY
 app.get('/api/:category', (req,res) => {
     // res.send('Got a category')
     shakedown.showOneCategory(req.params.category)
@@ -43,7 +41,7 @@ app.get('/api/:category', (req,res) => {
 })
 
 
-/////////ROUTE TO GET ALL TYPES OF GEAR FROM ONE CATEGORY IN INVENTORY
+///////////Build-A-Pack: ROUTE TO GET ALL TYPES IN ONE CATEGORY
 app.get('/api/:category/gearType', (req,res) => {
     // res.send('Got a type of gear')
     shakedown.showAllCatTypes(req.params.category)
@@ -58,7 +56,7 @@ app.get('/api/:category/gearType', (req,res) => {
 })
 
 
-/////////////////////////////////ROUTE TO ADD MY INITIAL GEAR RECORD
+/////////////////My-Gear-Page: ROUTE TO ADD MY INITIAL GEAR RECORD
 // `http://10.150.50.222:3500/api/3/addRecord`
 app.post('/api/:user_id/myGear', (req,res) => {
     // res.send('Got my record')
@@ -81,19 +79,13 @@ app.post('/api/:user_id/myGear', (req,res) => {
         })
 })
 
-
-////////////////////////////ROUTE TO EDIT WEIGHT ON A PIECE OF MY GEAR RECORD (UPDATE)
-
-
-
-////////////////////////////ROUTE TO DELETE A PIECE OF MY GEAR
+////////////////My-Gear-Page: ROUTE TO DELETE A PIECE OF MY GEAR
 app.get('/api/:user_id/myGear', (req,res) => {
     // res.send('This is my inventory card to delete')
     //get one record from inventory (stamped with user_id)
-
     let user_id = req.params.user_id
 
-    flashcard.showAllMyGear(user_id)
+    shakedown.showAllMyGear(user_id)
         .then((data) => {
             res.render('my-gear-page',
                 data)
@@ -102,20 +94,21 @@ app.get('/api/:user_id/myGear', (req,res) => {
 })
 
 //delete the record
-app.post('/api/:inv_id/myGear', (req,res) => {
+app.post('/api/:user_id/myGear', (req,res) => {
     // res.send('You deleted it!')
     let inv_id = req.params.inv_id
-    flashcard.deleteMyGearRecord(inv_id)
+    shakedown.deleteMyGearRecord(inv_id)
         .then((data) => {
-            res.redirect(`/api/${req.body.user_id}`)
+            res.redirect(`/api/${inv_id}`)
         })
 })
 
 
+/////My-Gear-Page: ROUTE TO GET THE WEIGHT ON ONE PIECE OF MY GEAR
 
-////////////////////////////ROUTE TO GET THE WEIGHT ON A PIECE OF MY GEAR
 
 
+/////My-Gear-Page: ROUTE TO UPDATE WEIGHT ON ONE PIECE OF MY GEAR
 
 
 
