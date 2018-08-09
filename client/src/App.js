@@ -1,6 +1,6 @@
 import React, { Component } from "react";
 import { BrowserRouter as Router, Route, Link } from "react-router-dom";
-import {NavLink} from 'react-router-dom';
+import { NavLink } from "react-router-dom";
 import Home from "./components/Home";
 import Hikes from "./components/Hikes";
 import TenEssentials from "./components/TenEssentials";
@@ -12,22 +12,32 @@ import MyGear from "./components/MyGear";
 import BuildAPack from "./components/BuildAPack";
 import Category from "./components/Category";
 import GearType from "./components/GearType";
+import About from "./components/About";
 
 import logo from "./logo.svg";
 import "./App.css";
 
-const Navigation = (props) => 
+const Navigation = props => (
   <nav>
     <ul>
-      <li><NavLink to= '/'>Home</NavLink></li>
-      <li><NavLink to="/hikes">Gear Checklists</NavLink></li>
-    
-
+      <li>
+        <NavLink to="/">Home</NavLink>
+      </li>
+      <li>
+        <NavLink to="/hikes">Gear Checklists</NavLink>
+      </li>
+      <li>
+        <NavLink to="/mygear">My Gear</NavLink>
+      </li>
+      <li>
+        <NavLink to="/buildapack">Build A Pack</NavLink>
+      </li>
+      <li>
+        <NavLink to="/about">About</NavLink>
+      </li>
     </ul>
   </nav>
-
-
-
+);
 
 class App extends Component {
   render() {
@@ -38,6 +48,7 @@ class App extends Component {
             <img src={logo} className="App-logo" alt="logo" />
             <h1 className="App-title">Welcome to Shakedown</h1>
           </header>
+          {/* Navigation */}
           <Navigation />
           <Route exact path="/" component={Home} />
           {/* Gear Checklists */}
@@ -68,7 +79,12 @@ class App extends Component {
           {/* Build a Pack */}
           <Route exact path="/buildapack" component={BuildAPack} />
           <Route exact path="/buildapack/:category" component={Category} />
-          <Route exact path="/buildapack/:category/:geartype" component={GearType}/>
+          <Route
+            exact
+            path="/buildapack/:category/:geartype"
+            component={GearType}
+          />
+          <Route exact path="/about" component={About} />
         </div>
       </Router>
     );
