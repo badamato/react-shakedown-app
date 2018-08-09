@@ -1,6 +1,6 @@
 import React from "react";
 import { BrowserRouter as Router, Route, Link } from "react-router-dom";
-import GearType from "./GearType";
+import GearType from "./GearType"; 
 
 class Category extends React.Component {
   constructor(props) {
