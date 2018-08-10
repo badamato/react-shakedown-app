@@ -7,7 +7,11 @@ class MyGearSingle extends React.Component{
     }
     render(){
         return (
-            <div>{this.props.my_gear_name}</div>
+            <div>
+               
+            <p>{this.props.my_gear_name} </p>
+            <p>{this.props.my_gear_weight} oz.</p>
+            </div>
         )
     }
 }

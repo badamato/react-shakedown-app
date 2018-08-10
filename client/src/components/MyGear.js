@@ -19,6 +19,9 @@ class MyGear extends React.Component {
       return <p>
         <MySingleGear 
         my_gear_name={singleGear.name}
+        my_gear_img={singleGear.image}
+        my_gear_weight={singleGear.weight}
+        
         />
       </p>
     })
