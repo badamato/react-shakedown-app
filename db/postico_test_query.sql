@@ -65,7 +65,7 @@ VALUES
     (1, 'Other Essentials'),
     (2, 'Top Baselayer'),
     (2, 'Bottom Baselayer'),
-    (2, 'Under Garments'),
+    (2, 'Undergarments'),
     (2, 'Bottoms'),
     (2, 'Tops'),
     (2, 'Outerwear Clothing'),
@@ -101,15 +101,37 @@ COPY Gear_Inventory (name, gender, image, weight, type_name, cat_name, user_id)
     CSV HEADER
 ;
 
-select name, inv_id, weight
+
+-- clear out the fucked up type_id values :) lol
+update gear_inventory
+set type_id=NULL;
+
+-- set the type_id based on the type_names
+update gear_inventory
+set type_id=gear_type.type_id
+from gear_type
+where gear_inventory.type_name=gear_type.type_name;
+
+
+-- clear out the fucked up cat_id values :) lol
+update gear_inventory
+set cat_id=NULL;
+
+-- set the cat_id based on the cat_names
+update gear_inventory
+set cat_id=gear_category.cat_id
+from gear_category
+where gear_inventory.cat_name=gear_category.cat_name;
+
+--from (select t.type_id
+--	from gear_type as t
+--inner join gear_inventory as i
+--	on t.type_name = i.type_name) as subquery;
 	
-from gear_inventory;
-
-
-(select t.type_id
-	from gear_type as t
-inner join gear_inventory as i
-	on t.type_name = i.type_name) as subquery;	
+--(select t.type_id
+--	from gear_type as t
+--inner join gear_inventory as i
+--	on t.type_name = i.type_name) as subquery;	
 
 
 
