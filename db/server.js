@@ -55,9 +55,9 @@ app.get("/api/BAP/:category/geartypes", (req, res) => {
 
 
 ///////////Build-A-Pack: ROUTE TO GET ALL OF A SINGLE TYPE IN A CATEGORY 
-app.get("/api/BAP/category/:geartypes/everyoftype", (req, res) => {
+app.get("/api/BAP/:category/:geartypes", (req, res) => {
   // res.send('Got a type of gear')
-  shakedown.showAllOfaType(req.params.geartypes)
+  shakedown.showAllOfaType(req.params.category, req.params.geartypes)
     .then(data => {
       console.log(data);
       res.send(data);

@@ -38,7 +38,7 @@ function showAllCatTypes(cat_id) {
 
 function showAllOfaType(cat_name, type_name) {
   return db.any(
-    "SELECT name FROM Gear_Inventory WHERE cat_name='$1#' and type_name='$2#'",
+    "SELECT name, weight FROM Gear_Inventory WHERE cat_name='$1#' and type_name='$2#'",
     [cat_name, type_name]
   );
 }
