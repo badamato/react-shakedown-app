@@ -45,7 +45,7 @@ class BuildAPack extends React.Component {
         category: res.data
       })
     })
-  //component will  mount -once API has been recieved
+
   //handle add selected products
   //handle remove products
   //sum total weight

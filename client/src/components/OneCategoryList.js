@@ -2,38 +2,50 @@ import React from "react";
 import { BrowserRouter as Router, Route, Link } from "react-router-dom";
 import axios from "axios";
 
-import DummyEssentialsList from "../EssentialsList";
-import DummyClothingList from "../ClothingList";
-import DummyFootwearList from "../FootwearList";
-import DummyOptionalList from "../OptionalList";
+import OneCategoryListItem from "./OneCategoryListItem";
+import TotalWeight from "./TotalWeight";
 
 // Route "/buildapack/:categoryid"
-  
 
+//type_name
 class OneCategoryList extends React.Component {
   constructor(props) {
     super(props);
     this.state = {
       categoryListItem: []
-    }
-
-    console.log(props);
-   
     };
 
-
+    console.log(props);
+  }
 
   render() {
+    let oneListItem = this.state.categoryListItem.map(singleListItem => {
+      // return <p>{singleListItem.type_name}</p>;
+      return (
+        <OneCategoryListItem
+          listItemName={singleListItem.type_name}
+          typeid={singleListItem.type_id}
+        />
+      );
+    });
+
     return (
       <div>
-        Here's the list, mutha fucka:  
+        <h3>{oneListItem}</h3>
+        <TotalWeight />
       </div>
     );
   }
 
-  componentDidMount(){
+  componentDidMount() {
     //make an AJAx request to API and retrieve category list
-    axios.get(`/`)
+    let category_id = this.props.match.params.categoryid;
+    axios.get(`/api/BAP/${category_id}/geartypes`).then(res => {
+      console.log(res);
+      this.setState({
+        categoryListItem: res.data
+      });
+    });
   }
 }
 
