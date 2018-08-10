@@ -37,8 +37,7 @@ CREATE TABLE Gear_Inventory (
 
 
 COPY Gear_Inventory (name, gender, image, weight, type_name, cat_name) 
-    FROM '/Users/aylindebruyne/DigitalCrafts-2018-04/Final Project/shakedown-app/db/Gear_Inventory.csv' 
-
+    FROM '/Users/aylindebruyne/DigitalCrafts-2018-04/Final Project/shakedown-app/db/Gear_Inventory.csv'
     DELIMITER ',' 
     CSV HEADER
 ;
@@ -47,9 +46,9 @@ COPY Gear_Inventory (name, gender, image, weight, type_name, cat_name)
 
 CREATE TABLE Gear_Category (
     cat_id SERIAL NOT NULL,
-
     cat_name character varying(200),
     PRIMARY KEY(cat_id)
+);
 
 
 
@@ -65,12 +64,10 @@ VALUES
 
 
 CREATE TABLE Gear_Type (
-
     type_id SERIAL NOT NULL,
     cat_id INTEGER,
     type_name character varying(200),
 	PRIMARY KEY(type_id)
-
 );
 
 
@@ -104,15 +101,11 @@ VALUES
     (4, 'Boots/Shoes Optional'),
     (4, 'Other Optional'),
     (4, 'Personal'),
-    (4, 'Sleeping')
-;
+    (4, 'Sleeping');
+    
 
 SELECT inv_id, g.user_id
-
 INTO Users_Gear
-
 FROM Gear_Inventory g
-
 LEFT JOIN Users u
-
 ON g.user_id = u.user_id;
