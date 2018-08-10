@@ -16,14 +16,14 @@ class MyGear extends React.Component {
  
   render() {
     let onePieceOfMyGear = this.state.myGear.map(singleGear => {
-      return <p>
-        <MySingleGear 
+      return (
+        <MySingleGear key={singleGear.inv_id}
         my_gear_name={singleGear.name}
         my_gear_img={singleGear.image}
         my_gear_weight={singleGear.weight}
-        
-        />
-      </p>
+      
+        />)
+      
     })
     return (
       <div>
