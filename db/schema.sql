@@ -16,7 +16,7 @@ CREATE TABLE Gear_Inventory (
 
 
 COPY Gear_Inventory (name, gender, image, weight, type_name, cat_name) 
-    FROM './Gear_Inventory.csv' 
+    FROM '/Users/aylindebruyne/DigitalCrafts-2018-04/Final Project/shakedown-app/db/Gear_Inventory.csv' 
     DELIMITER ',' 
     CSV HEADER
 ;
@@ -40,7 +40,7 @@ VALUES
 CREATE TABLE Gear_Type (
     type_id SERIAL PRIMARY KEY,
     cat_id INTEGER REFERENCES Gear_Category(cat_id),
-    type_name character varying(200)
+    type_name character varying(200)
 );
 
 
