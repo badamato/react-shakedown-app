@@ -6,25 +6,26 @@ import MySingleGear from "./MyGearSingle";
 import NewGearForm from "./NewGearForm";
 
 class MyGear extends React.Component {
-    constructor(props){
-      super(props)
-      this.state = {
-        myGear: []
-      }
-    }
 
- 
+  constructor(props) {
+    super(props);
+    this.state = {
+      myGear: []
+    };
+  }
+
+
   render() {
     let onePieceOfMyGear = this.state.myGear.map(singleGear => {
       return (
-        <MySingleGear key={singleGear.inv_id}
-        my_gear_name={singleGear.name}
-        my_gear_img={singleGear.image}
-        my_gear_weight={singleGear.weight}
-      
-        />)
-      
-    })
+
+          my_gear_name={singleGear.name}
+          my_gear_img={singleGear.image}
+          my_gear_weight={singleGear.weight}
+        />
+      );
+    });
+
     return (
       <div>
         <h3>Here is my gear sucka</h3>
@@ -43,17 +44,18 @@ class MyGear extends React.Component {
   componentDidMount() {
     //make an AJAX request to API and retrieve all categories and render array to page
     // axios.get("/api/:user_id/mygear")
-      axios.get('/api/1/mygear')
-     .then(res => {
-       console.log(res);
-       this.setState({
-         myGear: res.data
-       })
-     })
 
-  // onSubmit = fields => {
-  //   console.log('App comp got:', fields );
-  // }
-}
+    axios.get("/api/1/mygear").then(res => {
+      console.log(res);
+      this.setState({
+        myGear: res.data
+      });
+    });
+
+    // onSubmit = fields => {
+    //   console.log('App comp got:', fields );
+    // }
+  }
+
 }
 export default MyGear;
