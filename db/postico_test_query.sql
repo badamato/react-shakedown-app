@@ -1,17 +1,17 @@
 
-DROP TABLE Gear_Inventory;
-DROP TABLE Gear_Category;
-DROP TABLE Gear_Type;
-DROP TABLE Users;
+DROP TABLE Gear_Inventory CASCADE;
+DROP TABLE Gear_Category CASCADE;
+DROP TABLE Gear_Type CASCADE;
+DROP TABLE Users CASCADE;
+DROP TABLE Users_Gear CASCADE;
 
 
 CREATE TABLE Users (
-	user_id SERIAL NOT NULL,
+	user_id SERIAL PRIMARY KEY,
 	first_name character varying(200),
 	last_name character varying(200),
 	gender character varying(1),
-	login TIMESTAMPTZ DEFAULT Now(),
-	PRIMARY KEY (user_id)
+	login TIMESTAMPTZ DEFAULT Now()
 );
 
 INSERT INTO Users
@@ -22,31 +22,10 @@ VALUES
 	('Sarah', 'Lee', 'F');
 
 
-CREATE TABLE Gear_Inventory (
-    inv_id SERIAL NOT NULL,
-    name character varying(200),
-    gender character varying(1),
-    image character varying(2083),
-    weight numeric(5,2),
-    type_name character varying(200),
-    cat_name character varying(200),
-    user_id INTEGER REFERENCES Users(user_id),
-    PRIMARY KEY(inv_id)
-);
-
-
-COPY Gear_Inventory (name, gender, image, weight, type_name, cat_name, user_id) 
-    FROM '/Users/elizabethdamato/Documents/digitalcrafts/capstone/react-shakedown-app/db/Gear_Inventory.csv' 
-    DELIMITER ',' 
-    CSV HEADER
-;
-
-
 
 CREATE TABLE Gear_Category (
-    cat_id SERIAL NOT NULL,
-    cat_name character varying(200),
-    PRIMARY KEY(cat_id)
+    cat_id SERIAL PRIMARY KEY,
+    cat_name character varying(200)
 );
 
 
@@ -62,10 +41,9 @@ VALUES
 
 
 CREATE TABLE Gear_Type (
-    type_id SERIAL NOT NULL,
+    type_id SERIAL PRIMARY KEY,
     cat_id INTEGER,
-    type_name character varying(200),
-	PRIMARY KEY(type_id)
+    type_name character varying(200)
 );
 
 
@@ -101,6 +79,41 @@ VALUES
     (4, 'Personal'),
     (4, 'Sleeping')
 ;
+
+
+CREATE TABLE Gear_Inventory (
+    inv_id SERIAL PRIMARY KEY,
+    name character varying(200),
+    gender character varying(1),
+    image character varying(2083),
+    weight numeric(5,2),
+    type_id INTEGER REFERENCES gear_type(type_id),
+    type_name character varying(200),
+    cat_id INTEGER REFERENCES gear_category(cat_id),
+    cat_name character varying(200),
+    user_id INTEGER REFERENCES users(user_id)
+);
+
+
+COPY Gear_Inventory (name, gender, image, weight, type_name, cat_name, user_id) 
+    FROM '/Users/elizabethdamato/Documents/digitalcrafts/capstone/react-shakedown-app/db/Gear_Inventory.csv' 
+    DELIMITER ',' 
+    CSV HEADER
+;
+
+select name, inv_id, weight
+	
+from gear_inventory;
+
+
+(select t.type_id
+	from gear_type as t
+inner join gear_inventory as i
+	on t.type_name = i.type_name) as subquery;	
+
+
+
+
 
 SELECT inv_id, g.user_id
 

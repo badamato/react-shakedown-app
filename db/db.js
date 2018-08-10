@@ -37,11 +37,11 @@ function showAllCatTypes(cat_id) {
 //   .catch((error) => {console.log(error);});
 
 
-function showAllOfaType(cat_name, type_name) {
-  return db.any("SELECT name, weight FROM Gear_Inventory WHERE cat_name='$1#' and type_name='$2#'", [cat_name, type_name]);
+function showAllOfaType(cat_id, type_id) {
+  return db.any("SELECT name, weight FROM Gear_Inventory WHERE cat_id='$1' and type_id='$2'", [cat_id, type_id]);
 }
 
-showAllOfaType('Essentials', 'Backpack')
+showAllOfaType(2, 3)
   .then((data) => {console.log(data);})
   .catch((error) => {console.log(error);});
 

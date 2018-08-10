@@ -28,12 +28,13 @@ CREATE TABLE Gear_Inventory (
     gender character varying(1),
     image character varying(2083),
     weight numeric(5,2),
+    type_id INTEGER REFERENCES Gear_Type(type_id),
     type_name character varying(200),
+    cat_id INTEGER REFERENCES Gear_Category(cat_id),
     cat_name character varying(200),
     user_id INTEGER REFERENCES Users(user_id),
     PRIMARY KEY(inv_id)
 );
-
 
 
 COPY Gear_Inventory (name, gender, image, weight, type_name, cat_name) 
