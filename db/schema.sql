@@ -1,7 +1,7 @@
 DROP TABLE Gear_Inventory;
 DROP TABLE Gear_Category;
 DROP TABLE Gear_Type;
-DROP TABLE inventory;
+
 
 
 CREATE TABLE Gear_Inventory (
@@ -40,39 +40,39 @@ VALUES
 CREATE TABLE Gear_Type (
     type_id SERIAL PRIMARY KEY,
     cat_id INTEGER REFERENCES Gear_Category(cat_id),
-    type_name character varying(200)
+    type_name character varying(200)
 );
 
 
 INSERT INTO Gear_Type
     (type_name)
 VALUES
-    ('backpack'),
-    ('shelter'),
-    ('sleepingBag'),
-    ('sleepingPad'),
-    ('stove'),
-    ('cookware'),
-    ('waterFilter'),
-    ('waterBottleReservoir'),
-    ('headlamp'),
-    ('navigation'),
-    ('firstAid'),
-    ('repairKit'),
-    ('otherEssentials'),
-    ('topBaselayer'),
-    ('bottomBaselayer'),
-    ('undergarments'),
-    ('bottoms'),
-    ('tops'),
-    ('outerwearClothing'),
-    ('bootsShoesFootwear'),
-    ('socks'),
-    ('tools'),
-    ('outerwearOptional'),
-    ('sacks'),
-    ('bootsShoesOptional'),
-    ('otherOptional'),
-    ('personal'),
-    ('sleeping')
+    ('Backpack'),
+    ('Shelter'),
+    ('Sleeping Bag'),
+    ('Sleeping Pad'),
+    ('Stove'),
+    ('Cookware'),
+    ('Water Filter'),
+    ('Water Bottle/Reservoir'),
+    ('Headlamp'),
+    ('Navigation'),
+    ('First Aid'),
+    ('Repair Kit'),
+    ('Other Essentials'),
+    ('Top Baselayer'),
+    ('Bottom Baselayer'),
+    ('Undergarments'),
+    ('Bottoms'),
+    ('Tops'),
+    ('Outerwear Clothing'),
+    ('Boots/Shoes Footwear'),
+    ('Socks'),
+    ('Tools'),
+    ('Outerwear Optional'),
+    ('Sacks'),
+    ('Boots/Shoes Optional'),
+    ('Other Optional'),
+    ('Personal'),
+    ('Sleeping')
 ;
