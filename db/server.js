@@ -53,6 +53,24 @@ app.get("/api/BAP/:category/geartypes", (req, res) => {
     });
 });
 
+
+///////////Build-A-Pack: ROUTE TO GET ALL OF A SINGLE TYPE IN A CATEGORY 
+app.get("/api/BAP/category/:geartypes/everyoftype", (req, res) => {
+  // res.send('Got a type of gear')
+  shakedown.showAllOfaType(req.params.geartypes)
+    .then(data => {
+      console.log(data);
+      // res.send(data);
+      res.render('all-the-types-page', data);
+    })
+
+    .catch(error => {
+      console.log(error);
+    });
+});
+
+
+
 /////////////////My-Gear-Page: ROUTE TO ADD MY INITIAL GEAR RECORD
 // `http://10.150.50.222:3500/api/3/addRecord`
 app.post("/api/:user_id/addmygear", (req, res) => {
