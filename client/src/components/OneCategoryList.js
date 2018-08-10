@@ -2,14 +2,10 @@ import React from "react";
 import { BrowserRouter as Router, Route, Link } from "react-router-dom";
 import axios from "axios";
 
-import DummyEssentialsList from "../EssentialsList";
-import DummyClothingList from "../ClothingList";
-import DummyFootwearList from "../FootwearList";
-import DummyOptionalList from "../OptionalList";
 
 // Route "/buildapack/:categoryid"
   
-
+//type_name
 class OneCategoryList extends React.Component {
   constructor(props) {
     super(props);
@@ -24,9 +20,12 @@ class OneCategoryList extends React.Component {
 
 
   render() {
+    let oneListItem = this.state.categoryListItem.map(singleListItem => {
+      return <p>{singleListItem.type_name}</p>
+    })
     return (
       <div>
-        Here's the list, mutha fucka:  
+        <h3>{oneListItem}</h3> 
       </div>
     );
   }
@@ -36,7 +35,10 @@ class OneCategoryList extends React.Component {
     let category_id = this.props.match.params.categoryid
     axios.get(`/api/BAP/${category_id}/geartypes`)
       .then(res => {
-        console.log(res)
+        console.log(res);
+        this.setState({
+          categoryListItem: res.data
+        })
       })
   }
 }
