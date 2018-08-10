@@ -10,7 +10,7 @@ class Category extends React.Component {
     
   }
 
-  //AJAX my ass some of that category goodness, render everything in that catergory to the page
+  //AJAX  some of that category goodness, render everything in that catergory to the page
   render() {
  
     return (

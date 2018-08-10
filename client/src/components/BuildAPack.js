@@ -1,23 +1,21 @@
 import React from "react";
 import { BrowserRouter as Router, Route, Link } from "react-router-dom";
+import axios from "axios";
+
 import Category from "./Category";
 import TenEssentials from "./TenEssentials";
 import TotalWeight from "./TotalWeight";
 
-import DummyCategories from "../Categories";
+// import DummyCategories from "../Categories";
 
 class BuildAPack extends React.Component {
   constructor(props) {
     super(props);
     this.state = {
-      category: DummyCategories
+      category: []
     };
   }
-  //make an AJAX request to API and retrieve all categories and render array to page
-  //component will  mount -once API has been recieved
-  //handle add selected products
-  //handle remove products
-  //sum total weight
+
 
   render() {
     let allcategories = this.state.category.map(singlecategory => {
@@ -37,6 +35,23 @@ class BuildAPack extends React.Component {
       </div>
     );
   }
+
+  componentDidMount() {
+   //make an AJAX request to API and retrieve all categories and render array to page
+   axios.get("/api/BAP/categories")
+    .then(res => {
+      console.log(res);
+      this.setState({
+        category: res.data
+      })
+    })
+  //component will  mount -once API has been recieved
+  //handle add selected products
+  //handle remove products
+  //sum total weight
+  }
+
+
 }
 
 export default BuildAPack;

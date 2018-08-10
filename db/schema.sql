@@ -35,8 +35,10 @@ CREATE TABLE Gear_Inventory (
 );
 
 
-COPY Gear_Inventory (name, gender, image, weight, type_name, cat_name, user_id) 
-    FROM '/Users/elizabethdamato/Documents/digitalcrafts/capstone/react-shakedown-app/db/Gear_Inventory.csv' 
+
+COPY Gear_Inventory (name, gender, image, weight, type_name, cat_name) 
+    FROM '/Users/aylindebruyne/DigitalCrafts-2018-04/Final Project/shakedown-app/db/Gear_Inventory.csv' 
+
     DELIMITER ',' 
     CSV HEADER
 ;
@@ -45,9 +47,10 @@ COPY Gear_Inventory (name, gender, image, weight, type_name, cat_name, user_id)
 
 CREATE TABLE Gear_Category (
     cat_id SERIAL NOT NULL,
+
     cat_name character varying(200),
     PRIMARY KEY(cat_id)
-);
+
 
 
 
@@ -62,10 +65,12 @@ VALUES
 
 
 CREATE TABLE Gear_Type (
+
     type_id SERIAL NOT NULL,
     cat_id INTEGER,
     type_name character varying(200),
 	PRIMARY KEY(type_id)
+
 );
 
 
