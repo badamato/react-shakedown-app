@@ -1,6 +1,8 @@
 import React from "react";
 import { BrowserRouter as Router, Route, Link } from "react-router-dom";
 import axios from "axios";
+
+import MySingleGear from "./MyGearSingle";
 import NewGearForm from "./NewGearForm";
 
 class MyGear extends React.Component {
@@ -14,7 +16,11 @@ class MyGear extends React.Component {
  
   render() {
     let onePieceOfMyGear = this.state.myGear.map(singleGear => {
-      return <p>{singleGear.name}</p>
+      return <p>
+        <MySingleGear 
+        my_gear_name={singleGear.name}
+        />
+      </p>
     })
     return (
       <div>
