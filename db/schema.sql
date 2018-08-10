@@ -23,8 +23,9 @@ COPY Gear_Inventory (name, gender, image, weight, type_name, cat_name)
 
 
 CREATE TABLE Gear_Category (
-    cat_id SERIAL PRIMARY KEY,
+    cat_id SERIAL NOT NULL,
     cat_name character varying(200)
+    PRIMARY KEY (cat_id)
 );
 
 INSERT INTO Gear_Category
