@@ -60,8 +60,8 @@ app.get("/api/BAP/category/:geartypes/everyoftype", (req, res) => {
   shakedown.showAllOfaType(req.params.geartypes)
     .then(data => {
       console.log(data);
-      // res.send(data);
-      res.render('all-the-types-page', data);
+      res.send(data);
+      // res.ren('all-the-types-page', data);
     })
 
     .catch(error => {
