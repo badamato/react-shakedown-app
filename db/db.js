@@ -36,15 +36,20 @@ function showAllCatTypes(cat_id) {
 //   .then((data) => {console.log(data);})
 //   .catch((error) => {console.log(error);});
 
-
 function showAllOfaType(cat_name, type_name) {
-  return db.any("SELECT type_name FROM Gear_Inventory WHERE cat_name='$1#' and type_name='$2#'", [cat_name, type_name]);
+  return db.any(
+    "SELECT name FROM Gear_Inventory WHERE cat_name='$1#' and type_name='$2#'",
+    [cat_name, type_name]
+  );
 }
 
-showAllOfaType('Essentials', 'Backpack')
-  .then((data) => {console.log(data);})
-  .catch((error) => {console.log(error);});
-
+// showAllOfaType("Essentials", "Backpack")
+//   .then(data => {
+//     console.log(data);
+//   })
+//   .catch(error => {
+//     console.log(error);
+//   });
 
 function showAllMyGear(user_id) {
   return db.any(`SELECT * FROM Gear_Inventory WHERE user_id=$1`, [user_id]);
@@ -52,7 +57,6 @@ function showAllMyGear(user_id) {
 // showAllMyGear(2)
 //   .then((data) => {console.log(data);})
 //   .catch((error) => {console.log(error);});
-
 
 function showTotalGearWeight(user_id) {
   return db.any(`SELECT weight FROM Gear_Inventory WHERE user_id=$1`, [
