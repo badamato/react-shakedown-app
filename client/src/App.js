@@ -89,7 +89,7 @@ class App extends Component {
           {/* Route to Sub-sub-categories */}
           <Route
             exact
-            path="/buildapack/gear/:typeid"
+            path="/buildapack/:categoryid/:typeid"
             component={OneGearType}
           />
           {/* About */}

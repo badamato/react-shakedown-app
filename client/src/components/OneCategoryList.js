@@ -25,6 +25,7 @@ class OneCategoryList extends React.Component {
         <OneCategoryListItem
           listItemName={singleListItem.type_name}
           typeid={singleListItem.type_id}
+          catid={this.props.match.params.categoryid}
         />
       );
     });
