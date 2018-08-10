@@ -37,6 +37,7 @@ function showAllCatTypes(cat_id) {
 //   .catch((error) => {console.log(error);});
 
 
+
 function showAllOfaType(cat_id, type_id) {
   return db.any("SELECT name, weight FROM Gear_Inventory WHERE cat_id='$1' and type_id='$2'", [cat_id, type_id]);
 }
@@ -46,13 +47,13 @@ function showAllOfaType(cat_id, type_id) {
 //   .catch((error) => {console.log(error);});
 
 
+
 function showAllMyGear(user_id) {
   return db.any(`SELECT * FROM Gear_Inventory WHERE user_id=$1`, [user_id]);
 }
 // showAllMyGear(2)
 //   .then((data) => {console.log(data);})
 //   .catch((error) => {console.log(error);});
-
 
 function showTotalGearWeight(user_id) {
   return db.any(`SELECT weight FROM Gear_Inventory WHERE user_id=$1`, [
