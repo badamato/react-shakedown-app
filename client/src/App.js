@@ -78,7 +78,7 @@ class App extends Component {
           {/* My Gear Inventory */}
           <Route exact path="/mygear" component={MyGear} />
           {/* Build a Pack */}
-          <Route path="/buildapack" component={BuildAPack} />
+          <Route exact path="/buildapack" component={BuildAPack} />
 
           <Route path="/buildapack/:categoryid" component= {OneCategoryList} />
 
