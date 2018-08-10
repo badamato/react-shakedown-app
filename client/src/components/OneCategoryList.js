@@ -33,7 +33,11 @@ class OneCategoryList extends React.Component {
 
   componentDidMount(){
     //make an AJAx request to API and retrieve category list
-    axios.get(`/`)
+    let category_id = this.props.match.params.categoryid
+    axios.get(`/api/BAP/${category_id}/geartypes`)
+      .then(res => {
+        console.log(res)
+      })
   }
 }
 
