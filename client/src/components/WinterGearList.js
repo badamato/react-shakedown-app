@@ -82,6 +82,7 @@ class WinterGearList extends React.Component {
             <li>Socks(2-3pairs)</li>
             <li>Liner Socks</li>
             <li>Crampons/ Microspikes</li>
+            <li>Snow Shoes</li>
             <li>Camp Shoes</li>
           </ul>
         </div>
@@ -100,6 +101,7 @@ class WinterGearList extends React.Component {
             <li>Snow Shovel</li>
             <li>Chemical Heat Packs</li>
             <li>Ice Axe</li>
+            <li>Avalanche transceiver</li>
             <li>Stuff Sacks</li>
             <li>Compression Sacks</li>
             <li>Extra Ziploc Bags</li>
