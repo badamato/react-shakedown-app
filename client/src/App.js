@@ -16,7 +16,7 @@ import OneGearType from "./components/OneGearType";
 import About from "./components/About";
 
 import logo from "./logo.svg";
-import "./App.css";
+import "./css/App.css";
 
 const Navigation = props => (
   <nav>
