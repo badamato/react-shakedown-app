@@ -5,7 +5,7 @@ import Home from "./components/Home";
 import Hikes from "./components/Hikes";
 import TenEssentials from "./components/TenEssentials";
 import ThreeSeasonGearList from "./components/ThreeSeasonGearList";
-import UltralightGearList from "./components/UltralightGearList";
+
 import WinterGearList from "./components/WinterGearList";
 import DesertGearList from "./components/DesertGearList";
 import MyGear from "./components/MyGear";
@@ -60,11 +60,7 @@ class App extends Component {
             path="/hikes/threeseasongearlist"
             component={ThreeSeasonGearList}
           />
-          <Route
-            exact
-            path="/hikes/ultralightgearlist"
-            component={UltralightGearList}
-          />
+          
           <Route
             exact
             path="/hikes/wintergearlist"
