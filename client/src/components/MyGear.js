@@ -35,7 +35,7 @@ class MyGear extends React.Component {
         <hr />
         <div>
           <h4>Add to your Inventory</h4>
-          {/* <NewGearForm onSubmit={fields=>this.onSubmit(fields)}/> */}
+          <NewGearForm />
         </div>
       </div>
     );
