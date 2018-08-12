@@ -37,7 +37,7 @@ function showAllCatTypes(cat_id) {
 //   .catch((error) => {console.log(error);});
 
 function showAllOfaType(type_id) {
-  return db.any(`SELECT name, weight FROM Gear_Inventory WHERE  type_id=$1`, [
+  return db.any(`SELECT name, weight, image FROM Gear_Inventory WHERE  type_id=$1`, [
     type_id
   ]);
 }
