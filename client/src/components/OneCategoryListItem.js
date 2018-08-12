@@ -2,6 +2,8 @@ import React from "react";
 import { BrowserRouter as Router, Route, Link } from "react-router-dom";
 import OneGearType from "./OneGearType";
 
+//LEADS TO ONE GEAR TYPE
+
 class OneCategoryListItem extends React.Component {
   constructor(props) {
     super(props);
@@ -12,7 +14,7 @@ class OneCategoryListItem extends React.Component {
     return (
       <div>
         <p>
-          <Link to={`/buildapack/${this.props.catid}/${this.props.typeid}`}>
+          <Link to={`/buildapack/geartype/${this.props.typeid}`}>
             {this.props.listItemName}
           </Link>
         </p>
