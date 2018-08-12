@@ -48,7 +48,7 @@ class Hikes extends React.Component {
 
         <div class="card text-center winter">
           <div class="card-body">
-            <h5 class="card-title">Winter</h5>
+            <h5 class="card-title">Winter Backpacking</h5>
             <p class="card-text">Lots of layers and big campfires</p>
             <a href="/hikes/wintergearlist" class="btn btn-info">
               Go
@@ -57,7 +57,7 @@ class Hikes extends React.Component {
         </div>
         <div class="card text-center desert">
           <div class="card-body">
-            <h5 class="card-title">Desert</h5>
+            <h5 class="card-title">Desert Backpacking</h5>
             <p class="card-text">Hydrate and meditate</p>
             <a href="/hikes/desertgearlist" class="btn btn-info">
               Go

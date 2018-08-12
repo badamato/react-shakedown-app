@@ -12,6 +12,7 @@ body {
   background-color: rgb(217, 219, 218);
 }
 
+/* Main Image */
 .header {
   width: 100%;
   height: 200px;
@@ -22,6 +23,7 @@ body {
   text-align: center;
 }
 
+/* Nav Bar */
 .home-icon{
     width: 30px;
     height: 40px;
@@ -44,11 +46,14 @@ body {
   background-color: #17a2b894;
 }
 
+/* Header for Category */
 .headline {
   font-weight: bold;
   font-size: 2rem;
   text-align: center;
 }
+
+/* GEAR CHECKLIST DESIGN */
 .big-ten {
   background-image: url(https://images.unsplash.com/photo-1485809052957-5113b0ff51af?ixlib=rb-0.3.5&s=34b8c58599a2d67f3a41d74f3bffc31d&auto=format&fit=crop&w=1533&q=80);
   background-position: center;
@@ -79,7 +84,7 @@ body {
 
 .card {
   margin-bottom: 10px;
-  border: 3px black solid;
+  border: 5px white solid;
 }
 
 .card-title,
@@ -93,12 +98,14 @@ body {
   margin-left: 30%;
 }
 
+/* HOME PAGE BODY */
 .Home-Page {
   display: flex;
   flex-direction: column;
   justify-content: center;
   align-items: center;
   border: 1px black solid;
+  background-color:white;
 }
 
 .main-content{
@@ -108,6 +115,10 @@ body {
   font-size:3rem;
   margin-top:10px;
 }
+
+
+
+/* **************** MEDIA QUERIES ******************************** */
 /* IPAD */
 @media only screen and (min-width: 768px) {
   .header {
