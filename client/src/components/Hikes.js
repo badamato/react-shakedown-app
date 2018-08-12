@@ -30,7 +30,7 @@ class Hikes extends React.Component {
           <div class="card-body">
             <h5 class="card-title">The Ten Essentials</h5>
             <p class="card-text">The Gear You'll Need For Every Trip</p>
-            <a href="/hikes/tenessentials" class="btn btn-infor">
+            <a href="/hikes/tenessentials" class="btn btn-info">
               Go
             </a>
           </div>
@@ -50,7 +50,7 @@ class Hikes extends React.Component {
           <div class="card-body">
             <h5 class="card-title">Winter</h5>
             <p class="card-text">Lots of layers and big campfires</p>
-            <a href="/hikes/threeseasongearlist" class="btn btn-info">
+            <a href="/hikes/wintergearlist" class="btn btn-info">
               Go
             </a>
           </div>
@@ -59,7 +59,7 @@ class Hikes extends React.Component {
           <div class="card-body">
             <h5 class="card-title">Desert</h5>
             <p class="card-text">Hydrate and meditate</p>
-            <a href="/hikes/threeseasongearlist" class="btn btn-info">
+            <a href="/hikes/desertgearlist" class="btn btn-info">
               Go
             </a>
           </div>
