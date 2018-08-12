@@ -26,9 +26,10 @@ class MyGear extends React.Component {
     });
 
     return (
-      <div>
-        <h3>Here is my gear sucka</h3>
-        <img src="http://ndmsg.webs.com/photos/Bug-out-bags-BOBs/huge-backpack1.jpg" />
+      <div className="container">
+        <h3>My Gear Inventory</h3>
+        <p></p>
+        
         <p>{onePieceOfMyGear}</p>
 
         <hr />

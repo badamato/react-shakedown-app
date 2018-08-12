@@ -1,6 +1,12 @@
 import React from "react";
 import { BrowserRouter as Router, Route, Link } from "react-router-dom";
 import axios from "axios";
+
+//PRACTICE
+import MySingleGear from "./MyGearSingle";
+import MyGear from "./MyGear";
+
+
 class OneGearType extends React.Component {
   constructor(props) {
     super(props);
@@ -22,6 +28,7 @@ class OneGearType extends React.Component {
     });
     return (
       <div>
+        <MyGear />
         <p>{singleGear}</p>
       </div>
     );
