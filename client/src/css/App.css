@@ -42,6 +42,45 @@ body {
   margin-bottom: 10px;
 }
 
+.headline{
+  font-weight: bold;
+  font-size: 2rem;
+  text-align: center;
+}
+.big-ten{
+  background-image: url(https://images.unsplash.com/photo-1485809052957-5113b0ff51af?ixlib=rb-0.3.5&s=34b8c58599a2d67f3a41d74f3bffc31d&auto=format&fit=crop&w=1533&q=80);
+  background-position: center;
+  background-size: cover;
+  background-repeat: no-repeat;
+}
+
+.three-season {
+  background-image: url(https://images.unsplash.com/photo-1487730116645-74489c95b41b?ixlib=rb-0.3.5&ixid=eyJhcHBfaWQiOjEyMDd9&s=aa6e65fcad07b9a68420c430034f84f2&auto=format&fit=crop&w=700&q=60);
+  background-position: center;
+  background-size: cover;
+  background-repeat: no-repeat;
+}
+
+.winter{
+  background-image: url(https://images.unsplash.com/photo-1455496231601-e6195da1f841?ixlib=rb-0.3.5&ixid=eyJhcHBfaWQiOjEyMDd9&s=4d1156d3e4dfafbc71a9f293939f3243&auto=format&fit=crop&w=2190&q=80);
+  background-position: center;
+  background-size: cover;
+  background-repeat: no-repeat;
+}
+
+.desert{
+  background-image: url(https://images.unsplash.com/photo-1501004745788-4f4cb08ba8bc?ixlib=rb-0.3.5&ixid=eyJhcHBfaWQiOjEyMDd9&s=efb4245a7026676fbed5280a27faa597&auto=format&fit=crop&w=700&q=60);
+  background-position: center;
+  background-size: cover;
+  background-repeat: no-repeat;
+}
+
+.card{
+  margin-bottom: 10px;
+}
+.card-title, .card-text{
+  background-color: white;
+}
 /* .nav-list {
   background-color: yellow;
   text-align: center;
