@@ -1,6 +1,7 @@
 import React, { Component } from "react";
 import { BrowserRouter as Router, Route, Link } from "react-router-dom";
 import { NavLink } from "react-router-dom";
+import Navigation from "./components/Navigations";
 import Home from "./components/Home";
 import Hikes from "./components/Hikes";
 import TenEssentials from "./components/TenEssentials";
@@ -16,22 +17,6 @@ import About from "./components/About";
 
 import logo from "./logo.svg";
 import "./css/App.css";
-
-const Navigation = props => (
-  <nav>
-    <div className="nav-list">
-      <NavLink to="/" className="nav-item">Home</NavLink>
-
-      <NavLink to="/hikes" className="nav-item">Gear Checklists</NavLink>
-
-      <NavLink to="/mygear" className="nav-item">My Gear</NavLink>
-
-      <NavLink to="/buildapack" className="nav-item">Build A Pack</NavLink>
-
-      <NavLink to="/about" className="nav-item">About</NavLink>
-    </div>
-  </nav>
-);
 
 class App extends Component {
   render() {
