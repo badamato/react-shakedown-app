@@ -130,22 +130,14 @@ app.get("/api/:user_id/deletemygear", (req, res) => {
 app.post("/api/:user_id/deletemygear", (req, res) => {
   // res.send('You deleted it!')
   let inv_id = req.params.inv_id;
-  shakedown.deleteMyGearRecord(inv_id).then(data => {
+  shakedown.deleteMyGearRecord(inv_id)
+
+  .then((data) => {
     res.redirect(`/api/${inv_id}`);
-  });
+  })
+  .catch(error => console.log(error));
 });
 
-
-
-
-    .then((data) => {
-      console.log(data);
-      res.send(data);
-    })
-    .catch(error => {
-      console.log(error);
-    });
-});
 
 
 /////My-Gear-Page: ROUTE TO UPDATE ALL INPUT FIELDS ON ONE PIECE OF MY GEAR
