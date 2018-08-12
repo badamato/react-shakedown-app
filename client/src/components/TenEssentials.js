@@ -4,8 +4,10 @@ import { BrowserRouter as Router, Route, Link } from "react-router-dom";
 class TenEssentials extends React.Component {
   render() {
     return (
-      <div>
+      <div className="container ten-essentials">
+        <div className="container">
         <h1>The Ten Essentials</h1>
+        </div>
         <p>
           If you're heading into the wilderness, you're going to want to take
           the 10 essentials with you. Even on a day hike, it's good practice.

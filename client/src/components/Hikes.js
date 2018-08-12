@@ -4,31 +4,66 @@ import { BrowserRouter as Router, Route, Link } from "react-router-dom";
 class Hikes extends React.Component {
   render() {
     return (
-      <div>
-        <h1>Gear Checklists For Your Next Adventure</h1>
-        <ul>
-          <li>
-            <Link to="/hikes/tenessentials">
-              The Ten Essentials for Every Trip
-            </Link>
-          </li>
-          <li>
-            <Link to="/hikes/threeseasongearlist">
-              Three-Season Backpacking Gear
-            </Link>
-          </li>
-          <li>
-            <Link to="/hikes/ultralightgearlist">
-              Ultralight Backpacking Gear
-            </Link>
-          </li>
-          <li>
-            <Link to="/hikes/wintergearlist">Winter Backpacking Gear</Link>
-          </li>
-          <li>
-            <Link to="/hikes/desertgearlist"> Desert Backpacking Gear</Link>
-          </li>
-        </ul>
+      <div className="container hikes-holder">
+        <div className="container ">
+          <h1 className="headline">Gear Checklists For Your Next Adventure</h1>
+        </div>
+        {/*////////// OLD CODE//////// */}
+        {/* <div className="container">
+          <Link
+            to="/hikes/tenessentials"
+            style={{ textDecoration: "none", color: "white" }}
+          >
+            The Ten Essentials for Every Trip
+          </Link>
+
+          <Link to="/hikes/threeseasongearlist">
+            Three-Season Backpacking Gear
+          </Link>
+
+          <Link to="/hikes/wintergearlist">Winter Backpacking Gear</Link>
+
+          <Link to="/hikes/desertgearlist"> Desert Backpacking Gear</Link>
+        </div> */}
+
+        <div class="card text-center big-ten">
+          <div class="card-body">
+            <h5 class="card-title">The Ten Essentials</h5>
+            <p class="card-text">The Gear You'll Need For Every Trip</p>
+            <a href="/hikes/tenessentials" class="btn btn-info">
+              Go
+            </a>
+          </div>
+        </div>
+
+        <div class="card text-center three-season">
+          <div class="card-body">
+            <h5 class="card-title">Three-Season Backpacking</h5>
+            <p class="card-text">Get ready for Spring, Summer and Fall</p>
+            <a href="/hikes/threeseasongearlist" class="btn btn-info">
+              Go
+            </a>
+          </div>
+        </div>
+
+        <div class="card text-center winter">
+          <div class="card-body">
+            <h5 class="card-title">Winter Backpacking</h5>
+            <p class="card-text">Lots of layers and big campfires</p>
+            <a href="/hikes/wintergearlist" class="btn btn-info">
+              Go
+            </a>
+          </div>
+        </div>
+        <div class="card text-center desert">
+          <div class="card-body">
+            <h5 class="card-title">Desert Backpacking</h5>
+            <p class="card-text">Hydrate and meditate</p>
+            <a href="/hikes/desertgearlist" class="btn btn-info">
+              Go
+            </a>
+          </div>
+        </div>
       </div>
     );
   }

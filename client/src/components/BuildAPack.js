@@ -16,7 +16,6 @@ class BuildAPack extends React.Component {
     };
   }
 
-
   render() {
     let allcategories = this.state.category.map(singlecategory => {
       return (
@@ -37,21 +36,18 @@ class BuildAPack extends React.Component {
   }
 
   componentDidMount() {
-   //make an AJAX request to API and retrieve all categories and render array to page
-   axios.get("/api/BAP/categories")
-    .then(res => {
+    //make an AJAX request to API and retrieve all categories and render array to page
+    axios.get("/api/BAP/categories").then(res => {
       console.log(res);
       this.setState({
         category: res.data
-      })
-    })
+      });
+    });
 
-  //handle add selected products
-  //handle remove products
-  //sum total weight
+    //handle add selected products
+    //handle remove products
+    //sum total weight
   }
-
-
 }
 
 export default BuildAPack;
