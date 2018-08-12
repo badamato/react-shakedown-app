@@ -6,7 +6,8 @@ import Category from "./Category";
 import TenEssentials from "./TenEssentials";
 import TotalWeight from "./TotalWeight";
 
-// import DummyCategories from "../Categories";
+//BUILD A PACK LANDING
+//LEADS TO CATEGORY
 
 class BuildAPack extends React.Component {
   constructor(props) {

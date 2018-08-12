@@ -2,6 +2,8 @@ import React from "react";
 import { BrowserRouter as Router, Route, Link } from "react-router-dom";
 import OneGearType from "./OneGearType";
 
+//LEADS TO ONE GEAR TYPE
+
 class OneCategoryListItem extends React.Component {
   constructor(props) {
     super(props);

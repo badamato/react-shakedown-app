@@ -15,8 +15,8 @@ class OneGearType extends React.Component {
       return (
         <div>
           <img src={`http://localhost:3500${singleGearItem.image}`} />
-          <p>{singleGearItem.name}</p>
-          <p>{singleGearItem.weight}</p>
+          <p>Name: {singleGearItem.name}</p>
+          <p>Ounces: {singleGearItem.weight}</p>
         </div>
       );
     });

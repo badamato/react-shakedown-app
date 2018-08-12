@@ -5,6 +5,8 @@ import axios from "axios";
 import OneCategoryListItem from "./OneCategoryListItem";
 import TotalWeight from "./TotalWeight";
 
+//LEADS TO ONE CATEGORY LIST ITEM
+
 // Route "/buildapack/:categoryid"
 
 //type_name
