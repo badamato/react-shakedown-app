@@ -4,18 +4,12 @@ import { BrowserRouter as Router, Route, Link } from "react-router-dom";
 class Home extends React.Component {
   render() {
     return (
-      <div>
-        <ul>
-          <li>
-            <Link to="/hikes">Gear Checklists</Link>
-          </li>
-          <li>
-            <Link to="/mygear">My Gear</Link>
-          </li>
-          <li>
-            <Link to="/buildapack">Build A Pack </Link>
-          </li>
-        </ul>
+      <div className="Home-Page">
+        <Link to="/hikes" className="home-item">Gear Checklists</Link>
+
+        <Link to="/mygear" className="home-item">My Gear</Link>
+
+        <Link to="/buildapack" className="home-item">Build A Pack </Link>
       </div>
     );
   }
