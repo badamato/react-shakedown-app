@@ -22,6 +22,11 @@ body {
   text-align: center;
 }
 
+.home-icon{
+    width: 30px;
+    height: 40px;
+    padding-bottom: 10px;
+}
 .nav-list {
   display: flex;
   flex-direction: column;
@@ -93,9 +98,16 @@ body {
   flex-direction: column;
   justify-content: center;
   align-items: center;
+  border: 1px black solid;
 }
 
-
+.main-content{
+  border: 1px black solid;
+  width: 100%;
+  text-align: center;
+  font-size:3rem;
+  margin-top:10px;
+}
 /* IPAD */
 @media only screen and (min-width: 768px) {
   .header {

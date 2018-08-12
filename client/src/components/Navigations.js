@@ -76,6 +76,12 @@ const Navigation = props => (
   /////////UP TO DATE CODE
   <nav class="navbar navbar-expand-lg navbar-light bg-light">
     <a class="navbar-brand" href="/">
+      <span>
+        <img
+          className="home-icon"
+          src="https://cdn1.iconfinder.com/data/icons/camping-adventure-and-outdoors-1/32/cottage-cabin-wood-house-camping-outdoor-stay-512.png"
+        />
+      </span>{" "}
       Shakedown
     </a>
     <button
