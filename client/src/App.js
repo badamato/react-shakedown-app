@@ -5,7 +5,6 @@ import Home from "./components/Home";
 import Hikes from "./components/Hikes";
 import TenEssentials from "./components/TenEssentials";
 import ThreeSeasonGearList from "./components/ThreeSeasonGearList";
-
 import WinterGearList from "./components/WinterGearList";
 import DesertGearList from "./components/DesertGearList";
 import MyGear from "./components/MyGear";
@@ -20,23 +19,17 @@ import "./css/App.css";
 
 const Navigation = props => (
   <nav>
-    <ul>
-      <li>
-        <NavLink to="/">Home</NavLink>
-      </li>
-      <li>
-        <NavLink to="/hikes">Gear Checklists</NavLink>
-      </li>
-      <li>
-        <NavLink to="/mygear">My Gear</NavLink>
-      </li>
-      <li>
-        <NavLink to="/buildapack">Build A Pack</NavLink>
-      </li>
-      <li>
-        <NavLink to="/about">About</NavLink>
-      </li>
-    </ul>
+    <div className="nav-list">
+      <NavLink to="/" className="nav-item">Home</NavLink>
+
+      <NavLink to="/hikes" className="nav-item">Gear Checklists</NavLink>
+
+      <NavLink to="/mygear" className="nav-item">My Gear</NavLink>
+
+      <NavLink to="/buildapack" className="nav-item">Build A Pack</NavLink>
+
+      <NavLink to="/about" className="nav-item">About</NavLink>
+    </div>
   </nav>
 );
 
