@@ -6,7 +6,6 @@ import MySingleGear from "./MyGearSingle";
 import NewGearForm from "./NewGearForm";
 
 class MyGear extends React.Component {
-
   constructor(props) {
     super(props);
     this.state = {
@@ -14,11 +13,11 @@ class MyGear extends React.Component {
     };
   }
 
-
   render() {
     let onePieceOfMyGear = this.state.myGear.map(singleGear => {
       return (
-        <MySingleGear key={singleGear.inv_id}
+        <MySingleGear
+          key={singleGear.inv_id}
           my_gear_name={singleGear.name}
           my_gear_img={singleGear.image}
           my_gear_weight={singleGear.weight}
@@ -56,6 +55,5 @@ class MyGear extends React.Component {
     //   console.log('App comp got:', fields );
     // }
   }
-
 }
 export default MyGear;

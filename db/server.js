@@ -70,6 +70,22 @@ app.get("/api/BAP/:category/:geartypes/", (req, res) => {
     });
 });
 
+
+/////My-Gear-Page: ROUTE TO GET ALL OF MY GEAR
+app.get("/api/:user_id/mygear", (req, res) => {
+  // res.send('Got the weight of my piece of gear')
+  shakedown
+    .showAllMyGear(req.params.user_id)
+
+    .then(data => {
+      console.log(data);
+      res.send(data);
+    })
+    .catch(error => {
+      console.log(error);
+    });
+});
+
 /////////////////My-Gear-Page: ROUTE TO ADD MY INITIAL GEAR RECORD
 // `http://10.150.50.222:3500/api/3/addRecord`
 app.post("/api/:user_id/addmygear", (req, res) => {
@@ -118,20 +134,7 @@ app.post("/api/:user_id/deletemygear", (req, res) => {
   });
 });
 
-/////My-Gear-Page: ROUTE TO GET ALL OF MY GEAR
-app.get("/api/:user_id/mygear", (req, res) => {
-  // res.send('Got the weight of my piece of gear')
-  shakedown
-    .showAllMyGear(req.params.user_id)
 
-    .then(data => {
-      console.log(data);
-      res.send(data);
-    })
-    .catch(error => {
-      console.log(error);
-    });
-});
 
 /////My-Gear-Page: ROUTE TO UPDATE ALL INPUT FIELDS ON ONE PIECE OF MY GEAR
 app.post("/api/:user_id/mygear", (req, res) => {

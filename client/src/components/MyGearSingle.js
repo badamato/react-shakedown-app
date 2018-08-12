@@ -16,4 +16,3 @@ class MyGearSingle extends React.Component {
 }
 
 export default MyGearSingle;
-
