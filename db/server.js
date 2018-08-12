@@ -10,6 +10,10 @@ app.use(bodyParser.urlencoded({ extended: false }));
 const shakedown = require("./db");
 
 
+//USE Public folder for styles
+const static = express.static;
+app.use(static('public'))
+
 
 // ********* BUILD A  PACK ROUTES ************** //
 

@@ -23,7 +23,7 @@ class App extends Component {
     return (
       <Router>
         <div className="App">
-          <div class="container">
+          <div className="container">
             <header className="header">
               {/* <img src={logo} className="App-logo" alt="logo" /> */}
               <h1 className="App-title"> Shakedown</h1>
@@ -65,7 +65,7 @@ class App extends Component {
           {/* Route to Sub-sub-categories */}
           <Route
             exact
-            path="/buildapack/:categoryid/:typeid"
+            path="/buildapack/geartype/:typeid"
             component={OneGearType}
           />
           {/* About */}
