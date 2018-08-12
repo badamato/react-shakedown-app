@@ -133,6 +133,46 @@ body {
 
 }
 
+/* MY GEAR PAGE STYLES */
+.my-gear-pg{
+
+  display: flex;
+  flex-direction:column;
+  
+  align-items: center; 
+}
+
+.my-gear-head{
+  font-size: 3rem;
+  font-weight: bold;
+}
+
+
+.gear-container{
+ 
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+
+}
+
+.my-gear-card{
+  width: 100%;
+  border: 3px solid white;
+  display: flex;
+  flex-direction: column;
+  align-content: center;
+  margin-top: 10px;
+ 
+  
+}
+
+.gear-img{
+  width: 50%;
+  margin: 10px auto;
+  
+}
+
 /* **************** MEDIA QUERIES ******************************** */
 /* IPAD */
 @media only screen and (min-width: 768px) {
@@ -145,10 +185,16 @@ body {
   .hikes-holder {
     width: 80%;
   }
+  .my-gear-card{
+    width:50%;
+  }
 }
 /* LAPTOP */
 @media only screen and (min-width: 1024px) {
   .header {
     height: 400px;
+  }
+  .my-gear-card{
+    width: 35%;
   }
 }

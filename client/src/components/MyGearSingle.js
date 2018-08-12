@@ -7,9 +7,10 @@ class MyGearSingle extends React.Component {
   }
   render() {
     return (
-      <div>
-        <p>{this.props.my_gear_name} </p>
-        <p>{this.props.my_gear_weight} oz.</p>
+      <div className="container my-gear-card">
+        <img src="https://static.thenounproject.com/png/254126-200.png" className="img-thumbnail gear-img"/>
+        <h4><strong>Name</strong>: {this.props.my_gear_name}</h4>
+        <h5><strong>Weight</strong>:  {this.props.my_gear_weight} oz.</h5>
       </div>
     );
   }
