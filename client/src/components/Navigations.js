@@ -3,91 +3,113 @@ import { BrowserRouter as Router, Route, Link } from "react-router-dom";
 import { NavLink } from "react-router-dom";
 
 const Navigation = props => (
-  <nav>
-    <div class="pos-f-t">
-      <div class="collapse" id="navbarToggleExternalContent">
-        <div class="bg-dark p-4">
-          <h5 class="text-white h4">
-            <NavLink
-              to="/"
-              className="nav-item "
-              style={{ textDecoration: "none", color: "white" }}
-            >
-              Home
-            </NavLink>
-          </h5>
-          <h5 class="text-white h4">
-            <NavLink
-              to="/hikes"
-              className="nav-item"
-              style={{ textDecoration: "none", color: "white" }}
-            >
-              Gear Checklists
-            </NavLink>
-          </h5>
-          <h5 class="text-white h4"> 
-          <NavLink
-          to="/mygear"
-          className="nav-item"
-          style={{ textDecoration: "none", color: "white" }}
-        >
-          My Gear
-        </NavLink>
-          </h5>
-          <h5 class="text-white h4"> 
-           <NavLink
-          to="/buildapack"
-          className="nav-item"
-          style={{ textDecoration: "none", color: "white" }}
-        >
-          Build A Pack
-        </NavLink>
-          
-        </h5>
-        <h5 class="text-white h4"> 
-         <NavLink
-          to="/about"
-          className="nav-item"
-          style={{ textDecoration: "none", color: "white" }}
-        >
-          About
-        </NavLink>
-        </h5>
-        </div>
-        <div class="bg-dark p-4" />
-      </div>
+  ///////////OLD CODE
+  //   <nav>
+  //     <div class="pos-f-t">
+  //       <div class="collapse" id="navbarToggleExternalContent">
+  //         <div class="bg-dark p-4">
+  //           <h5 class="text-white h4">
+  //             <NavLink
+  //               to="/"
+  //               className="nav-item "
+  //               style={{ textDecoration: "none", color: "white" }}
+  //             >
+  //               Home
+  //             </NavLink>
+  //           </h5>
+  //           <h5 class="text-white h4">
+  //             <NavLink
+  //               to="/hikes"
+  //               className="nav-item"
+  //               style={{ textDecoration: "none", color: "white" }}
+  //             >
+  //               Gear Checklists
+  //             </NavLink>
+  //           </h5>
+  //           <h5 class="text-white h4">
+  //           <NavLink
+  //           to="/mygear"
+  //           className="nav-item"
+  //           style={{ textDecoration: "none", color: "white" }}
+  //         >
+  //           My Gear
+  //         </NavLink>
+  //           </h5>
+  //           <h5 class="text-white h4">
+  //            <NavLink
+  //           to="/buildapack"
+  //           className="nav-item"
+  //           style={{ textDecoration: "none", color: "white" }}
+  //         >
+  //           Build A Pack
+  //         </NavLink>
 
-      <nav class="navbar navbar-dark bg-dark">
-        <button
-          class="navbar-toggler"
-          type="button"
-          data-toggle="collapse"
-          data-target="#navbarToggleExternalContent"
-          aria-controls="navbarToggleExternalContent"
-          aria-expanded="false"
-          aria-label="Toggle navigation"
-        >
-          <span class="navbar-toggler-icon" />
-        </button>
-      </nav>
-    </div>
+  //         </h5>
+  //         <h5 class="text-white h4">
+  //          <NavLink
+  //           to="/about"
+  //           className="nav-item"
+  //           style={{ textDecoration: "none", color: "white" }}
+  //         >
+  //           About
+  //         </NavLink>
+  //         </h5>
+  //         </div>
+  //         <div class="bg-dark p-4" />
+  //       </div>
 
-    <div className="nav-list">
-     
+  //       <nav class="navbar navbar-dark bg-dark">
+  //         <button
+  //           class="navbar-toggler"
+  //           type="button"
+  //           data-toggle="collapse"
+  //           data-target="#navbarToggleExternalContent"
+  //           aria-controls="navbarToggleExternalContent"
+  //           aria-expanded="false"
+  //           aria-label="Toggle navigation"
+  //         >
+  //           <span class="navbar-toggler-icon" />
+  //         </button>
+  //       </nav>
+  //     </div>
 
-      <a>
-        {" "}
-       
-      </a>
+  /////////UP TO DATE CODE
+  <nav class="navbar navbar-expand-lg navbar-light bg-light">
+    <a class="navbar-brand" href="/">
+      Shakedown
+    </a>
+    <button
+      class="navbar-toggler"
+      type="button"
+      data-toggle="collapse"
+      data-target="#navbarTogglerDemo02"
+      aria-controls="navbarTogglerDemo02"
+      aria-expanded="false"
+      aria-label="Toggle navigation"
+    >
+      <span class="navbar-toggler-icon" />
+    </button>
 
-      <a>
-        {" "}
-      
-      </a>
-
-      <a>
-      
-      </a>
+    <div class="collapse navbar-collapse" id="navbarTogglerDemo02">
+      <ul class="navbar-nav mr-auto mt-2 mt-lg-0">
+        <li class="nav-item active">
+          <a class="nav-link" href="/hikes">
+            Gear Checklists <span class="sr-only">(current)</span>
+          </a>
+        </li>
+        <li class="nav-item active">
+          <a class="nav-link" href="/mygear">
+            My Gear
+            <span class="sr-only">(current)</span>
+          </a>
+        </li>
+        <li class="nav-item active">
+          <a class="nav-link" href="/buildapack">
+            Build A Pack
+            <span class="sr-only">(current)</span>
+          </a>
+        </li>
+      </ul>
     </div>
   </nav>
 );

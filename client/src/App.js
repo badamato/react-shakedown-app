@@ -26,7 +26,7 @@ class App extends Component {
           <div class="container">
             <header className="header">
               {/* <img src={logo} className="App-logo" alt="logo" /> */}
-              <h1 className="App-title">Welcome to Shakedown</h1>
+              <h1 className="App-title"> Shakedown</h1>
             </header>
           </div>
           {/* Navigation */}
