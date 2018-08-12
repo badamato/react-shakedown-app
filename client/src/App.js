@@ -45,10 +45,12 @@ class App extends Component {
     return (
       <Router>
         <div className="App">
-          <header className="App-header">
-            <img src={logo} className="App-logo" alt="logo" />
-            <h1 className="App-title">Welcome to Shakedown</h1>
-          </header>
+          <div class="container">
+            <header className="header">
+              {/* <img src={logo} className="App-logo" alt="logo" /> */}
+              <h1 className="App-title">Welcome to Shakedown</h1>
+            </header>
+          </div>
           {/* Navigation */}
           <Navigation />
           <Route exact path="/" component={Home} />
@@ -60,7 +62,7 @@ class App extends Component {
             path="/hikes/threeseasongearlist"
             component={ThreeSeasonGearList}
           />
-          
+
           <Route
             exact
             path="/hikes/wintergearlist"
