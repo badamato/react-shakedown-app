@@ -41,7 +41,7 @@ class OneCategoryList extends React.Component {
   componentDidMount() {
     //make an AJAx request to API and retrieve category list
     let category_id = this.props.match.params.categoryid;
-    axios.get(`/api/BAP/${category_id}/geartypes`).then(res => {
+    axios.get(`/api/BAP/categories/${category_id}/geartypes`).then(res => {
       console.log(res);
       this.setState({
         categoryListItem: res.data

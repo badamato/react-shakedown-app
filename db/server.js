@@ -2,7 +2,6 @@
 const express = require("express");
 const app = express();
 
-
 //IMPORT body-parser
 const bodyParser = require("body-parser");
 app.use(bodyParser.urlencoded({ extended: false }));
@@ -12,12 +11,14 @@ const shakedown = require("./db");
 
 
 
+// ********* BUILD A  PACK ROUTES ************** //
+
 //////////////////////Build-A-Pack: ROUTE TO GET ALL CATEGORIES
 app.get("/api/BAP/categories", (req, res) => {
   // get all the catagories
   shakedown
     .showAllCategories()
-    .then((data) => {
+    .then(data => {
       res.send(data);
     })
 
@@ -31,7 +32,7 @@ app.get("/api/BAP/categories/:category", (req, res) => {
   // res.send('Got a category')
   shakedown
     .showOneCategory(req.params.category)
-    .then((data) => {
+    .then(data => {
       // console.log(data);
       res.send(data);
     })
@@ -46,30 +47,56 @@ app.get("/api/BAP/categories/:category/geartypes", (req, res) => {
   // res.send('Got a type of gear')
   shakedown
     .showAllCatTypes(req.params.category)
-    .then((data) => {
+    .then(data => {
       console.log(data);
       res.send(data);
     })
 
-    .catch((error) => {
+    .catch(error => {
       console.log(error);
     });
 });
 
+//////////Practice
+// app.get("/api/BAP/categories/:category/:geartypes", (req, res) => {
+//   shakedown
+//     .showAllCatTypes(req.params.category)
+//     .then(data => {
+//       console.log(data);
+//       let cat_id = data[0].cat_id;
+//       let gear_id = data[0].type_id;
+
+//       console.log(cat_id);
+//       console.log(gear_id);
+//       shakedown.showAllOfaType(cat_id, gear_id)
+//       .then(data => {
+//         console.log(data)
+//     })
+//   .then((data)=> {
+//       res.send(data);
+//     })
+
+//       })   
+    
+
+//////////////// ROUTE FROM HELL ////////////////////
 ///////////Build-A-Pack: ROUTE TO GET ALL OF A SINGLE TYPE IN A CATEGORY
 
-app.get("/api/BAP/categories/:category/:geartypes", (req, res) => {
-
-  shakedown
-  .showAllOfaType(req.params.category, req.params.geartypes)
+app.get("/api/BAP/geartype/:geartype", (req, res) => {
+ shakedown.showAllOfaType(req.params.geartype)
     .then((data) => {
       console.log(data)
-      res.send(data)
+      res.send(data);
     })
     .catch((error) => {
       console.log(error);
     })
 });
+
+
+
+// *********** MY GEAR ROUTES ******************** //
+
 
 
 /////My-Gear-Page: ROUTE TO GET ALL OF MY GEAR
@@ -102,7 +129,7 @@ app.post("/api/:user_id/addmygear", (req, res) => {
 
   shakedown
     .addMyGearRecord(user_id, name, gender, image, weight, type_name, cat_name)
-    .then((data) => {
+    .then(data => {
       console.log(data);
       // res.send(data);
       res.redirect(`/api/${req.body.user_id}`);
@@ -120,7 +147,7 @@ app.get("/api/:user_id/deletemygear", (req, res) => {
 
   shakedown
     .showAllMyGear(user_id)
-    .then((data) => {
+    .then(data => {
       res.render("my-gear-page", data);
     })
     .catch(error => console.log(error));
@@ -130,23 +157,16 @@ app.get("/api/:user_id/deletemygear", (req, res) => {
 app.post("/api/:user_id/deletemygear", (req, res) => {
   // res.send('You deleted it!')
   let inv_id = req.params.inv_id;
-  shakedown.deleteMyGearRecord(inv_id).then(data => {
-    res.redirect(`/api/${inv_id}`);
-  });
-});
-
-
-
-
-    .then((data) => {
-      console.log(data);
-      res.send(data);
+  shakedown
+    .deleteMyGearRecord(inv_id)
+    .then(data => {
+      res.redirect(`/api/${inv_id}`);
     })
+
     .catch(error => {
       console.log(error);
     });
 });
-
 
 /////My-Gear-Page: ROUTE TO UPDATE ALL INPUT FIELDS ON ONE PIECE OF MY GEAR
 app.post("/api/:user_id/mygear", (req, res) => {
@@ -161,7 +181,7 @@ app.post("/api/:user_id/mygear", (req, res) => {
 
   shakedown
     .addMyGearRecord(user_id, name, gender, image, weight, type_name, cat_name)
-    .then((data) => {
+    .then(data => {
       console.log(data);
       // res.send(data);
       res.redirect(`/api/${rec.body.user_id}/mygear`);
@@ -170,9 +190,6 @@ app.post("/api/:user_id/mygear", (req, res) => {
       console.log(error);
     });
 });
-
-
-
 
 app.listen(3500, () => {
   console.log("The server is running on: 3500!");
