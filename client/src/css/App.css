@@ -155,12 +155,18 @@ body {
   flex-direction: column;
   justify-content: center;
   align-items: center;
-  border: red 1px solid;
+  /* border: red 1px solid; */
   width: 100%;
   background-color: rgb(163, 201, 206);
   color: white;
   margin-bottom: 10px;
   padding-bottom: 10px;
+  border-radius: 15px 50px;
+  /* font-size: 1.75em; */
+}
+
+.gear-form{
+  font-size: 1.75em;
 }
 
 .hit-it {
@@ -169,11 +175,17 @@ body {
 }
 
 .my-gear-pg {
-  border: 2px green solid;
+  /* border: 2px green solid; */
+  width:100%;
   display: flex;
   flex-direction: column;
   align-items: center;
   background-color: white;
+}
+
+.my-gear-pg p{
+ font-size: 1.7em;
+ font-weight: 900
 }
 
 .my-gear-head {
@@ -185,17 +197,24 @@ body {
   border: 1px solid hotpink;
   width: 100%;
   display: flex;
-  flex-direction: column;
+  flex-direction: row;
+  flex-wrap: wrap;
 }
 
 .my-gear-card {
   width: 100%;
-  border: 3px solid white;
+  border: 3px solid  rgb(163, 201, 206);
   display: flex;
   flex-direction: column;
   align-content: center;
   margin-top: 10px;
+  font-weight: bold;
 }
+ 
+.my-gear-card h4,h5{
+  font-size: 2.25em;
+}
+
 
 .gear-img {
   width: 50%;
@@ -215,7 +234,7 @@ body {
     width: 80%;
   }
   .my-gear-card {
-    width: 50%;
+    width: 45%;
   }
 
   .main-content {

@@ -74,7 +74,7 @@ const Navigation = props => (
   //     </div>
 
   /////////UP TO DATE CODE
-  <nav class="navbar navbar-expand-lg navbar-light bg-light">
+  <nav class="navbar navbar-expand-lg navbar-light bg-light sticky-top">
     <a class="navbar-brand" href="/">
       <span>
         <img

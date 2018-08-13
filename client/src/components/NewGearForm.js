@@ -12,9 +12,7 @@ class NewGearForm extends React.Component {
     };
   }
 
- 
-
-  handlename = (event) => {
+  handlename = event => {
     this.setState({
       form: {
         ...this.state.form,
@@ -23,17 +21,17 @@ class NewGearForm extends React.Component {
     });
   };
 
-//   _clearForm = event => {
-//     event.preventDefault();
-//     // console.log('clicked')
-//     this.setState({
-//       form: {
-//         name: ""
-//       }
-//     });
-//   };
+  //   _clearForm = event => {
+  //     event.preventDefault();
+  //     // console.log('clicked')
+  //     this.setState({
+  //       form: {
+  //         name: ""
+  //       }
+  //     });
+  //   };
 
-  handleEntry  = (event) => {
+  handleEntry = event => {
     event.preventDefault();
 
     let gearObject = {
@@ -46,27 +44,27 @@ class NewGearForm extends React.Component {
         return res.data;
       })
       .catch(err => console.log(err));
-  }
+  };
 
   render() {
     return (
       <div>
-        <form
-          onSubmit={this.handleEntry}
-        >
-          <label htmlFor="Gear Name">Name:   </label>
+        <form onSubmit={this.handleEntry} className="gear-form">
+          <label htmlFor="Gear Name">Name: </label>
           <input
             value={this.state.form.name}
             type="text"
             onChange={this.handlename}
             required
-            placeholder="Enter your company name"
+            placeholder="Gear name"
           />
           <br />
 
-          <input type="submit" value="Create Entry" className="hit-it"/>
-       
-          <button onClick={this._clearForm} className="hit-it">Clear Form</button>
+          <input type="submit" value="Create Entry" className="hit-it" />
+
+          <button onClick={this._clearForm} className="hit-it">
+            Clear Form
+          </button>
         </form>
       </div>
     );
