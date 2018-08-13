@@ -17,6 +17,6 @@
   },
   "scripts": {
     "serve": "nodemon db/server.js",
-    "resetdb": "dropdb shakedown; createdb shakedown; psql -d shakedown -f db/schema.sql"
+    "resetdb": "dropdb shakedown; createdb shakedown; cp Gear_Inventory.csv /tmp; psql -d shakedown -f db/schema.sql"
   }
 }
