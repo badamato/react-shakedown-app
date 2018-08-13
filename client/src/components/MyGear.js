@@ -35,8 +35,8 @@ class MyGear extends React.Component {
           transform into a gearhead!
         </p>
         <div className="new-form">
-          <h4>Add to your Inventory</h4>
-          <NewGearForm />
+          <h4><Link to={`/newGearForm`}>Add to your Inventory</Link></h4>
+          {/* <NewGearForm /> */}
         </div>
         <div className="gear-container">
           <p>{onePieceOfMyGear}</p>

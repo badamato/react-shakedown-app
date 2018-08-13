@@ -9,6 +9,7 @@ import ThreeSeasonGearList from "./components/ThreeSeasonGearList";
 import WinterGearList from "./components/WinterGearList";
 import DesertGearList from "./components/DesertGearList";
 import MyGear from "./components/MyGear";
+import NewGearForm from "./components/NewGearForm";
 import BuildAPack from "./components/BuildAPack";
 import Category from "./components/Category";
 import OneCategoryList from "./components/OneCategoryList";
@@ -53,6 +54,7 @@ class App extends Component {
           />
           {/* My Gear Inventory */}
           <Route exact path="/mygear" component={MyGear} />
+          <Route exact path="/newGearForm" component={NewGearForm} />
           {/* Build a Pack */}
           {/* Route to Categories */}
           <Route exact path="/buildapack" component={BuildAPack} />

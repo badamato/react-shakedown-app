@@ -7,7 +7,9 @@ class NewGearForm extends React.Component {
     super();
     this.state = {
       form: {
-        name: ""
+        name: "",
+        weight: '',
+        
       }
     };
   }
