@@ -6,7 +6,6 @@ import axios from "axios";
 import MySingleGear from "./MyGearSingle";
 import MyGear from "./MyGear";
 
-
 class OneGearType extends React.Component {
   constructor(props) {
     super(props);

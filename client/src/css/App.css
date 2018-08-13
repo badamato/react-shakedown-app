@@ -225,6 +225,14 @@ h5 {
   margin: 10px auto;
 }
 
+/* BUILD A PACK STYLES */
+#pick-it{
+  display: flex;
+  flex-direction: column;
+  align-content: center;
+  text-align: center;
+}
+
 /* **************** MEDIA QUERIES ******************************** */
 /* IPAD */
 @media only screen and (min-width: 768px) {
