@@ -6,7 +6,7 @@ import axios from "axios";
 //PRACTICE
 import MySingleGear from "./MyGearSingle";
 import MyGear from "./MyGear";
-import TotalWeight from "./TotalWeight"
+
 
 class OneGearType extends React.Component {
   constructor(props) {
@@ -21,21 +21,15 @@ class OneGearType extends React.Component {
     console.log(this.state);
   }
 
-  // addToWeight(weight){
-  //   this.setState({
-  //     selectedProduct: {
-  //       name: singleGearItem.name,
-  //       weight: singleGearItem.weight
-  //     }
-  //   }, function(){
-  //     console.log(weight)
-  //   })
-  // }
 
   render() {
     let singleGear = this.state.oneGearTypeList.map(singleGearItem => {
       return (
-        <div className="container my-gear-card">
+        <div className="container my-gear-card" 
+        onClick={ () => {
+          this.props.handleAddWeight(singleGearItem)
+        }}>
+
           <img
             src={`http://localhost:3500${singleGearItem.image}`}
             className="img-thumbnail gear-img"
@@ -54,7 +48,7 @@ class OneGearType extends React.Component {
     });
     return (
       <div className="container">
-        <TotalWeight />
+       
         {/* <h1>Your Gear</h1>
         <MyGear /> */}
         <h1>Some Suggested Gear</h1>

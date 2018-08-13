@@ -53,15 +53,19 @@ class MyGear extends React.Component {
     console.log(gear);
     let inv_id = gear;
 
-    axios.post("/api/1/deletemygear", inv_id).then(res => {
+    axios.post("/api/1/deletemygear", {inv_id}).then(res => {
       console.log(res);
-      this.componentDidMount();
+      this._getMyGear();
     });
   };
   componentDidMount() {
-    //make an AJAX request to API and retrieve all categories and render array to page
-    // axios.get("/api/:user_id/mygear")
+    this._getMyGear();
     console.log("WOOOO get that");
+    
+  }
+  _getMyGear = () => {
+    //make an AJAX request to API and retrieve all categories and render array to page
+    // axios.get("/api/:user_id/mygear")  
     axios.get("/api/1/mygear").then(res => {
       console.log(res);
       this.setState({
@@ -69,9 +73,7 @@ class MyGear extends React.Component {
       });
     });
 
-    // onSubmit = fields => {
-    //   console.log('App comp got:', fields );
-    // }
   }
+
 }
 export default MyGear;

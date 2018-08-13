@@ -177,9 +177,10 @@ body {
   /* border: 2px green solid; */
   width: 100%;
   display: flex;
-  flex-direction: column;
+  flex-direction: row;
+  flex-wrap: wrap;
   align-items: center;
-  background-color: white;
+  /* background-color: white; */
 }
 
 .my-gear-pg p {

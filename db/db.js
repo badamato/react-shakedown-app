@@ -102,7 +102,7 @@ function addMyGearRecord(
 
 //DELETE++++++++++++++++++++++++++++++++
 function deleteMyGearRecord(inv_id) {
-  return db.result(`DELETE FROM Gear_Inventory WHERE inv_id = $1`, [inv_id]);
+  return db.result(`DELETE FROM users_gear WHERE inv_id = $1`, [inv_id])
 }
 // deleteMyGearRecord(284)
 //   .then((data) => {console.log(data);})

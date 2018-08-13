@@ -3,7 +3,6 @@ import { BrowserRouter as Router, Route, Link } from "react-router-dom";
 import axios from "axios";
 
 import OneCategoryListItem from "./OneCategoryListItem";
-import TotalWeight from "./TotalWeight";
 
 //LEADS TO ONE CATEGORY LIST ITEM
 
@@ -34,10 +33,8 @@ class OneCategoryList extends React.Component {
 
     return (
       <div className="container sub-category">
-        <TotalWeight />
         <h2>Pick A Sub-Category</h2>
         <h3>{oneListItem}</h3>
-        
       </div>
     );
   }

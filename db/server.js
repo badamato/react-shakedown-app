@@ -157,13 +157,14 @@ app.get("/api/:user_id/deletemygear", (req, res) => {
 //delete the record
 app.post("/api/:user_id/deletemygear", (req, res) => {
   // res.send('You deleted it!')
-  let inv_id = req.params.inv_id;
+  console.log(req.body)
+  let inv_id = req.body.inv_id;
 
   shakedown
     .deleteMyGearRecord(inv_id)
     .then(data => {
       // res.redirect(`/api/${inv_id}`);
-      res.send("you deleted it!")
+    res.send("you deleted it!")
     })
 
     .catch(error => {

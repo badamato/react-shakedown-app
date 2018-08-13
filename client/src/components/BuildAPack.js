@@ -4,7 +4,6 @@ import axios from "axios";
 
 import Category from "./Category";
 import TenEssentials from "./TenEssentials";
-import TotalWeight from "./TotalWeight";
 
 //BUILD A PACK LANDING
 //LEADS TO CATEGORY
@@ -23,16 +22,15 @@ class BuildAPack extends React.Component {
         <Category
           name={singlecategory.cat_name}
           catId={singlecategory.cat_id}
+          
         />
       );
     });
 
     return (
-      <div className="container" id="pick-it"> 
-        <TotalWeight />
-        <h1 >Pick a category</h1>
+      <div className="container" id="pick-it">
+        <h1>Pick a category</h1>
         <h2>{allcategories}</h2>
-       
       </div>
     );
   }

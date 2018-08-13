@@ -15,11 +15,25 @@ import Category from "./components/Category";
 import OneCategoryList from "./components/OneCategoryList";
 import OneGearType from "./components/OneGearType";
 import About from "./components/About";
+import TotalWeight from "./components/TotalWeight";
 
 import logo from "./logo.svg";
 import "./css/App.css";
 
 class App extends Component {
+  constructor(props) {
+    super(props);
+    this.state = {
+      selectedGear: []
+    };
+  }
+  _addToWeight = gear => {
+    //
+    this.setState({
+      selectedGear: [...this.state.selectedGear, gear]
+    });
+  };
+
   render() {
     return (
       <Router>
@@ -32,6 +46,18 @@ class App extends Component {
           </div>
           {/* Navigation */}
           <Navigation />
+          {/* Total Weight */}
+          <Route
+            path="/buildapack"
+            render={props => {
+              return (
+                <TotalWeight 
+                chosenGear={this.state.selectedGear} 
+                {...props} />
+              );
+            }}
+          />
+          {/* HOME */}
           <Route exact path="/" component={Home} />
           {/* Gear Checklists */}
           <Route exact path="/hikes" component={Hikes} />
@@ -68,7 +94,11 @@ class App extends Component {
           <Route
             exact
             path="/buildapack/geartype/:typeid"
-            component={OneGearType}
+            render={props => {
+              return (
+                <OneGearType handleAddWeight={this._addToWeight} {...props} />
+              );
+            }}
           />
           {/* About */}
           <Route exact path="/about" component={About} />

@@ -6,7 +6,8 @@ class TotalWeight extends React.Component {
   constructor(props){
     super(props);
     this.state= {
-      packWeight: ''
+      weight: 0
+
     }
   }
   
@@ -17,6 +18,19 @@ class TotalWeight extends React.Component {
         </div>
     );
   }
+
+//selectGear.image
+//selectedGear.name
+//selectedGear.weight
+  //take out the items in props.selecetedGear-map through each one
+  //add each item weight to one another
+
+// _getWeightForEachItemInProps = (allGearSelected) => {
+//   allGear
+// }
+
+
+
 }
 
 export default TotalWeight;
