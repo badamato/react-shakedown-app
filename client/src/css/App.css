@@ -226,7 +226,14 @@ h5 {
 }
 
 /* BUILD A PACK STYLES */
-#pick-it{
+#pick-it {
+  display: flex;
+  flex-direction: column;
+  align-content: center;
+  text-align: center;
+}
+
+.sub-category {
   display: flex;
   flex-direction: column;
   align-content: center;
