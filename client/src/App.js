@@ -15,10 +15,12 @@ import Category from "./components/Category";
 import OneCategoryList from "./components/OneCategoryList";
 import OneGearType from "./components/OneGearType";
 import About from "./components/About";
+
 import TotalWeight from "./components/TotalWeight";
 
-import logo from "./logo.svg";
+
 import "./css/App.css";
+
 
 class App extends Component {
   constructor(props) {
@@ -40,7 +42,6 @@ class App extends Component {
         <div className="App">
           <div className="container">
             <header className="header">
-              {/* <img src={logo} className="App-logo" alt="logo" /> */}
               <h1 className="App-title"> Shakedown</h1>
             </header>
           </div>
@@ -59,6 +60,7 @@ class App extends Component {
           />
           {/* HOME */}
           <Route exact path="/" component={Home} />
+
           {/* Gear Checklists */}
           <Route exact path="/hikes" component={Hikes} />
           <Route exact path="/hikes/tenessentials" component={TenEssentials} />
@@ -80,10 +82,14 @@ class App extends Component {
           />
           {/* My Gear Inventory */}
           <Route exact path="/mygear" component={MyGear} />
+
           <Route exact path="/newGearForm" component={NewGearForm} />
+
           {/* Build a Pack */}
+
           {/* Route to Categories */}
           <Route exact path="/buildapack" component={BuildAPack} />
+
           {/* Route to Sub-categories */}
           <Route
             exact

@@ -1,4 +1,3 @@
-
 DROP TABLE Gear_Inventory CASCADE;
 DROP TABLE Gear_Category CASCADE;
 DROP TABLE Gear_Type CASCADE;
@@ -7,20 +6,20 @@ DROP TABLE Users_Gear CASCADE;
 
 
 CREATE TABLE Users (
-	user_id SERIAL PRIMARY KEY,
-	first_name character varying(200),
-	last_name character varying(200),
-	gender character varying(1),
-	login TIMESTAMPTZ DEFAULT Now()
+    user_id SERIAL PRIMARY KEY,
+    first_name character varying(200),
+    last_name character varying(200),
+    gender character varying(1),
+    login TIMESTAMPTZ DEFAULT Now()
 );
 
-
 INSERT INTO Users
-	(first_name, last_name, gender)
+    (first_name, last_name, gender)
 VALUES
-	('Bruce', 'Harvey', 'M'),
-	('Flip', 'Wilson', 'M'),
-	('Sarah', 'Lee', 'F');
+    ('Bruce', 'Harvey', 'M'),
+    ('Flip', 'Wilson', 'M'),
+    ('Sarah', 'Lee', 'F');
+
 
 
 CREATE TABLE Gear_Category (
@@ -42,9 +41,8 @@ VALUES
 CREATE TABLE Gear_Type (
     type_id SERIAL PRIMARY KEY,
     cat_id INTEGER,
-    type_name character varying(200)
+    type_name character varying(200)
 );
-
 
 
 INSERT INTO Gear_Type
@@ -82,7 +80,7 @@ VALUES
 
 
 CREATE TABLE Gear_Inventory (
-    inv_id SERIAL PRIMARY KEY,
+    inv_id SERIAL PRIMARY KEY,
     name character varying(200),
     gender character varying(1),
     image character varying(2083),
@@ -109,7 +107,6 @@ from gear_type
 where gear_inventory.type_name=gear_type.type_name;
 
 
-
 -- set the cat_id based on the cat_names
 update gear_inventory
 set cat_id=gear_category.cat_id
@@ -118,12 +115,5 @@ where gear_inventory.cat_name=gear_category.cat_name;
 
 
 
-SELECT inv_id, g.user_id
-
-INTO Users_Gear
-
-FROM Gear_Inventory g
-
-LEFT JOIN Users u
-
-ON g.user_id = u.user_id;
+CREATE TABLE Users_Gear AS
+SELECT Gear_Inventory.inv_id, Gear_Inventory.user_id FROM Gear_Inventory LEFT JOIN Users ON(Gear_Inventory.user_id = Users.user_id);
