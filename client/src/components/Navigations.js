@@ -117,7 +117,8 @@ const Navigation = props => (
         </li>
         <li class="nav-item active">
         <a class="nav-link" href="/preauth">
-          <button class="">PREAUTH</button>
+          <button class="">LOGIN/LOGOUT</button>
+          <span class="sr-only">(current)</span>
         </a>
       </li>
       </ul>

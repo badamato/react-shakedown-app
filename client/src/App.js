@@ -15,7 +15,7 @@ import OneCategoryList from "./components/OneCategoryList";
 import OneGearType from "./components/OneGearType";
 import About from "./components/About";
 import "./css/App.css";
-import Preauth from "./components/auth/Preauth";
+
 
 class App extends Component {
   render() {
@@ -30,6 +30,7 @@ class App extends Component {
           {/* Navigation */}
           <Navigation />
           <Route exact path="/" component={Home} />
+
           {/* Gear Checklists */}
           <Route exact path="/hikes" component={Hikes} />
           <Route exact path="/hikes/tenessentials" component={TenEssentials} />
@@ -51,9 +52,12 @@ class App extends Component {
           />
           {/* My Gear Inventory */}
           <Route exact path="/mygear" component={MyGear} />
+
           {/* Build a Pack */}
+
           {/* Route to Categories */}
           <Route exact path="/buildapack" component={BuildAPack} />
+
           {/* Route to Sub-categories */}
           <Route
             exact
@@ -68,9 +72,6 @@ class App extends Component {
           />
           {/* About */}
           <Route exact path="/about" component={About} />
-
-          {/* PREAUTH */}
-          <Route exact path="/preauth" component={Preauth} />
         </div>
       </Router>
     );
