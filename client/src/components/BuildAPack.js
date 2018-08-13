@@ -28,10 +28,11 @@ class BuildAPack extends React.Component {
     });
 
     return (
-      <div className="container" id="pick-it">
+      <div className="container" id="pick-it"> 
+        <TotalWeight />
         <h1 >Pick a category</h1>
         <h2>{allcategories}</h2>
-        <TotalWeight />
+       
       </div>
     );
   }

@@ -2,18 +2,35 @@ import React from "react";
 import { BrowserRouter as Router, Route, Link } from "react-router-dom";
 import axios from "axios";
 
+
 //PRACTICE
 import MySingleGear from "./MyGearSingle";
 import MyGear from "./MyGear";
+import TotalWeight from "./TotalWeight"
 
 class OneGearType extends React.Component {
   constructor(props) {
     super(props);
     this.state = {
-      oneGearTypeList: []
+      oneGearTypeList: [],
+      selectedProduct:{
+        name: '',
+        weight: ''
+      }
     };
     console.log(this.state);
   }
+
+  // addToWeight(weight){
+  //   this.setState({
+  //     selectedProduct: {
+  //       name: singleGearItem.name,
+  //       weight: singleGearItem.weight
+  //     }
+  //   }, function(){
+  //     console.log(weight)
+  //   })
+  // }
 
   render() {
     let singleGear = this.state.oneGearTypeList.map(singleGearItem => {
@@ -29,13 +46,17 @@ class OneGearType extends React.Component {
           <h5>
             <strong>Weight</strong>: {singleGearItem.weight} oz.
           </h5>
+          <a href="#" 
+       
+           >Add to Pack</a>
         </div>
       );
     });
     return (
       <div className="container">
-        <h1>Your Gear</h1>
-        <MyGear />
+        <TotalWeight />
+        {/* <h1>Your Gear</h1>
+        <MyGear /> */}
         <h1>Some Suggested Gear</h1>
         <p id="buildapack-data">{singleGear}</p>
       </div>

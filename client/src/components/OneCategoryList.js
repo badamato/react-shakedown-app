@@ -34,9 +34,10 @@ class OneCategoryList extends React.Component {
 
     return (
       <div className="container sub-category">
+        <TotalWeight />
         <h2>Pick A Sub-Category</h2>
         <h3>{oneListItem}</h3>
-        <TotalWeight />
+        
       </div>
     );
   }
