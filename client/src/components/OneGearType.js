@@ -18,11 +18,12 @@ class OneGearType extends React.Component {
   render() {
     let singleGear = this.state.oneGearTypeList.map(singleGearItem => {
       return (
-        <div>
-          <img src={`http://localhost:3500${singleGearItem.image}`} />
-          <p>Name: {singleGearItem.name}</p>
-          <p>Ounces: {singleGearItem.weight}</p>
+        <div className="container my-gear-card">
+          <img src={`http://localhost:3500${singleGearItem.image}`}  className="img-thumbnail gear-img"/>
+          <h4><strong>Name</strong>: {singleGearItem.name}</h4>
+          <h5><strong>Weight</strong>: {singleGearItem.weight} oz.</h5>
         </div>
+
       );
     });
     return (
