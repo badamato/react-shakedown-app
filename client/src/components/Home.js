@@ -5,21 +5,21 @@ class Home extends React.Component {
   render() {
     return (
       <div className="Home-Page">
-        <div className="main-holder">
+        <div className="main-holder gear-checklist">
           <div className="main-content">
-            <Link to="/hikes" className="home-item">
+            <Link to="/hikes" className="home-item ">
               Gear Checklists
             </Link>
           </div>
         </div>
-        <div className="main-holder">
+        <div className="main-holder my-gear-inventory">
           <div className="main-content">
             <Link to="/mygear" className="home-item">
               My Gear
             </Link>
           </div>
         </div>
-        <div className="main-holder">
+        <div className="main-holder build-a-pack">
           <div className="main-content">
             <Link to="/buildapack" className="home-item">
               Build A Pack{" "}

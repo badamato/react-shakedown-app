@@ -123,16 +123,37 @@ body {
   background-repeat: no-repeat; */
 }
 .main-content {
+  border-radius: 15px 50px;
   border: 1px black solid;
-  width: 90%;
+  width: 75%;
   text-align: center;
   font-size: 3rem;
   margin-top: 20px;
   margin-bottom:20px;
-  background-color: #ffffff7a;
+  background-color: #ffffffe3;
 
 }
+.gear-checklist {
+  background-image: url(https://s3.envato.com/files/203326520/Camping%20Vector%20Line%20Icons%20preview.jpg);
+  background-position: center;
+  background-size: contain;
+  background-repeat: repeat;
+}
 
+.my-gear-inventory{
+  
+  background-image:url(https://images.unsplash.com/photo-1490604001847-b712b0c2f967?ixlib=rb-0.3.5&ixid=eyJhcHBfaWQiOjEyMDd9&s=a199707ec57afbaddcc9a3887f2161ab&auto=format&fit=crop&w=2280&q=80);
+  background-position: center;
+  background-size: cover;
+  background-repeat: no-repeat;
+}
+
+.build-a-pack{
+  background-image:url(https://us.123rf.com/450wm/lenm/lenm1603/lenm160300130/55303988-illustration-of-colorful-camping-backpacks.jpg?ver=6);
+  background-position: center;
+  background-size: contain;
+  background-repeat: repeat;
+}
 /* MY GEAR PAGE STYLES */
 
 .new-form{
@@ -198,6 +219,10 @@ body {
   }
   .my-gear-card{
     width:50%;
+  }
+
+  .main-content{
+    width: 45%
   }
 }
 /* LAPTOP */
