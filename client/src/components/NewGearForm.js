@@ -36,12 +36,12 @@ class NewGearForm extends React.Component {
   handleEntry  = (event) => {
     event.preventDefault();
 
-    let companyObject = {
+    let gearObject = {
       name: this.state.form.name
     };
 
     axios
-      .post("/api/:user_id/addmygear", companyObject)
+      .post("/api/:user_id/addmygear", gearObject)
       .then(res => {
         return res.data;
       })
@@ -54,7 +54,7 @@ class NewGearForm extends React.Component {
         <form
           onSubmit={this.handleEntry}
         >
-          <label htmlFor="Company Name">Company</label>
+          <label htmlFor="Gear Name">Name:   </label>
           <input
             value={this.state.form.name}
             type="text"
@@ -64,8 +64,9 @@ class NewGearForm extends React.Component {
           />
           <br />
 
-          <input type="submit" value="Create Entry" />
-          <button onClick={this._clearForm}>Clear Form</button>
+          <input type="submit" value="Create Entry" className="hit-it"/>
+       
+          <button onClick={this._clearForm} className="hit-it">Clear Form</button>
         </form>
       </div>
     );

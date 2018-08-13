@@ -28,16 +28,19 @@ class MyGear extends React.Component {
     return (
       <div className="container my-gear-pg">
         <h3 className="my-gear-head">My Gear Inventory</h3>
-        <p>Keep track of your gear. Add items when you get new gear. Delete items when it's time to retire it...or if it melts in the fire because you got a little too close.</p>
+        <p>
+          Keep track of your gear. Add items when you get new gear. Delete items
+          when it's time to retire it...or if it melts in the fire because you
+          got a little too close.
+        </p>
         <div className="new-form">
           <h4>Add to your Inventory</h4>
           <NewGearForm />
         </div>
-        <div className= "gear-container">
-        <p>{onePieceOfMyGear}</p>
+        <div className="gear-container">
+          <p>{onePieceOfMyGear}</p>
         </div>
         <hr />
-     
       </div>
     );
   }
