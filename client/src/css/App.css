@@ -165,7 +165,7 @@ body {
   /* font-size: 1.75em; */
 }
 
-.gear-form{
+.gear-form {
   font-size: 1.75em;
 }
 
@@ -176,16 +176,16 @@ body {
 
 .my-gear-pg {
   /* border: 2px green solid; */
-  width:100%;
+  width: 100%;
   display: flex;
   flex-direction: column;
   align-items: center;
   background-color: white;
 }
 
-.my-gear-pg p{
- font-size: 1.7em;
- font-weight: 900
+.my-gear-pg p {
+  font-size: 1.2em;
+  font-weight: 900;
 }
 
 .my-gear-head {
@@ -194,7 +194,7 @@ body {
 }
 
 .gear-container p {
-  border: 1px solid hotpink;
+  /* border: 1px solid hotpink; */
   width: 100%;
   display: flex;
   flex-direction: row;
@@ -203,18 +203,18 @@ body {
 
 .my-gear-card {
   width: 100%;
-  border: 3px solid  rgb(163, 201, 206);
+  border: 3px solid rgb(163, 201, 206);
   display: flex;
   flex-direction: column;
   align-content: center;
   margin-top: 10px;
   font-weight: bold;
 }
- 
-.my-gear-card h4,h5{
+
+.my-gear-card h4,
+h5 {
   font-size: 2.25em;
 }
-
 
 .gear-img {
   width: 50%;
@@ -235,6 +235,9 @@ body {
   }
   .my-gear-card {
     width: 45%;
+  }
+  .my-gear-pg p {
+    font-size: 0.7em;
   }
 
   .main-content {
