@@ -15,6 +15,7 @@ import OneCategoryList from "./components/OneCategoryList";
 import OneGearType from "./components/OneGearType";
 import About from "./components/About";
 import "./css/App.css";
+import Preauth from "./components/auth/Preauth";
 
 class App extends Component {
   render() {
@@ -23,7 +24,6 @@ class App extends Component {
         <div className="App">
           <div className="container">
             <header className="header">
-              {/* <img src={logo} className="App-logo" alt="logo" /> */}
               <h1 className="App-title"> Shakedown</h1>
             </header>
           </div>
@@ -68,6 +68,9 @@ class App extends Component {
           />
           {/* About */}
           <Route exact path="/about" component={About} />
+
+          {/* PREAUTH */}
+          <Route exact path="/preauth" component={Preauth} />
         </div>
       </Router>
     );
