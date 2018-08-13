@@ -15,7 +15,7 @@ class NewGearForm extends React.Component {
     this.state = {
       user_id: 1,
       name: "",
-      gender: '',
+      gender: "",
       image: "",
       weight: 0,
       type_name: "",
@@ -41,7 +41,7 @@ class NewGearForm extends React.Component {
     e.preventDefault();
     //take the data from state we created in constructor and store them as an object in a new variable called formData
     let formData = {
-     user_id: this.state.user_id,
+      user_id: this.state.user_id,
       name: this.state.name,
       gender: this.state.gender,
       image: this.state.image,
@@ -72,22 +72,23 @@ class NewGearForm extends React.Component {
     //   cat_name: ""
     // });
 
-    console.log("Data sent!")
+    console.log("Data sent!");
   };
 
   render() {
     return (
-      <div>
-        <form onSubmit={this.handleSubmit} className="gear-form">
+      <div className="container">
+        <form onSubmit={this.handleSubmit} className="gear-form ">
           {/* UserID */}
           <label>User Id:</label>
-          <input 
+          <input
+            className=""
             name="user_id"
             value={this.state.user_id}
-            type= "number"
+            type="number"
             onChange={this.handleChange}
             required
-            />
+          />
           <br />
           {/* NAME */}
           <label>Name: </label>

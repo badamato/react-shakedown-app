@@ -248,6 +248,15 @@ h5 {
   flex-wrap: wrap;
 }
 
+/* GEAR FORM */
+.gear-form{
+  background-color: red;
+  width:80%;
+ 
+
+
+}
+
 /*WEIGHT  */
 .total-weight {
   color: red;
