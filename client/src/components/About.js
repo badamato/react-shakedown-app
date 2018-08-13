@@ -64,7 +64,7 @@ class About extends React.Component {
         </p>
 
         <h5>The Ladies of Shakedown</h5>
-        <h6>Beth D'amato</h6>
+        <h6>Beth D'Amato</h6>
         <h6>Aylin DeBruyne</h6>
       </div>
     );
