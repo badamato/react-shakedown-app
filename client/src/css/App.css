@@ -53,8 +53,6 @@ body {
   text-align: center;
 }
 
-
-
 /* GEAR CHECKLIST DESIGN */
 .big-ten {
   background-image: url(https://images.unsplash.com/photo-1485809052957-5113b0ff51af?ixlib=rb-0.3.5&s=34b8c58599a2d67f3a41d74f3bffc31d&auto=format&fit=crop&w=1533&q=80);
@@ -106,11 +104,8 @@ body {
   flex-direction: column;
   justify-content: center;
   align-items: center;
-
- 
 }
-.main-holder{
-  border: blue 1px solid;
+.main-holder {
   width: 100%;
   height: 150px;
   display: flex;
@@ -123,14 +118,148 @@ body {
   background-repeat: no-repeat; */
 }
 .main-content {
+  border-radius: 15px 50px;
   border: 1px black solid;
-  width: 90%;
+  width: 75%;
   text-align: center;
   font-size: 3rem;
   margin-top: 20px;
-  margin-bottom:20px;
-  background-color: #ffffff7a;
+  margin-bottom: 20px;
+  background-color: #ffffffe3;
+}
+.gear-checklist {
+  background-image: url(https://s3.envato.com/files/203326520/Camping%20Vector%20Line%20Icons%20preview.jpg);
+  background-position: center;
+  background-size: contain;
+  background-repeat: repeat;
+}
 
+.my-gear-inventory {
+  background-image: url(https://images.unsplash.com/photo-1490604001847-b712b0c2f967?ixlib=rb-0.3.5&ixid=eyJhcHBfaWQiOjEyMDd9&s=a199707ec57afbaddcc9a3887f2161ab&auto=format&fit=crop&w=2280&q=80);
+  background-position: center;
+  background-size: cover;
+  background-repeat: no-repeat;
+}
+
+.build-a-pack {
+  background-image: url(https://us.123rf.com/450wm/lenm/lenm1603/lenm160300130/55303988-illustration-of-colorful-camping-backpacks.jpg?ver=6);
+  background-position: center;
+  background-size: contain;
+  background-repeat: repeat;
+}
+/* MY GEAR PAGE STYLES */
+
+.new-form {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  /* border: red 1px solid; */
+  width: 100%;
+  background-color: rgb(163, 201, 206);
+  color: white;
+  margin-bottom: 10px;
+  padding-bottom: 10px;
+  border-radius: 15px 50px;
+  /* font-size: 1.75em; */
+}
+
+.gear-form {
+  font-size: 1.75em;
+}
+
+.hit-it {
+  border-radius: 15px;
+  margin-right: 10px;
+}
+
+.my-gear-pg {
+  /* border: 2px green solid; */
+  width: 100%;
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  align-items: center;
+  /* background-color: white; */
+}
+
+.my-gear-pg p {
+  font-size: 1em;
+  font-weight: 900;
+}
+
+#my-gear-main-p {
+  font-size: 1.7rem;
+}
+
+.my-gear-head {
+  font-size: 3rem;
+  font-weight: bold;
+}
+
+.gear-container p {
+  /* border: 1px solid hotpink; */
+  width: 100%;
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+}
+
+.my-gear-card {
+  width: 100%;
+  border: 3px solid rgb(163, 201, 206);
+  display: flex;
+  flex-direction: column;
+  align-content: center;
+  margin-top: 10px;
+  font-weight: bold;
+  background-color:white;
+}
+
+.my-gear-card h4,
+h5 {
+  font-size: 2.25em;
+}
+
+.gear-img {
+  width: 50%;
+  margin: 10px auto;
+}
+
+/* BUILD A PACK STYLES */
+#pick-it {
+  display: flex;
+  flex-direction: column;
+  align-content: center;
+  text-align: center;
+}
+
+.sub-category {
+  display: flex;
+  flex-direction: column;
+  align-content: center;
+  text-align: center;
+}
+
+#buildapack-data {
+  /* background-color: white; */
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+}
+
+/* GEAR FORM */
+.gear-form{
+  background-color: red;
+  width:80%;
+ 
+
+
+}
+
+/*WEIGHT  */
+.total-weight {
+  color: red;
 }
 
 /* **************** MEDIA QUERIES ******************************** */
@@ -145,10 +274,23 @@ body {
   .hikes-holder {
     width: 80%;
   }
+  .my-gear-card {
+    width: 40%;
+  }
+  .my-gear-pg p {
+    font-size: 0.7em;
+  }
+
+  .main-content {
+    width: 45%;
+  }
 }
 /* LAPTOP */
 @media only screen and (min-width: 1024px) {
   .header {
     height: 400px;
+  }
+  .my-gear-card {
+    width: 35%;
   }
 }

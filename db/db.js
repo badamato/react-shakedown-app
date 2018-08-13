@@ -49,7 +49,8 @@ function showAllOfaType(type_id) {
 //   .catch((error) => {console.log(error);});
 
 function showAllMyGear(user_id) {
-  return db.any(`SELECT * FROM Gear_Inventory WHERE user_id=$1`, [user_id]);
+  return db.any(`
+  SELECT * FROM gear_inventory WHERE inv_id in (SELECT inv_id from users_gear WHERE user_id = $1)`, [user_id]);
 }
 // showAllMyGear(2)
 //   .then((data) => {console.log(data);})
@@ -72,13 +73,21 @@ function addMyGearRecord(
   gender,
   image,
   weight,
-  type_name,
-  cat_name
+  type_id,
+  cat_id
 ) {
+  // console.log(user_id)
+  // console.log(name)
+  // console.log(gender)
+  // console.log(image)
+  // console.log(weight)
+  // console.log(type_id)
+  // console.log(cat_id)
+  
   return db
     .one(
-      `INSERT INTO Gear_Inventory (name, gender, image, weight, type_name, cat_name) VALUES ('$1#', '$2#', '$3#', '$4#', '$5#', '$6#') returning inv_id`,
-      [name, gender, image, weight, type_name, cat_name]
+      `INSERT INTO Gear_Inventory (name, gender, image, weight, type_id, cat_id) VALUES ('$1#', '$2#', '$3#', '$4#', $5, $6) returning inv_id`,
+      [name, gender, image, weight, type_id, cat_id]
     )
     .then(data => {
       return db.one(
@@ -93,7 +102,7 @@ function addMyGearRecord(
 
 //DELETE++++++++++++++++++++++++++++++++
 function deleteMyGearRecord(inv_id) {
-  return db.result(`DELETE FROM Gear_Inventory WHERE inv_id = $1`, [inv_id]);
+  return db.result(`DELETE FROM users_gear WHERE inv_id = $1`, [inv_id])
 }
 // deleteMyGearRecord(284)
 //   .then((data) => {console.log(data);})

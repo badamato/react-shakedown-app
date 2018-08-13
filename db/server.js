@@ -5,15 +5,14 @@ const app = express();
 //IMPORT body-parser
 const bodyParser = require("body-parser");
 app.use(bodyParser.urlencoded({ extended: false }));
+app.use(bodyParser.json());
 
 //IMPORT db.js
 const shakedown = require("./db");
 
-
 //USE Public folder for styles
 const static = express.static;
-app.use(static('public'))
-
+app.use(static("public"));
 
 // ********* BUILD A  PACK ROUTES ************** //
 
@@ -80,28 +79,24 @@ app.get("/api/BAP/categories/:category/geartypes", (req, res) => {
 //       res.send(data);
 //     })
 
-//       })   
-    
+//       })
 
 //////////////// ROUTE FROM HELL ////////////////////
 ///////////Build-A-Pack: ROUTE TO GET ALL OF A SINGLE TYPE IN A CATEGORY
 
 app.get("/api/BAP/geartype/:geartype", (req, res) => {
- shakedown.showAllOfaType(req.params.geartype)
-    .then((data) => {
-      console.log(data)
+  shakedown
+    .showAllOfaType(req.params.geartype)
+    .then(data => {
+      console.log(data);
       res.send(data);
     })
-    .catch((error) => {
+    .catch(error => {
       console.log(error);
-    })
+    });
 });
 
-
-
 // *********** MY GEAR ROUTES ******************** //
-
-
 
 /////My-Gear-Page: ROUTE TO GET ALL OF MY GEAR
 app.get("/api/:user_id/mygear", (req, res) => {
@@ -123,6 +118,7 @@ app.get("/api/:user_id/mygear", (req, res) => {
 app.post("/api/:user_id/addmygear", (req, res) => {
   // res.send('Got my record')
   // open the package, pass it to addMyGearRecord form
+  console.log(req.body);
   let user_id = req.body.user_id;
   let name = req.body.name;
   let gender = req.body.gender;
@@ -135,8 +131,8 @@ app.post("/api/:user_id/addmygear", (req, res) => {
     .addMyGearRecord(user_id, name, gender, image, weight, type_name, cat_name)
     .then(data => {
       console.log(data);
-      // res.send(data);
-      res.redirect(`/api/${req.body.user_id}`);
+      res.send(data);
+      
     })
     .catch(error => {
       console.log(error);
@@ -152,7 +148,8 @@ app.get("/api/:user_id/deletemygear", (req, res) => {
   shakedown
     .showAllMyGear(user_id)
     .then(data => {
-      res.render("my-gear-page", data);
+      // res.render("my-gear-page", data);
+      res.send(data)
     })
     .catch(error => console.log(error));
 });
@@ -160,12 +157,14 @@ app.get("/api/:user_id/deletemygear", (req, res) => {
 //delete the record
 app.post("/api/:user_id/deletemygear", (req, res) => {
   // res.send('You deleted it!')
-  let inv_id = req.params.inv_id;
+  console.log(req.body)
+  let inv_id = req.body.inv_id;
 
   shakedown
     .deleteMyGearRecord(inv_id)
     .then(data => {
-      res.redirect(`/api/${inv_id}`);
+      // res.redirect(`/api/${inv_id}`);
+    res.send("you deleted it!")
     })
 
     .catch(error => {
@@ -188,8 +187,8 @@ app.post("/api/:user_id/mygear", (req, res) => {
     .addMyGearRecord(user_id, name, gender, image, weight, type_name, cat_name)
     .then(data => {
       console.log(data);
-      // res.send(data);
-      res.redirect(`/api/${rec.body.user_id}/mygear`);
+      res.send(data);
+      // res.redirect(`/api/${rec.body.user_id}/mygear`);
     })
     .catch(error => {
       console.log(error);
