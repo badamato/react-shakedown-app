@@ -240,6 +240,12 @@ h5 {
   text-align: center;
 }
 
+#buildapack-data {
+  background-color: white;
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+}
 /* **************** MEDIA QUERIES ******************************** */
 /* IPAD */
 @media only screen and (min-width: 768px) {

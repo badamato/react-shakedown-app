@@ -27,9 +27,13 @@ class OneGearType extends React.Component {
       );
     });
     return (
-      <div>
+      <div className="container">
+        <h1>Your Gear</h1>
         <MyGear />
-        <p>{singleGear}</p>
+        <h1>Some Suggested Gear</h1>
+        <p id="buildapack-data">
+        {singleGear}</p>
+        
       </div>
     );
   }
