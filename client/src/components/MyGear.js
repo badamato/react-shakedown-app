@@ -49,7 +49,7 @@ class MyGear extends React.Component {
   componentDidMount() {
     //make an AJAX request to API and retrieve all categories and render array to page
     // axios.get("/api/:user_id/mygear")
-
+    console.log("WOOOO get that");
     axios.get("/api/1/mygear").then(res => {
       console.log(res);
       this.setState({

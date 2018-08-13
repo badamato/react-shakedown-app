@@ -5,6 +5,7 @@ const app = express();
 //IMPORT body-parser
 const bodyParser = require("body-parser");
 app.use(bodyParser.urlencoded({ extended: false }));
+app.use(bodyParser.json());
 
 //IMPORT db.js
 const shakedown = require("./db");
@@ -117,6 +118,7 @@ app.get("/api/:user_id/mygear", (req, res) => {
 app.post("/api/:user_id/addmygear", (req, res) => {
   // res.send('Got my record')
   // open the package, pass it to addMyGearRecord form
+  console.log(req.body);
   let user_id = req.body.user_id;
   let name = req.body.name;
   let gender = req.body.gender;
@@ -129,8 +131,8 @@ app.post("/api/:user_id/addmygear", (req, res) => {
     .addMyGearRecord(user_id, name, gender, image, weight, type_name, cat_name)
     .then(data => {
       console.log(data);
-      // res.send(data);
-      res.redirect(`/api/${req.body.user_id}`);
+      res.send(data);
+      
     })
     .catch(error => {
       console.log(error);

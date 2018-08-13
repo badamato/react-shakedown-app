@@ -13,8 +13,9 @@ class NewGearForm extends React.Component {
   constructor() {
     super();
     this.state = {
+      user_id: 1,
       name: "",
-      gender: null,
+      gender: '',
       image: "",
       weight: 0,
       type_name: "",
@@ -40,40 +41,54 @@ class NewGearForm extends React.Component {
     e.preventDefault();
     //take the data from state we created in constructor and store them as an object in a new variable called formData
     let formData = {
-      formName: this.state.name,
-      formGender: this.state.gender,
-      formImg: this.state.image,
-      formWeight: this.state.weight,
-      formType_Name: this.state.type_name,
-      formCat_Name: this.state.cat_name
+     user_id: this.state.user_id,
+      name: this.state.name,
+      gender: this.state.gender,
+      image: this.state.image,
+      weight: this.state.weight,
+      type_name: this.state.type_name,
+      cat_name: this.state.cat_name
     };
 
     //check that all input elements contain some data, if not, terminate handleSubmit
-    if (formData.formName.length < 1) {
+    if (formData.name.length < 1) {
       return false;
     }
 
     axios
-      .post("/api/:user_id/addmygear")
+      .post("/api/1/addmygear", formData)
       .then(res => {
-        return res.data;
+        // return res.data;
+        this.props.history.push("/mygear");
       })
       .catch(err => console.log(err));
 
-    this.setState({
-      name: "",
-      gender: null,
-      image: "",
-      weight: null,
-      type_name: "",
-      cat_name: ""
-    });
+    // this.setState({
+    //   name: "",
+    //   gender: null,
+    //   image: "",
+    //   weight: null,
+    //   type_name: "",
+    //   cat_name: ""
+    // });
+
+    console.log("Data sent!")
   };
 
   render() {
     return (
       <div>
         <form onSubmit={this.handleSubmit} className="gear-form">
+          {/* UserID */}
+          <label>User Id:</label>
+          <input 
+            name="user_id"
+            value={this.state.user_id}
+            type= "number"
+            onChange={this.handleChange}
+            required
+            />
+          <br />
           {/* NAME */}
           <label>Name: </label>
           <input
@@ -90,14 +105,13 @@ class NewGearForm extends React.Component {
           <select
             name="gender"
             value={this.state.gender}
-           onChange={this.handleChange}
+            onChange={this.handleChange}
             required
-             >
-             <option>null</option>
-             <option>M</option>
-             <option>F</option>
-             
-            </select>
+          >
+            <option>null</option>
+            <option>M</option>
+            <option>F</option>
+          </select>
 
           <br />
           {/* Image */}
@@ -119,9 +133,8 @@ class NewGearForm extends React.Component {
             type="number"
             step="0.01"
             onChange={this.handleChange}
-           
           />
-        
+
           <br />
           {/* type_name */}
           <label>Type name:</label>
@@ -142,6 +155,21 @@ class NewGearForm extends React.Component {
             <option>8</option>
             <option>9</option>
             <option>10</option>
+          </select>
+          <br />
+          {/* cat_name */}
+          <label>Category name:</label>
+          <select
+            name="cat_name"
+            componentClass="select"
+            value={this.state.cat_name}
+            onChange={this.handleChange}
+            required
+          >
+            <option>1</option>
+            <option>2</option>
+            <option>3</option>
+            <option>4</option>
           </select>
 
           {/* Submit  */}
