@@ -148,7 +148,8 @@ app.get("/api/:user_id/deletemygear", (req, res) => {
   shakedown
     .showAllMyGear(user_id)
     .then(data => {
-      res.render("my-gear-page", data);
+      // res.render("my-gear-page", data);
+      res.send(data)
     })
     .catch(error => console.log(error));
 });
@@ -161,7 +162,8 @@ app.post("/api/:user_id/deletemygear", (req, res) => {
   shakedown
     .deleteMyGearRecord(inv_id)
     .then(data => {
-      res.redirect(`/api/${inv_id}`);
+      // res.redirect(`/api/${inv_id}`);
+      res.send("you deleted it!")
     })
 
     .catch(error => {
@@ -184,8 +186,8 @@ app.post("/api/:user_id/mygear", (req, res) => {
     .addMyGearRecord(user_id, name, gender, image, weight, type_name, cat_name)
     .then(data => {
       console.log(data);
-      // res.send(data);
-      res.redirect(`/api/${rec.body.user_id}/mygear`);
+      res.send(data);
+      // res.redirect(`/api/${rec.body.user_id}/mygear`);
     })
     .catch(error => {
       console.log(error);

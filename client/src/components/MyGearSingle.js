@@ -13,8 +13,16 @@ class MyGearSingle extends React.Component {
         <img src={this.props.my_gear_img || this.defaultImg}  className="img-thumbnail gear-img"/>
         <h4><strong>Name</strong>: {this.props.my_gear_name}</h4>
         <h5><strong>Weight</strong>:  {this.props.my_gear_weight} oz.</h5>
+        <a 
+        onClick={this.onDelete.bind(this, this.props.invID)}
+        href="#">X-Delete</a>
       </div>
     );
+  }
+
+  onDelete(inv_id){
+    // console.log(inv_id);
+    this.props.deleteGear(inv_id)
   }
 }
 

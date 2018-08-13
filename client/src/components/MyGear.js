@@ -17,14 +17,19 @@ class MyGear extends React.Component {
     let onePieceOfMyGear = this.state.myGear.map(singleGear => {
       return (
         <MySingleGear
+         
           key={singleGear.inv_id}
+          invID = {singleGear.inv_id}
           my_gear_name={singleGear.name}
           my_gear_img={singleGear.image}
           my_gear_weight={singleGear.weight}
+          deleteGear={this.handleGearDelete}
         />
       );
-    });
 
+    });
+    
+  
     return (
       <div className="container my-gear-pg">
         <h3 className="my-gear-head">My Gear Inventory</h3>
@@ -45,7 +50,16 @@ class MyGear extends React.Component {
       </div>
     );
   }
+  handleGearDelete = gear =>{
+    console.log(gear)
+    let inv_id = gear;
+    
+    axios.post("/api/1/deletemygear", inv_id )
+    .then(res => {
+        console.log(res);
+    })
 
+  }
   componentDidMount() {
     //make an AJAX request to API and retrieve all categories and render array to page
     // axios.get("/api/:user_id/mygear")
