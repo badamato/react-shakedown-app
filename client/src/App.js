@@ -14,8 +14,6 @@ import Category from "./components/Category";
 import OneCategoryList from "./components/OneCategoryList";
 import OneGearType from "./components/OneGearType";
 import About from "./components/About";
-
-import logo from "./logo.svg";
 import "./css/App.css";
 
 class App extends Component {
