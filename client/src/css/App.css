@@ -184,8 +184,12 @@ body {
 }
 
 .my-gear-pg p {
-  font-size: 1.2em;
+  font-size: 1em;
   font-weight: 900;
+}
+
+#my-gear-main-p {
+  font-size: 1.7rem;
 }
 
 .my-gear-head {
@@ -234,7 +238,7 @@ h5 {
     width: 80%;
   }
   .my-gear-card {
-    width: 45%;
+    width: 40%;
   }
   .my-gear-pg p {
     font-size: 0.7em;
