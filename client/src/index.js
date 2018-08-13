@@ -4,7 +4,7 @@ import { BrowserRouter as Router } from 'react-router-dom';
 
 
 import "./css/index.css";
-import config from "./components/auth/app.config";
+
 import App from "./App";
 import registerServiceWorker from "./registerServiceWorker";
 
