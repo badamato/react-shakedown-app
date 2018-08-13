@@ -9,11 +9,9 @@ app.use(bodyParser.urlencoded({ extended: false }));
 //IMPORT db.js
 const shakedown = require("./db");
 
-
 //USE Public folder for styles
 const static = express.static;
-app.use(static('public'))
-
+app.use(static("public"));
 
 // ********* BUILD A  PACK ROUTES ************** //
 
@@ -80,28 +78,24 @@ app.get("/api/BAP/categories/:category/geartypes", (req, res) => {
 //       res.send(data);
 //     })
 
-//       })   
-    
+//       })
 
 //////////////// ROUTE FROM HELL ////////////////////
 ///////////Build-A-Pack: ROUTE TO GET ALL OF A SINGLE TYPE IN A CATEGORY
 
 app.get("/api/BAP/geartype/:geartype", (req, res) => {
- shakedown.showAllOfaType(req.params.geartype)
-    .then((data) => {
-      console.log(data)
+  shakedown
+    .showAllOfaType(req.params.geartype)
+    .then(data => {
+      console.log(data);
       res.send(data);
     })
-    .catch((error) => {
+    .catch(error => {
       console.log(error);
-    })
+    });
 });
 
-
-
 // *********** MY GEAR ROUTES ******************** //
-
-
 
 /////My-Gear-Page: ROUTE TO GET ALL OF MY GEAR
 app.get("/api/:user_id/mygear", (req, res) => {

@@ -19,11 +19,17 @@ class OneGearType extends React.Component {
     let singleGear = this.state.oneGearTypeList.map(singleGearItem => {
       return (
         <div className="container my-gear-card">
-          <img src={`http://localhost:3500${singleGearItem.image}`}  className="img-thumbnail gear-img"/>
-          <h4><strong>Name</strong>: {singleGearItem.name}</h4>
-          <h5><strong>Weight</strong>: {singleGearItem.weight} oz.</h5>
+          <img
+            src={`http://localhost:3500${singleGearItem.image}`}
+            className="img-thumbnail gear-img"
+          />
+          <h4>
+            <strong>Name</strong>: {singleGearItem.name}
+          </h4>
+          <h5>
+            <strong>Weight</strong>: {singleGearItem.weight} oz.
+          </h5>
         </div>
-
       );
     });
     return (
@@ -31,9 +37,7 @@ class OneGearType extends React.Component {
         <h1>Your Gear</h1>
         <MyGear />
         <h1>Some Suggested Gear</h1>
-        <p id="buildapack-data">
-        {singleGear}</p>
-        
+        <p id="buildapack-data">{singleGear}</p>
       </div>
     );
   }
