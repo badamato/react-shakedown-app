@@ -63,15 +63,6 @@ class NewGearForm extends React.Component {
       })
       .catch(err => console.log(err));
 
-    // this.setState({
-    //   name: "",
-    //   gender: null,
-    //   image: "",
-    //   weight: null,
-    //   type_name: "",
-    //   cat_name: ""
-    // });
-
     console.log("Data sent!");
   };
 
