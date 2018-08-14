@@ -3,7 +3,8 @@ import { BrowserRouter as Router, Route, Link } from "react-router-dom";
 import { NavLink } from "react-router-dom";
 
 const Navigation = props => (
-  <nav class="navbar navbar-default">
+  <nav className="navbar navbar-default navbar-fixed-top main-nav-gear">
+  <div class="navbar navbar-default">
     <div class="container-fluid">
       {/* <!-- Brand and toggle get grouped for better mobile display --> */}
       <div class="navbar-header">
@@ -55,10 +56,10 @@ const Navigation = props => (
         </ul>
       </div>
     </div>
-  </nav>
-
+  </div>
+</nav>
   /////////UP TO DATE CODE
-  /* <nav className=
+  /* /* <nav className=
   "navbar navbar-expand-lg navbar-light bg-light">
     <a class="navbar-brand" href="/">
       <span>
@@ -108,7 +109,7 @@ const Navigation = props => (
         </li>
       </ul>
     </div>
-  </nav> */
+  </nav> */ 
 );
 
 export default Navigation;

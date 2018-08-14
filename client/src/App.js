@@ -18,9 +18,7 @@ import About from "./components/About";
 
 import TotalWeight from "./components/TotalWeight";
 
-
 import "./css/App.css";
-
 
 class App extends Component {
   constructor(props) {
@@ -36,12 +34,12 @@ class App extends Component {
     });
   };
 
-  _clearWeight = (e) => {
+  _clearWeight = e => {
     e.preventDefault();
     this.setState({
       selectedGear: []
-    })
-  }
+    });
+  };
 
   render() {
     return (
@@ -52,22 +50,26 @@ class App extends Component {
               <h1 className="App-title"> Shakedown</h1>
             </header>
           </div>
-          <div className="sticky-top">
-          {/* Navigation */}
-          <Navigation />
-          {/* Total Weight */}
-          <Route
-            path="/buildapack"
-            render={props => {
-              return (
-                <TotalWeight 
-                chosenGear={this.state.selectedGear} 
-                clearWeight = {this._clearWeight}
-                {...props} />
-              );
-            }}
-          />
-          </div>
+
+       
+          
+            {/* Navigation */}
+            <Navigation  />
+            {/* Total Weight */}
+            <Route
+              path="/buildapack"
+              render={props => {
+                return (
+                  <TotalWeight
+                    chosenGear={this.state.selectedGear}
+                    clearWeight={this._clearWeight}
+                    {...props}
+                  />
+                );
+              }}
+            />
+           
+
           {/* HOME */}
           <Route exact path="/" component={Home} />
 

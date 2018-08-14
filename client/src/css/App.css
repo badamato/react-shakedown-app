@@ -1,6 +1,7 @@
 * {
   box-sizing: border-box;
 }
+/* body { padding-top: 70px; } */
 
 html,
 body {
@@ -21,6 +22,7 @@ body {
   background-position: center;
   background-size: cover;
   text-align: center;
+  margin-top:25%;
 }
 
 /* Nav Bar */
@@ -46,6 +48,17 @@ body {
   background-color: #17a2b894;
 }
 
+.navbar-brand{
+  font-size: 1.7em;
+}
+
+.nav-bar{
+  margin-bottom: 0;
+}
+
+.main-nav-gear{
+  margin-bottom: 0;
+}
 /* Header for Category */
 .headline {
   font-weight: bold;
@@ -291,6 +304,7 @@ h5 {
 @media only screen and (min-width: 768px) {
   .header {
     height: 300px;
+    margin-top:15%;
   }
   .card {
     margin-bottom: 20px;
@@ -313,7 +327,10 @@ h5 {
 @media only screen and (min-width: 1024px) {
   .header {
     height: 400px;
+    margin-top: 10%;
+  
   }
+
   .my-gear-card {
     width: 35%;
   }
