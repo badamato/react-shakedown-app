@@ -7,6 +7,8 @@ DROP TABLE Users_Gear CASCADE;
 
 CREATE TABLE Users (
     user_id SERIAL PRIMARY KEY,
+    email character varying(200),
+    password character varying(200),
     first_name character varying(200),
     last_name character varying(200),
     gender character varying(1),
@@ -14,11 +16,11 @@ CREATE TABLE Users (
 );
 
 INSERT INTO Users
-    (first_name, last_name, gender)
+    (email, password, first_name, last_name, gender)
 VALUES
-    ('Bruce', 'Harvey', 'M'),
-    ('Flip', 'Wilson', 'M'),
-    ('Sarah', 'Lee', 'F');
+    ('bruce@gmail.com', null, 'Bruce', 'Harvey', 'M'),
+    ('flip@gmail.com', null, 'Flip', 'Wilson', 'M'),
+    ('sarah@gmail.com', null, 'Sarah', 'Lee', 'F');
 
 
 

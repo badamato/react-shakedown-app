@@ -1,4 +1,5 @@
 import React from 'react';
+import axios from 'axios';
 
 
 class Login extends React.Component {
@@ -12,8 +13,10 @@ class Login extends React.Component {
 
     render() {
         return (
-            <div>
-                <form action="" method="POST">
+            <div className="signup-wrapper">
+                <form 
+                className="signup-form"
+                onSubmit={this._handleSubmit}>
                 <label for="">username:
                 <input 
                     type="text" 
@@ -53,6 +56,20 @@ class Login extends React.Component {
             password: value
         }) 
     }
+
+    _handleSubmit = (event) => {
+        event.preventDefault();
+
+        axios.post('/api/login/', this.state)
+            .then((response) => {
+                console.log(response.data);
+            })
+            .catch(err => {
+                console.log(err);
+            })
+    }
+
+
 
     }
 

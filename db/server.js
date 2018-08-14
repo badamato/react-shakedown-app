@@ -213,49 +213,22 @@ app.use(session({
   }
 }));
 
-app.post('/api/login', (req, res) => {
-  let email = req.body.email;
-  let password = req.body.password;
-  shakedown.authenticateUser(email, password)
-    .then(isValid => {
-      if (isValid) {
-        shakedown.getUser(email)
-          .then(u => {
-            req.session.user = u.user_id;
-            console.log(`Your user id is ${u.user_id}`);
-            // res.redirect('/');
-            res.json({status: 'okay'})
-          })
-      } else {
-        console.log('your credentials no good!');
-        // res.redirect('/login');
-        res.json({status: 'not okay'})
-      }
-    })
-  // res.send('yeah, you logged in');
-});
-
-// app.get('/signup', (req, res) => {
-//   res.render('signup-page');
-// });
-
 app.post('/api/signup', (req, res) => {
   let email = req.body.email;
   let password = req.body.password;
   let password2 = req.body.password2;
 
-  console.log(email);
-  console.log(password);
-  console.log(password2);
+  // console.log(email);
+  // console.log(password);
+  // console.log(password2);
   shakedown.getUser(email)
     .then(user => {
-      console.log(user);
       if (user) {
         console.log('found that user');
         // res.send('that punk already exists');
         res.json({status: 'taken'})
       } else if (password === password2) {
-        console.log('passwords matched');
+        // console.log('passwords matched');
         shakedown.createUser(email, password)
           .then(u => {
             console.log(u);
@@ -276,6 +249,32 @@ app.post('/api/signup', (req, res) => {
 
   // res.send('yeah, you signed up');
 });
+
+
+app.post('/api/login', (req, res) => {
+  let email = req.body.email;
+  let password = req.body.password;
+
+  console.log(email, password)
+  shakedown.authenticateUser(email, password)
+    .then(isValid => {
+      console.log(isValid);
+      if (isValid) {
+        shakedown.getUser(email)
+          .then(u => {
+            req.session.user = u.user_id;
+            console.log(`Your user id is ${u.user_id}`);
+            // res.redirect('/');
+            res.json({status: 'okay'})
+          })
+      } else {
+          console.log('your credentials no good!');
+          res.json({status: 'not okay'})
+      }
+    })
+  // res.send('yeah, you logged in');
+});
+
 
 
 
