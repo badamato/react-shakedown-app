@@ -2,81 +2,64 @@ import React, { Component } from "react";
 import { BrowserRouter as Router, Route, Link } from "react-router-dom";
 import { NavLink } from "react-router-dom";
 
-
-
 const Navigation = props => (
-  ///////////OLD CODE
-  //   <nav>
-  //     <div class="pos-f-t">
-  //       <div class="collapse" id="navbarToggleExternalContent">
-  //         <div class="bg-dark p-4">
-  //           <h5 class="text-white h4">
-  //             <NavLink
-  //               to="/"
-  //               className="nav-item "
-  //               style={{ textDecoration: "none", color: "white" }}
-  //             >
-  //               Home
-  //             </NavLink>
-  //           </h5>
-  //           <h5 class="text-white h4">
-  //             <NavLink
-  //               to="/hikes"
-  //               className="nav-item"
-  //               style={{ textDecoration: "none", color: "white" }}
-  //             >
-  //               Gear Checklists
-  //             </NavLink>
-  //           </h5>
-  //           <h5 class="text-white h4">
-  //           <NavLink
-  //           to="/mygear"
-  //           className="nav-item"
-  //           style={{ textDecoration: "none", color: "white" }}
-  //         >
-  //           My Gear
-  //         </NavLink>
-  //           </h5>
-  //           <h5 class="text-white h4">
-  //            <NavLink
-  //           to="/buildapack"
-  //           className="nav-item"
-  //           style={{ textDecoration: "none", color: "white" }}
-  //         >
-  //           Build A Pack
-  //         </NavLink>
+  <nav class="navbar navbar-default">
+    <div class="container-fluid">
+      {/* <!-- Brand and toggle get grouped for better mobile display --> */}
+      <div class="navbar-header">
+        <button
+          type="button"
+          class="navbar-toggle collapsed"
+          data-toggle="collapse"
+          data-target="#bs-example-navbar-collapse-1"
+          aria-expanded="false"
+        >
+          <span class="sr-only">Toggle navigation</span>
+          <span class="icon-bar" />
+          <span class="icon-bar" />
+          <span class="icon-bar" />
+        </button>
+        <a class="navbar-brand" href="/">
+          <span>
+            <img
+              className="home-icon"
+              src="https://cdn1.iconfinder.com/data/icons/camping-adventure-and-outdoors-1/32/cottage-cabin-wood-house-camping-outdoor-stay-512.png"
+            />
+          </span>{" "}
+          Shakedown
+        </a>
+      </div>
 
-  //         </h5>
-  //         <h5 class="text-white h4">
-  //          <NavLink
-  //           to="/about"
-  //           className="nav-item"
-  //           style={{ textDecoration: "none", color: "white" }}
-  //         >
-  //           About
-  //         </NavLink>
-  //         </h5>
-  //         </div>
-  //         <div class="bg-dark p-4" />
-  //       </div>
-
-  //       <nav class="navbar navbar-dark bg-dark">
-  //         <button
-  //           class="navbar-toggler"
-  //           type="button"
-  //           data-toggle="collapse"
-  //           data-target="#navbarToggleExternalContent"
-  //           aria-controls="navbarToggleExternalContent"
-  //           aria-expanded="false"
-  //           aria-label="Toggle navigation"
-  //         >
-  //           <span class="navbar-toggler-icon" />
-  //         </button>
-  //       </nav>
-  //     </div>
+      <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
+        <ul class="nav navbar-nav">
+          <li class="nav-item active">
+            <a class="nav-link" href="/hikes">
+              Gear Checklists
+            </a>
+          </li>
+          <li class="nav-item active">
+            <a class="nav-link" href="/mygear">
+              My Gear
+            </a>
+          </li>
+          <li class="nav-item active">
+            <a class="nav-link" href="/buildapack">
+              Build A Pack
+            </a>
+          </li>
+          <li class="nav-item active">
+            <a class="nav-link" href="/about">
+              About
+            </a>
+          </li>
+        </ul>
+      </div>
+    </div>
+  </nav>
 
   /////////UP TO DATE CODE
-  <nav class="navbar navbar-expand-lg navbar-light bg-light">
+  /* <nav className=
+  "navbar navbar-expand-lg navbar-light bg-light">
     <a class="navbar-brand" href="/">
       <span>
         <img
@@ -125,7 +108,7 @@ const Navigation = props => (
         </li>
       </ul>
     </div>
-  </nav>
+  </nav> */
 );
 
 export default Navigation;
