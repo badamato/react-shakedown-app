@@ -1,6 +1,9 @@
 import React, { Component } from "react";
 import { BrowserRouter as Router, Route, Link } from "react-router-dom";
 import { NavLink } from "react-router-dom";
+
+import Signup from "./components/Signup";
+import Login from "./components/Login";
 import Navigation from "./components/Navigations";
 import Home from "./components/Home";
 import Hikes from "./components/Hikes";
@@ -15,7 +18,6 @@ import Category from "./components/Category";
 import OneCategoryList from "./components/OneCategoryList";
 import OneGearType from "./components/OneGearType";
 import About from "./components/About";
-
 import TotalWeight from "./components/TotalWeight";
 
 import "./css/App.css";
@@ -59,8 +61,16 @@ class App extends Component {
             </header>
           </div>
 
+          {/* Signup */}
+          <Signup />
+
+          {/* Login */}
+          <Login />
+
+
           {/* Navigation */}
           <Navigation />
+
           {/* Total Weight */}
           <Route
             path="/buildapack"

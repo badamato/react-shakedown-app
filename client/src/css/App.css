@@ -48,6 +48,26 @@ body {
   background-color: #17a2b894;
 }
 
+
+/* SignUp */
+.signup-wrapper {
+  display: flex;
+  justify-content: center;
+  margin-top: 40px;
+  border: 3px solid red;
+}
+
+.first-line {
+  display: flex;
+}
+
+.password-input {
+  display: flex;
+}
+
+
+
+
 .navbar-brand {
   font-size: 1.7em;
 }
@@ -59,6 +79,7 @@ body {
 .main-nav-gear {
   margin-bottom: 0;
 }
+
 /* Header for Category */
 .headline {
   font-weight: bold;
