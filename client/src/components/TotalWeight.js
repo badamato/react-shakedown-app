@@ -13,7 +13,6 @@ class TotalWeight extends React.Component {
   }
 
   render() {
-
     //SORT THROUGH THE ARRAY OF RETURNED GEAR and MAKE EACH ONE ITS OWN P TAG
     let singleSelectedGear = this.props.chosenGear.map(singleGear => {
       return (
@@ -28,50 +27,47 @@ class TotalWeight extends React.Component {
     // THIS IS WHAT IS RENDERING //
     return (
       <div className="">
-      <div className=" container weight-div ">
-        <h3 className=" btn weight-btn">
-          Total Weight:
-          <span className="weight-number">
-            {" "}
-            {this._calculateTotalWeight()}
-          </span>{" "}
-          ounces
-        </h3>
-      
-        <div className="modal-container" style={{ height: 50 }}>
-          <Button
-            className="see-your-pack-btn"
-            bsStyle="primary"
-            bsSize="large"
-            onClick={() => this.setState({ show: true })}
-          >
-           ** View My Pack **
-          </Button>
+        <div className=" container weight-div ">
+          <h3 className=" btn weight-btn">
+            Total Weight:
+            <span className="weight-number">
+              {" "}
+              {this._calculateTotalWeight()}
+            </span>{" "}
+            ounces
+          </h3>
 
-          <Modal
-            show={this.state.show}
-            onHide={this.handleHide}
-            container={this}
-            aria-labelledby="contained-modal-title"
-          >
-            <Modal.Header closeButton>
-              <Modal.Title id="contained-modal-title">Your Pack</Modal.Title>
-            </Modal.Header>
-            <Modal.Body>
-              {singleSelectedGear}
-              <a href="#" onClick={this.props.clearWeight}>
-                Empty Pack
-              </a>
-            </Modal.Body>
-            <Modal.Footer>
-              <Button onClick={this.handleHide}>Close</Button>
-            </Modal.Footer>
-          </Modal>
+          <div className="modal-container" style={{ height: 50 }}>
+            <Button
+              className="see-your-pack-btn"
+              bsStyle="primary"
+              bsSize="large"
+              onClick={() => this.setState({ show: true })}
+            >
+              ** View My Pack **
+            </Button>
+
+            <Modal
+              show={this.state.show}
+              onHide={this.handleHide}
+              container={this}
+              aria-labelledby="contained-modal-title"
+            >
+              <Modal.Header closeButton>
+                <Modal.Title id="contained-modal-title">Your Pack</Modal.Title>
+              </Modal.Header>
+              <Modal.Body>
+                {singleSelectedGear}
+                <a href="#" onClick={this.props.clearWeight}>
+                  Empty Pack
+                </a>
+              </Modal.Body>
+              <Modal.Footer>
+                <Button onClick={this.handleHide}>Close</Button>
+              </Modal.Footer>
+            </Modal>
+          </div>
         </div>
-      </div>
-      
-
-      
       </div>
     );
   }

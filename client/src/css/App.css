@@ -330,6 +330,27 @@ font-size: 2.6rem;
   line-height: 2;
 }
 
+.pick-it-category{
+  text-decoration: underline;
+  font-size: 5rem;
+}
+
+.big-4{
+  color: white;
+  background-color:  rgb(69, 109,160); 
+  padding-top: 10px;
+  padding-bottom: 10px;
+  border-radius: 50px;
+  font-size: 4rem;
+  border: 1px solid white;
+}
+
+
+.big-4 a, a:visited{
+  color:white;
+
+}
+
 /* **************** MEDIA QUERIES ******************************** */
 /* IPAD */
 @media only screen and (min-width: 768px) {

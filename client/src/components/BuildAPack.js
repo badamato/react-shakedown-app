@@ -38,7 +38,7 @@ class BuildAPack extends React.Component {
             outside!{" "}
           </p>
         </div>
-        <h2>Pick a category</h2>
+        <h2 className="pick-it-category">Pick a category</h2>
 
         <h3>{allcategories}</h3>
       </div>
