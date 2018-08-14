@@ -45,6 +45,7 @@ class App extends Component {
               <h1 className="App-title"> Shakedown</h1>
             </header>
           </div>
+          <div className="sticky-top">
           {/* Navigation */}
           <Navigation />
           {/* Total Weight */}
@@ -58,6 +59,7 @@ class App extends Component {
               );
             }}
           />
+          </div>
           {/* HOME */}
           <Route exact path="/" component={Home} />
 

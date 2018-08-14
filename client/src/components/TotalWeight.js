@@ -13,8 +13,15 @@ class TotalWeight extends React.Component {
   
   render() {
     return (
-      <div>
-        < h1 className="total-weight">Total Weight: {this._calculateTotalWeight()} ounces</h1>
+      <div className="container weight-div ">
+        < h3 className="total-weight">
+        Total Weight:<span className="weight-number"> {this._calculateTotalWeight()}</span> ounces
+        
+        </h3>
+        {/* <br/>
+        <a href="#" onClick={() => this._clearWeight}>Clear weight</a>
+        <br/>
+        <a href="#">See My Pack</a> */}
        
         </div>
     );
@@ -28,11 +35,11 @@ _calculateTotalWeight = () => {
   return weight
 }
 
-//selectGear.image
-//selectedGear.name
-//selectedGear.weight
-  //take out the items in props.selecetedGear-map through each one
-  //add each item weight to one another
+_clearWeight = () => {
+  this.setState({
+    weight: 0
+  })
+}
 
 
 

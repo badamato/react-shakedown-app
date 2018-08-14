@@ -213,7 +213,11 @@ body {
   align-content: center;
   margin-top: 10px;
   font-weight: bold;
-  background-color:white;
+  background-color: white;
+}
+
+.my-gear-card:active {
+  background-color: blue;
 }
 
 .my-gear-card h4,
@@ -249,17 +253,30 @@ h5 {
 }
 
 /* GEAR FORM */
-.gear-form{
+.gear-form {
   background-color: red;
-  width:80%;
- 
-
-
+  width: 80%;
 }
 
-/*WEIGHT  */
+/*WEIGHT  Comoponent */
+.weight-div {
+  display: flex;
+  flex-direction: row;
+  align-content: center;
+  justify-content: flex-end;
+ 
+}
+
 .total-weight {
-  color: red;
+  background-color: rgb(163, 201, 206);
+  border: 3px white solid;
+  border-radius: 50px 20px;
+  font-size: 1.5rem;
+  padding: 0 3%
+}
+
+.weight-number {
+  color: blueviolet;
 }
 
 /* **************** MEDIA QUERIES ******************************** */
