@@ -244,18 +244,21 @@ app.post('/api/signup', (req, res) => {
   let password = req.body.password;
   let password2 = req.body.password2;
 
-  // console.log(email);
-  // console.log(password);
-  // console.log(password2);
+  console.log(email);
+  console.log(password);
+  console.log(password2);
   shakedown.getUser(email)
     .then(user => {
+      console.log(user);
       if (user) {
         console.log('found that user');
         // res.send('that punk already exists');
         res.json({status: 'taken'})
       } else if (password === password2) {
+        console.log('passwords matched');
         shakedown.createUser(email, password)
           .then(u => {
+            console.log(u);
             req.session.user = u.user_id;
             console.log(`Your user id is ${u.user_id}`);
             // res.redirect('/');
@@ -266,6 +269,7 @@ app.post('/api/signup', (req, res) => {
             res.send(err);
           })
       } else {
+        console.log('passwords no matchy');
         res.json({status: 'not okay'});
       }
     })

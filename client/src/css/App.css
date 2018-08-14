@@ -46,6 +46,14 @@ body {
   background-color: #17a2b894;
 }
 
+/* SignUp */
+.signup-wrapper {
+  display: flex;
+  justify-content: center;
+}
+
+
+
 /* Header for Category */
 .headline {
   font-weight: bold;

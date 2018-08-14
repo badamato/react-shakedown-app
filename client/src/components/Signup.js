@@ -1,4 +1,5 @@
 import React from 'react';
+import axios from 'axios';
 
 
 class Signup extends React.Component {
@@ -13,10 +14,13 @@ class Signup extends React.Component {
 
     render() {
         return (
-            <div>
-                <form action="" method="POST">
-                <label for="">username:
+            <div className="signup-wrapper">
+                <form 
+                className="signup-form" 
+                onSubmit={this._handleSubmit}>
+                <label className="form-label" for="">username:
                 <input 
+                    className="form-input"
                     type="text" 
                     name="email" 
                     onChange={this._handleEmail}
@@ -24,8 +28,9 @@ class Signup extends React.Component {
                 />
                 </label>
                 <br />
-                <label for="">password:
+                <label className="form-label" for="">password:
                 <input 
+                    className="form-input"
                     type="password" 
                     name="password" 
                     onChange={this._handlePassword}
@@ -33,16 +38,17 @@ class Signup extends React.Component {
                 />
                 </label>
                 <br />
-                <label for="">password (again):
+                <label className="form-label" for="">password (again):
                 <input 
+                className="form-input"
                 type="password" 
                 name="password2" 
                 onChange={this._handlePassword2}
                 value={this.state.password2}
-            />
+                />
                 </label>
                 <br />
-                <input type="submit" />
+                <input className="input-button" type="submit" />
                 </form>
             </div>
         );
@@ -70,6 +76,18 @@ class Signup extends React.Component {
         this.setState({
             password2: value
         }) 
+    }
+
+    _handleSubmit = (event) => {
+        event.preventDefault();
+
+        axios.post('/api/signup/', this.state)
+            .then((response) => {
+                console.log(response.data);
+            })
+            .catch(err => {
+                console.log(err);
+            })
     }
 
     }
