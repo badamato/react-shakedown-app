@@ -33,20 +33,16 @@ function getUser(email) {
 //   .catch((error) => { console.log(error); });
 
 function authenticateUser(email, password) {
-  console.log(email);
   return getUser(email)
           .then((user) => {
-            console.log(user)
             return bcrypt.compareSync(password, user.password)
           })
           .catch((error) => false);
-
 }
+
 // authenticateUser('bob@gmail.com', 'abc')
 //   .then((data) => { console.log(data); })
 //   .catch((error) => { console.log(error); });
-
-
 
 
 //SHOW++++++++++++++++++++++++++++++++

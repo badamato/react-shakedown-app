@@ -258,7 +258,6 @@ app.post('/api/login', (req, res) => {
   console.log(email, password)
   shakedown.authenticateUser(email, password)
     .then(isValid => {
-      console.log(isValid);
       if (isValid) {
         shakedown.getUser(email)
           .then(u => {
