@@ -36,6 +36,13 @@ class App extends Component {
     });
   };
 
+  _clearWeight = (e) => {
+    e.preventDefault();
+    this.setState({
+      selectedGear: []
+    })
+  }
+
   render() {
     return (
       <Router>
@@ -55,6 +62,7 @@ class App extends Component {
               return (
                 <TotalWeight 
                 chosenGear={this.state.selectedGear} 
+                clearWeight = {this._clearWeight}
                 {...props} />
               );
             }}
