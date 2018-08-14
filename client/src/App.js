@@ -1,6 +1,7 @@
 import React, { Component } from "react";
 import { BrowserRouter as Router, Route, Link } from "react-router-dom";
 import { NavLink } from "react-router-dom";
+import Signup from "./components/Signup";
 import Navigation from "./components/Navigations";
 import Home from "./components/Home";
 import Hikes from "./components/Hikes";
@@ -45,6 +46,8 @@ class App extends Component {
               <h1 className="App-title"> Shakedown</h1>
             </header>
           </div>
+          {/* Signup */}
+          <Signup />
           {/* Navigation */}
           <Navigation />
           {/* Total Weight */}
