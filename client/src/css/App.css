@@ -22,7 +22,7 @@ body {
   background-position: center;
   background-size: cover;
   text-align: center;
-  margin-top:25%;
+  margin-top: 25%;
 }
 
 /* Nav Bar */
@@ -48,15 +48,15 @@ body {
   background-color: #17a2b894;
 }
 
-.navbar-brand{
+.navbar-brand {
   font-size: 1.7em;
 }
 
-.nav-bar{
+.nav-bar {
   margin-bottom: 0;
 }
 
-.main-nav-gear{
+.main-nav-gear {
   margin-bottom: 0;
 }
 /* Header for Category */
@@ -273,29 +273,43 @@ h5 {
 
 /*WEIGHT  Comoponent */
 .weight-div {
+  border: 1px red solid;
   display: flex;
-  flex-direction: row;
-  align-content: center;
-  justify-content: flex-end;
- 
+  flex-direction: column;
+
+  justify-content: center;
+  align-items: center;
 }
 
-.total-weight {
+/* .total-weight {
   background-color: rgb(163, 201, 206);
   border: 3px white solid;
   border-radius: 50px 20px;
   font-size: 1.5rem;
-  padding: 0 3%
-}
+  padding: 0 3%;
+  width: 50%;
+} */
 
 .weight-number {
-  color: blueviolet;
+  color: black;
+  font-weight: bold;
 }
-
+.weight-btn{
+  padding-top: 15px;
+padding-bottom: 15px;
+margin-bottom: 24px;
+color: white;
+border: 1px solid rgb(69, 109,160);
+font-size: 2.6rem;
+}
+.see-your-pack-btn {
+  font-size: 2.6rem;
+}
 .modal-container {
   position: relative;
 }
-.modal-container .modal, .modal-container .modal-backdrop {
+.modal-container .modal,
+.modal-container .modal-backdrop {
   position: absolute;
 }
 
@@ -304,7 +318,7 @@ h5 {
 @media only screen and (min-width: 768px) {
   .header {
     height: 300px;
-    margin-top:15%;
+    margin-top: 15%;
   }
   .card {
     margin-bottom: 20px;
@@ -328,7 +342,6 @@ h5 {
   .header {
     height: 400px;
     margin-top: 10%;
-  
   }
 
   .my-gear-card {

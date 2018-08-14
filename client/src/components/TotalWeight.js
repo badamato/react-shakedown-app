@@ -13,6 +13,8 @@ class TotalWeight extends React.Component {
   }
 
   render() {
+
+    //SORT THROUGH THE ARRAY OF RETURNED GEAR and MAKE EACH ONE ITS OWN P TAG
     let singleSelectedGear = this.props.chosenGear.map(singleGear => {
       return (
         <div>
@@ -23,9 +25,11 @@ class TotalWeight extends React.Component {
       );
     });
 
+    // THIS IS WHAT IS RENDERING //
     return (
-      <div className="container weight-div ">
-        <h3 className="total-weight">
+      <div className="">
+      <div className=" container weight-div ">
+        <h3 className=" btn weight-btn">
           Total Weight:
           <span className="weight-number">
             {" "}
@@ -33,18 +37,15 @@ class TotalWeight extends React.Component {
           </span>{" "}
           ounces
         </h3>
-        <br />
-
-        <br />
-
-        {/* *******MODAL*********** */}
-        <div className="modal-container" style={{ height: 200 }}>
+      
+        <div className="modal-container" style={{ height: 50 }}>
           <Button
+            className="see-your-pack-btn"
             bsStyle="primary"
             bsSize="large"
             onClick={() => this.setState({ show: true })}
           >
-            See Your Pack
+           ** Click Me to See What's In Your Pack **
           </Button>
 
           <Modal
@@ -67,6 +68,10 @@ class TotalWeight extends React.Component {
             </Modal.Footer>
           </Modal>
         </div>
+      </div>
+      
+
+      
       </div>
     );
   }

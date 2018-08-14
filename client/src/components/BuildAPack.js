@@ -19,6 +19,7 @@ class BuildAPack extends React.Component {
   render() {
     let allcategories = this.state.category.map(singlecategory => {
       return (
+        
         <Category
           name={singlecategory.cat_name}
           catId={singlecategory.cat_id}
