@@ -41,6 +41,14 @@ class App extends Component {
     });
   };
 
+  _removeGearItem = gearName => {
+    this.setState({
+      selectedGear: this.state.selectedGear.filter(
+        oneGear => oneGear.name != gearName
+      )
+    });
+  };
+
   render() {
     return (
       <Router>
@@ -51,24 +59,22 @@ class App extends Component {
             </header>
           </div>
 
-       
-          
-            {/* Navigation */}
-            <Navigation  />
-            {/* Total Weight */}
-            <Route
-              path="/buildapack"
-              render={props => {
-                return (
-                  <TotalWeight
-                    chosenGear={this.state.selectedGear}
-                    clearWeight={this._clearWeight}
-                    {...props}
-                  />
-                );
-              }}
-            />
-           
+          {/* Navigation */}
+          <Navigation />
+          {/* Total Weight */}
+          <Route
+            path="/buildapack"
+            render={props => {
+              return (
+                <TotalWeight
+                  chosenGear={this.state.selectedGear}
+                  clearWeight={this._clearWeight}
+                  removeOneGear={this._removeGearItem}
+                  {...props}
+                />
+              );
+            }}
+          />
 
           {/* HOME */}
           <Route exact path="/" component={Home} />
