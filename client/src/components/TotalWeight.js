@@ -1,11 +1,14 @@
 import React from "react";
+import { Modal, Button } from "react-bootstrap";
 
 class TotalWeight extends React.Component {
   constructor(props) {
     super(props);
+    this.handleHide = this.handleHide.bind(this);
     this.state = {
       weight: 0,
-      selectedGear: []
+      selectedGear: [],
+      show: false
     };
   }
 
@@ -13,8 +16,10 @@ class TotalWeight extends React.Component {
     let singleSelectedGear = this.props.chosenGear.map(singleGear => {
       return (
         <div>
-          <p>{singleGear.name}  /  {singleGear.weight} oz.</p>
-          </div>
+          <p>
+            {singleGear.name} / {singleGear.weight} oz.
+          </p>
+        </div>
       );
     });
 
@@ -29,14 +34,44 @@ class TotalWeight extends React.Component {
           ounces
         </h3>
         <br />
-        <a href="#" onClick={this.props.clearWeight}>
-          Clear weight
-        </a>
+
         <br />
-        <a href="#">See My Pack</a>
-        <div>{singleSelectedGear}</div>
+
+        {/* *******MODAL*********** */}
+        <div className="modal-container" style={{ height: 200 }}>
+          <Button
+            bsStyle="primary"
+            bsSize="large"
+            onClick={() => this.setState({ show: true })}
+          >
+            See Your Pack
+          </Button>
+
+          <Modal
+            show={this.state.show}
+            onHide={this.handleHide}
+            container={this}
+            aria-labelledby="contained-modal-title"
+          >
+            <Modal.Header closeButton>
+              <Modal.Title id="contained-modal-title">Your Pack</Modal.Title>
+            </Modal.Header>
+            <Modal.Body>
+              {singleSelectedGear}
+              <a href="#" onClick={this.props.clearWeight}>
+                Empty Pack
+              </a>
+            </Modal.Body>
+            <Modal.Footer>
+              <Button onClick={this.handleHide}>Close</Button>
+            </Modal.Footer>
+          </Modal>
+        </div>
       </div>
     );
+  }
+  handleHide() {
+    this.setState({ show: false });
   }
 
   _calculateTotalWeight = () => {
