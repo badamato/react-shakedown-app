@@ -12,6 +12,38 @@ const cn = {
 };
 
 const db = pgp(cn);
+const bcrypt = require('bcrypt');
+
+//USER AUTHENTICATE+++++++++++++++++
+function createUser(email, password) {
+  let hash = bcrypt.hashSync(password, 10);
+  return db.one("insert into users (email, password) values ('$1#', '$2#') returning id", [email, hash]);
+}
+// createUser('milla', 'mow')
+//   .then((data) => { console.log(data); })
+//   .catch((error) => { console.log(error); });
+
+function getUser(email) {
+  return db.oneOrNone("select * from users where email='$1#'", [email]);
+}
+// getUser('milla')
+//   .then((data) => { console.log(data); })
+//   .catch((error) => { console.log(error); });
+
+function authenticateUser(username, password) {
+  return getUser(username)
+          .then((user) => {
+            return bcrypt.compareSync(password, user.password_hash)
+          })
+          .catch((error) => false);
+
+}
+// authenticateUser('milla', 'mow')
+//   .then((data) => { console.log(data); })
+//   .catch((error) => { console.log(error); });
+
+
+
 
 //SHOW++++++++++++++++++++++++++++++++
 
@@ -120,6 +152,9 @@ function updateGearWeight(newWeight, inv_id, user_id) {
 //   .catch((error) => { console.log(error); });
 
 module.exports = {
+  createUser,
+  getUser,
+  authenticateUser,
   showAllCategories,
   showOneCategory,
   showAllCatTypes,

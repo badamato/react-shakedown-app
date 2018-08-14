@@ -195,6 +195,88 @@ app.post("/api/:user_id/mygear", (req, res) => {
     });
 });
 
+
+// cookie-parser lets us access cookies in the browser
+const cookieParser = require('cookie-parser');
+app.use(cookieParser());
+
+
+// And now, set up sessions so we can track a logged-in user
+const session = require('express-session');
+app.use(session({
+  key: 'user_sid',
+  secret: 'ldfhgosdhgoushdfglahdflajsd',
+  resave: false,
+  saveUninitialized: false,
+  cookie: {
+      expires: 600000
+  }
+}));
+
+app.post('/api/login', (req, res) => {
+  let email = req.body.email;
+  let password = req.body.password;
+  shakedown.authenticateUser(email, password)
+    .then(isValid => {
+      if (isValid) {
+        shakedown.getUser(email)
+          .then(u => {
+            req.session.user = u.user_id;
+            console.log(`Your user id is ${u.user_id}`);
+            // res.redirect('/');
+            res.json({status: 'okay'})
+          })
+      } else {
+        console.log('your credentials no good!');
+        // res.redirect('/login');
+        res.json({status: 'not okay'})
+      }
+    })
+  // res.send('yeah, you logged in');
+});
+
+// app.get('/signup', (req, res) => {
+//   res.render('signup-page');
+// });
+
+app.post('/api/signup', (req, res) => {
+  let email = req.body.email;
+  let password = req.body.password;
+  let password2 = req.body.password2;
+
+  // console.log(email);
+  // console.log(password);
+  // console.log(password2);
+  shakedown.getUser(email)
+    .then(user => {
+      if (user) {
+        console.log('found that user');
+        // res.send('that punk already exists');
+        res.json({status: 'taken'})
+      } else if (password === password2) {
+        shakedown.createUser(email, password)
+          .then(u => {
+            req.session.user = u.user_id;
+            console.log(`Your user id is ${u.user_id}`);
+            // res.redirect('/');
+            res.json({status: 'okay'})
+            // res.send(`Your user id is ${u.id}`);
+          })
+          .catch(err => {
+            res.send(err);
+          })
+      } else {
+        res.json({status: 'not okay'});
+      }
+    })
+
+  // res.send('yeah, you signed up');
+});
+
+
+
+
+
 app.listen(3500, () => {
   console.log("The server is running on: 3500!");
 });
