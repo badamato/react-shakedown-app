@@ -132,7 +132,6 @@ app.post("/api/:user_id/addmygear", (req, res) => {
     .then(data => {
       console.log(data);
       res.send(data);
-      
     })
     .catch(error => {
       console.log(error);
@@ -149,7 +148,7 @@ app.get("/api/:user_id/deletemygear", (req, res) => {
     .showAllMyGear(user_id)
     .then(data => {
       // res.render("my-gear-page", data);
-      res.send(data)
+      res.send(data);
     })
     .catch(error => console.log(error));
 });
@@ -157,14 +156,14 @@ app.get("/api/:user_id/deletemygear", (req, res) => {
 //delete the record
 app.post("/api/:user_id/deletemygear", (req, res) => {
   // res.send('You deleted it!')
-  console.log(req.body)
+  console.log(req.body);
   let inv_id = req.body.inv_id;
 
   shakedown
     .deleteMyGearRecord(inv_id)
     .then(data => {
       // res.redirect(`/api/${inv_id}`);
-    res.send("you deleted it!")
+      res.send("you deleted it!");
     })
 
     .catch(error => {
