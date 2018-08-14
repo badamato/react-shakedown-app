@@ -14,6 +14,7 @@ class Category extends React.Component {
   render() {
     return (
       <div>
+     
         <h2>
           <Link to={`/buildapack/${this.props.catId}`}>{this.props.name}</Link>
         </h2>

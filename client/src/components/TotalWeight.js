@@ -45,7 +45,7 @@ class TotalWeight extends React.Component {
             bsSize="large"
             onClick={() => this.setState({ show: true })}
           >
-           ** Click Me to See What's In Your Pack **
+           ** View My Pack **
           </Button>
 
           <Modal
