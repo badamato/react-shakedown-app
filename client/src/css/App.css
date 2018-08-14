@@ -1,6 +1,7 @@
 * {
   box-sizing: border-box;
 }
+/* body { padding-top: 70px; } */
 
 html,
 body {
@@ -21,6 +22,7 @@ body {
   background-position: center;
   background-size: cover;
   text-align: center;
+  margin-top: 25%;
 }
 
 /* Nav Bar */
@@ -46,6 +48,17 @@ body {
   background-color: #17a2b894;
 }
 
+.navbar-brand {
+  font-size: 1.7em;
+}
+
+.nav-bar {
+  margin-bottom: 0;
+}
+
+.main-nav-gear {
+  margin-bottom: 0;
+}
 /* Header for Category */
 .headline {
   font-weight: bold;
@@ -126,7 +139,13 @@ body {
   margin-top: 20px;
   margin-bottom: 20px;
   background-color: #ffffffe3;
+  color: black;
 }
+
+.main-content a:visited {
+  color: black;
+}
+
 .gear-checklist {
   background-image: url(https://s3.envato.com/files/203326520/Camping%20Vector%20Line%20Icons%20preview.jpg);
   background-position: center;
@@ -161,11 +180,14 @@ body {
   margin-bottom: 10px;
   padding-bottom: 10px;
   border-radius: 15px 50px;
-  /* font-size: 1.75em; */
+  /* font-size: 4em; */
 }
 
 .gear-form {
   font-size: 1.75em;
+}
+.gear-form-btn {
+  font-size: 3.5rem;
 }
 
 .hit-it {
@@ -189,12 +211,15 @@ body {
 }
 
 #my-gear-main-p {
-  font-size: 1.7rem;
+  font-size: 2.5rem;
+  font-weight: bold;
+  line-height: 2;
 }
 
 .my-gear-head {
-  font-size: 3rem;
+  font-size: 5rem;
   font-weight: bold;
+  text-decoration: underline;
 }
 
 .gear-container p {
@@ -213,7 +238,11 @@ body {
   align-content: center;
   margin-top: 10px;
   font-weight: bold;
-  background-color:white;
+  background-color: white;
+}
+
+.my-gear-card:active {
+  background-color: #35babc;
 }
 
 .my-gear-card h4,
@@ -224,6 +253,10 @@ h5 {
 .gear-img {
   width: 50%;
   margin: 10px auto;
+}
+
+.trash-it {
+  color: red;
 }
 
 /* BUILD A PACK STYLES */
@@ -249,17 +282,99 @@ h5 {
 }
 
 /* GEAR FORM */
-.gear-form{
-  background-color: red;
-  width:80%;
- 
-
-
+.gear-form {
+  background-color: rgb(163, 201, 206);
+  width: 90%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
 }
 
-/*WEIGHT  */
-.total-weight {
-  color: red;
+/*WEIGHT  Comoponent */
+.weight-div {
+  display: flex;
+  flex-direction: column;
+
+  justify-content: center;
+  align-items: center;
+}
+
+/* .total-weight {
+  background-color: rgb(163, 201, 206);
+  border: 3px white solid;
+  border-radius: 50px 20px;
+  font-size: 1.5rem;
+  padding: 0 3%;
+  width: 50%;
+} */
+
+.weight-number {
+  color: black;
+  font-weight: bold;
+}
+.weight-btn {
+  padding-top: 15px;
+  padding-bottom: 15px;
+  margin-bottom: 24px;
+  color: white;
+  border: 1px solid rgb(69, 109, 160);
+  font-size: 2.6rem;
+}
+.see-your-pack-btn {
+  font-size: 2.6rem;
+}
+.modal-container {
+  position: relative;
+}
+.modal-container .modal,
+.modal-container .modal-backdrop {
+  position: absolute;
+}
+
+/* BUILD A PACK */
+.Intro-BAP {
+  background-color: white;
+  margin-top: 20px;
+  border-radius: 50px;
+}
+.Intro-BAP p {
+  font-size: 2.5rem;
+  padding-left: 25px;
+  padding-right: 25px;
+  font-weight: bold;
+  line-height: 2;
+}
+
+.pick-it-category {
+  text-decoration: underline;
+  font-size: 5rem;
+}
+
+.big-4 {
+  color: white;
+  background-color: rgb(69, 109, 160);
+  padding-top: 10px;
+  padding-bottom: 10px;
+  border-radius: 50px;
+  font-size: 4rem;
+  border: 1px solid white;
+  margin-bottom: 30px;
+}
+
+.big-4 a,
+a:visited {
+  color: white;
+}
+
+.Intro-BAP-2 {
+  background-color: white;
+  margin-top: 20px;
+  border-radius: 50px;
+  font-size: 2.5rem;
+  padding-left: 25px;
+  padding-right: 25px;
+  font-weight: bold;
 }
 
 /* **************** MEDIA QUERIES ******************************** */
@@ -267,6 +382,7 @@ h5 {
 @media only screen and (min-width: 768px) {
   .header {
     height: 300px;
+    margin-top: 15%;
   }
   .card {
     margin-bottom: 20px;
@@ -289,7 +405,9 @@ h5 {
 @media only screen and (min-width: 1024px) {
   .header {
     height: 400px;
+    margin-top: 10%;
   }
+
   .my-gear-card {
     width: 35%;
   }

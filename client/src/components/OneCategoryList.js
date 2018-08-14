@@ -24,6 +24,7 @@ class OneCategoryList extends React.Component {
       // return <p>{singleListItem.type_name}</p>;
       return (
         <OneCategoryListItem
+          
           listItemName={singleListItem.type_name}
           typeid={singleListItem.type_id}
           catid={this.props.match.params.categoryid}
@@ -33,8 +34,8 @@ class OneCategoryList extends React.Component {
 
     return (
       <div className="container sub-category">
-        <h2>Pick A Sub-Category</h2>
-        <h3>{oneListItem}</h3>
+        <h2 className="pick-it-category">Pick A Sub-Category</h2>
+        <h3 >{oneListItem}</h3>
       </div>
     );
   }

@@ -22,15 +22,25 @@ class BuildAPack extends React.Component {
         <Category
           name={singlecategory.cat_name}
           catId={singlecategory.cat_id}
-          
         />
       );
     });
 
     return (
       <div className="container" id="pick-it">
-        <h1>Pick a category</h1>
-        <h2>{allcategories}</h2>
+        <div className="Intro-BAP">
+          <h1>Ready to build your pack?</h1>
+          <p>
+            Head on down the trail of categories and pick your gear. As you
+            click on an item, the weight will be added to the counter above. You
+            can view the gear you've added by clicking on the "View My Pack"
+            button above. Once you're happy with the weight, load on up and get
+            outside!{" "}
+          </p>
+        </div>
+        <h2 className="pick-it-category">Pick a category</h2>
+
+        <h3>{allcategories}</h3>
       </div>
     );
   }

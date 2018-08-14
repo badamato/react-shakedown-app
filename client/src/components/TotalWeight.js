@@ -1,43 +1,94 @@
 import React from "react";
-
+import { Modal, Button } from "react-bootstrap";
 
 class TotalWeight extends React.Component {
-
-  constructor(props){
+  constructor(props) {
     super(props);
-    this.state= {
-      weight: 0
-
-    }
+    this.handleHide = this.handleHide.bind(this);
+    this.state = {
+      weight: 0,
+      selectedGear: [],
+      show: false
+    };
   }
-  
+
   render() {
-    return (
-      <div>
-        < h1 className="total-weight">Total Weight: {this._calculateTotalWeight()} ounces</h1>
-       
+    //SORT THROUGH THE ARRAY OF RETURNED GEAR and MAKE EACH ONE ITS OWN P TAG
+    let singleSelectedGear = this.props.chosenGear.map(singleGear => {
+      return (
+        <div>
+          <p>
+            {singleGear.name} / {singleGear.weight} oz.
+          </p>
+          <button
+            onClick={e => {
+              this.props.removeOneGear(singleGear.name);
+            }}
+          >
+            <i class="icon-trash"></i>{" "}
+          </button>
         </div>
+      );
+    });
+
+    // THIS IS WHAT IS RENDERING //
+    return (
+      <div className="">
+        <div className=" container weight-div ">
+          <h3 className=" btn weight-btn">
+            Total Weight:
+            <span className="weight-number">
+              {" "}
+              {this._calculateTotalWeight()}
+            </span>{" "}
+            ounces
+          </h3>
+
+          <div className="modal-container" style={{ height: 50 }}>
+            <Button
+              className="see-your-pack-btn"
+              bsStyle="primary"
+              bsSize="large"
+              onClick={() => this.setState({ show: true })}
+            >
+              ** View My Pack **
+            </Button>
+
+            <Modal
+              show={this.state.show}
+              onHide={this.handleHide}
+              container={this}
+              aria-labelledby="contained-modal-title"
+            >
+              <Modal.Header closeButton>
+                <Modal.Title id="contained-modal-title">Your Pack</Modal.Title>
+              </Modal.Header>
+              <Modal.Body>
+                {singleSelectedGear}
+                <a href="#" onClick={this.props.clearWeight}>
+                  Empty Pack
+                </a>
+              </Modal.Body>
+              <Modal.Footer>
+                <Button onClick={this.handleHide}>Close</Button>
+              </Modal.Footer>
+            </Modal>
+          </div>
+        </div>
+      </div>
     );
   }
-
-_calculateTotalWeight = () => {
-  let weight = 0;
-  for (let item of this.props.chosenGear) {
-    weight = weight + parseFloat(item.weight)
+  handleHide() {
+    this.setState({ show: false });
   }
-  return weight
-}
 
-//selectGear.image
-//selectedGear.name
-//selectedGear.weight
-  //take out the items in props.selecetedGear-map through each one
-  //add each item weight to one another
-
-
-
-
-
+  _calculateTotalWeight = () => {
+    let weight = 0;
+    for (let item of this.props.chosenGear) {
+      weight = weight + parseFloat(item.weight);
+    }
+    return weight;
+  };
 }
 
 export default TotalWeight;

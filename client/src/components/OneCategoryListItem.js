@@ -13,7 +13,7 @@ class OneCategoryListItem extends React.Component {
   render() {
     return (
       <div>
-        <p>
+        <p className="big-4">
           <Link to={`/buildapack/geartype/${this.props.typeid}`}>
             {this.props.listItemName}
           </Link>

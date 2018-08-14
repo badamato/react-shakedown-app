@@ -2,34 +2,32 @@ import React from "react";
 import { BrowserRouter as Router, Route, Link } from "react-router-dom";
 import axios from "axios";
 
-
 //PRACTICE
 import MySingleGear from "./MyGearSingle";
 import MyGear from "./MyGear";
-
 
 class OneGearType extends React.Component {
   constructor(props) {
     super(props);
     this.state = {
       oneGearTypeList: [],
-      selectedProduct:{
-        name: '',
-        weight: ''
+      selectedProduct: {
+        name: "",
+        weight: ""
       }
     };
     console.log(this.state);
   }
 
-
   render() {
     let singleGear = this.state.oneGearTypeList.map(singleGearItem => {
       return (
-        <div className="container my-gear-card" 
-        onClick={ () => {
-          this.props.handleAddWeight(singleGearItem)
-        }}>
-
+        <div
+          className="container my-gear-card"
+          onClick={() => {
+            this.props.handleAddWeight(singleGearItem);
+          }}
+        >
           <img
             src={`http://localhost:3500${singleGearItem.image}`}
             className="img-thumbnail gear-img"
@@ -40,18 +38,17 @@ class OneGearType extends React.Component {
           <h5>
             <strong>Weight</strong>: {singleGearItem.weight} oz.
           </h5>
-          <a href="#" 
-       
-           >Add to Pack</a>
         </div>
       );
     });
     return (
       <div className="container">
-       
         {/* <h1>Your Gear</h1>
         <MyGear /> */}
-        <h1>Some Suggested Gear</h1>
+        <div className="Intro-BAP-2">
+          <h2>Click on a piece of gear to add it to your pack</h2>
+        </div>
+        <h1 className="pick-it-category">Suggested Gear</h1>
         <p id="buildapack-data">{singleGear}</p>
       </div>
     );

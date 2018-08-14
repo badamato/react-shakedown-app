@@ -18,9 +18,7 @@ import About from "./components/About";
 
 import TotalWeight from "./components/TotalWeight";
 
-
 import "./css/App.css";
-
 
 class App extends Component {
   constructor(props) {
@@ -36,6 +34,21 @@ class App extends Component {
     });
   };
 
+  _clearWeight = e => {
+    e.preventDefault();
+    this.setState({
+      selectedGear: []
+    });
+  };
+
+  _removeGearItem = gearName => {
+    this.setState({
+      selectedGear: this.state.selectedGear.filter(
+        oneGear => oneGear.name != gearName
+      )
+    });
+  };
+
   render() {
     return (
       <Router>
@@ -45,6 +58,7 @@ class App extends Component {
               <h1 className="App-title"> Shakedown</h1>
             </header>
           </div>
+
           {/* Navigation */}
           <Navigation />
           {/* Total Weight */}
@@ -52,12 +66,16 @@ class App extends Component {
             path="/buildapack"
             render={props => {
               return (
-                <TotalWeight 
-                chosenGear={this.state.selectedGear} 
-                {...props} />
+                <TotalWeight
+                  chosenGear={this.state.selectedGear}
+                  clearWeight={this._clearWeight}
+                  removeOneGear={this._removeGearItem}
+                  {...props}
+                />
               );
             }}
           />
+
           {/* HOME */}
           <Route exact path="/" component={Home} />
 
