@@ -69,7 +69,13 @@ class Login extends React.Component {
     axios
       .post("/api/login/", this.state)
       .then(response => {
-        console.log(response.data);
+        if (response.data.status !== 'okay') {
+          alert("Try again hiker trash!")
+      }
+
+      else {
+          this.props.history.push('/')
+      }
       })
       .catch(err => {
         console.log(err);
