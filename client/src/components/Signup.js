@@ -138,7 +138,7 @@ _handleSubmit = event => {
             }
 
             else {
-                this.props.history.push('/login')
+                this.props.history.push('/')
             }
     })
         .catch(err => {

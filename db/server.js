@@ -194,25 +194,25 @@ app.post("/api/:user_id/mygear", (req, res) => {
     });
 });
 
-
 // cookie-parser lets us access cookies in the browser
-const cookieParser = require('cookie-parser');
+const cookieParser = require("cookie-parser");
 app.use(cookieParser());
 
-
 // And now, set up sessions so we can track a logged-in user
-const session = require('express-session');
-app.use(session({
-  key: 'user_sid',
-  secret: 'ldfhgosdhgoushdfglahdflajsd',
-  resave: false,
-  saveUninitialized: false,
-  cookie: {
+const session = require("express-session");
+app.use(
+  session({
+    key: "user_sid",
+    secret: "ldfhgosdhgoushdfglahdflajsd",
+    resave: false,
+    saveUninitialized: false,
+    cookie: {
       expires: 600000
-  }
-}));
+    }
+  })
+);
 
-app.post('/api/signup', (req, res) => {
+app.post("/api/signup", (req, res) => {
   let firstName = req.body.first_name;
   let lastName = req.body.last_name;
   let email = req.body.email;
@@ -222,64 +222,66 @@ app.post('/api/signup', (req, res) => {
   // console.log(email);
   // console.log(password);
   // console.log(password2);
-  shakedown.getUser(email)
-    .then(user => {
-      if (user) {
-        console.log('found that user');
-        // res.send('that punk already exists');
-        res.json({status: 'taken'})
-      } else if (password === password2) {
-        // console.log('passwords matched');
-        shakedown.createUser(firstName, lastName, email, password)
-          .then(u => {
-            console.log(u);
-            req.session.user = u.user_id;
-            console.log(`Your user id is ${u.user_id}`);
-            // res.redirect('/');
-            res.json({status: 'okay'})
-            // res.send(`Your user id is ${u.id}`);
-          })
-          .catch(err => {
-            // console.log('hello bruce')
-            res.send(err);
-          })
-      } else {
-        console.log('passwords no matchy');
-        res.json({status: 'not okay'});
-      }
-    })
+  shakedown.getUser(email).then(user => {
+    if (user) {
+      console.log("found that user");
+      // res.send('that punk already exists');
+      res.json({ status: "taken" });
+    } else if (password === password2) {
+      // console.log('passwords matched');
+      shakedown
+        .createUser(firstName, lastName, email, password)
+        .then(u => {
+          console.log(u);
+          req.session.user = u.user_id;
+          console.log(`Your user id is ${u.user_id}`);
+          // res.redirect('/');
+          res.json({ status: "okay" });
+          // res.send(`Your user id is ${u.id}`);
+        })
+        .catch(err => {
+          // console.log('hello bruce')
+          res.send(err);
+        });
+    } else {
+      console.log("passwords no matchy");
+      res.json({ status: "not okay" });
+    }
+  });
 
   // res.send('yeah, you signed up');
 });
 
-
-app.post('/api/login', (req, res) => {
+app.post("/api/login", (req, res) => {
   let email = req.body.email;
   let password = req.body.password;
 
-  console.log(email, password)
-  shakedown.authenticateUser(email, password)
-    .then(isValid => {
-      if (isValid) {
-        shakedown.getUser(email)
-          .then(u => {
-            req.session.user = u.user_id;
-            console.log(`Your user id is ${u.user_id}`);
-            // res.redirect('/');
-            res.json({status: 'okay'})
-          })
-      } else {
-          console.log('your credentials no good!');
-          res.json({status: 'not okay'})
-      }
-    })
+  console.log(email, password);
+  shakedown.authenticateUser(email, password).then(isValid => {
+    if (isValid) {
+      shakedown.getUser(email).then(u => {
+        req.session.user = u.user_id;
+        console.log(`Your user id is ${u.user_id}`);
+        // res.redirect('/');
+        res.json({ status: "okay" });
+      });
+    } else {
+      console.log("your credentials no good!");
+      res.json({ status: "not okay" });
+    }
+  });
   // res.send('yeah, you logged in');
 });
 
-
-
-
-
+// LOGOUT ROUTE
+app.get("/api/verify", (req, res) => {
+  res.json(req.session.user);
+});
+app.post("/api/logout", (req, res) => {
+  req.session.destroy(() => {
+    res.json({ status: "Later" });
+  });
+});
 
 app.listen(3500, () => {
   console.log("The server is running on: 3500!");
