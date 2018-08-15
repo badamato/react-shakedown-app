@@ -58,6 +58,10 @@ class App extends Component {
           <div className="container">
             <header className="header">
               <h1 className="App-title"> Shakedown</h1>
+              <div className="logo-saying">
+              
+                <h5> Pack it up. Shake it down. Get outside. </h5>
+              </div>
             </header>
           </div>
 
@@ -66,7 +70,6 @@ class App extends Component {
 
           {/* Login */}
           <Login />
-
 
           {/* Navigation */}
           <Navigation />

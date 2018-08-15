@@ -25,6 +25,26 @@ body {
   margin-top: 25%;
 }
 
+.logo-saying{
+  margin-top: 160px;
+  font-size: 75%;
+}
+/* SignUp */
+.signup-wrapper {
+  display: flex;
+  justify-content: center;
+  margin-top: 40px;
+  border: 3px solid red;
+}
+.signup-form {
+  display:flex;
+  flex-direction:column;
+  border-radius: 25px;
+  padding: 20px
+}
+
+
+
 /* Nav Bar */
 .home-icon {
   width: 30px;
@@ -48,21 +68,7 @@ body {
   background-color: #17a2b894;
 }
 
-/* SignUp */
-.signup-wrapper {
-  display: flex;
-  justify-content: center;
-  margin-top: 40px;
-  border: 3px solid red;
-}
 
-.first-line {
-  display: flex;
-}
-
-.password-input {
-  display: flex;
-}
 
 .navbar-brand {
   font-size: 1.7em;
@@ -471,6 +477,12 @@ a:visited {
     height: 300px;
     margin-top: 15%;
   }
+
+  .logo-saying{
+    margin-top: 36%;
+    font-size: 100%;
+  }
+
   .card {
     margin-bottom: 20px;
     height: 300px;
@@ -503,9 +515,15 @@ a:visited {
   .header {
     height: 400px;
     margin-top: 10%;
+    font-weight:bold;
   }
 
   .my-gear-card {
     width: 35%;
+  }
+  .logo-saying{
+    font-size:100%;
+    margin-top:37%;
+
   }
 }
