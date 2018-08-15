@@ -96,7 +96,7 @@ CREATE TABLE Gear_Inventory (
 
 
 COPY Gear_Inventory (name, gender, image, weight, type_name, cat_name, user_id) 
-    FROM '/Users/elizabethdamato/Documents/digitalcrafts/capstone/react-shakedown-app/db/Gear_Inventory.csv' 
+    FROM '/tmp/Gear_Inventory.csv' 
     DELIMITER ',' 
     CSV HEADER
 ;

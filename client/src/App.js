@@ -60,7 +60,7 @@ class App extends Component {
               <h1 className="App-title"> Shakedown</h1>
               <div className="logo-saying">
               
-                <h5> Pack it up. Shake it down. Get outside. </h5>
+                {/* <h5> Pack it up. Shake it down. Get outside. </h5> */}
               </div>
             </header>
           </div>
@@ -69,7 +69,7 @@ class App extends Component {
           <Route exact path="/signup" component={Signup} />
 
           {/* Login */}
-          <Route exact path="/login" component={Login} />
+          <Route exact path="/" component={Login} />
 
           {/* Navigation */}
           <Navigation />
@@ -90,7 +90,7 @@ class App extends Component {
           />
 
           {/* HOME */}
-          <Route exact path="/" component={Home} />
+          <Route exact path="/home" component={Home} />
 
           {/* Gear Checklists */}
           <Route exact path="/hikes" component={Hikes} />

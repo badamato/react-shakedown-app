@@ -20,7 +20,7 @@ const Navigation = props => (
           <span class="icon-bar" />
           <span class="icon-bar" />
         </button>
-        <a class="navbar-brand" href="/">
+        <a class="navbar-brand" href="/home">
           <span>
             <img
               className="home-icon"
