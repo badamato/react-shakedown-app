@@ -72,8 +72,8 @@ class App extends Component {
           <Route exact path="/" component={Login} />
 
           {/* Navigation */}
-          <Navigation />
-
+          
+          <Route path="/" component={Navigation}/>
           {/* Total Weight */}
           <Route
             path="/buildapack"
