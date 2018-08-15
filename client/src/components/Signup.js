@@ -2,150 +2,142 @@ import React from "react";
 import axios from "axios";
 
 class Signup extends React.Component {
-  constructor(props) {
+    constructor(props) {
     super(props);
     this.state = {
-      email: "",
-      password: "",
-      password2: ""
+        email: "",
+        password: "",
+        password2: ""
     };
-  }
+}
 
-  render() {
+    render() {
     return (
-      <div className="signup-wrapper">
+        <div className="signup-wrapper">
         <form className="signup-form gear-form" onSubmit={this._handleSubmit}>
-          <h1>Welcome to Shakedown!</h1>
-          <p>
+            <h1>Welcome to Shakedown!</h1>
+            <h3>
             Sign-up and get access to cool features to track your gear and build
             your pack. Add gear to your pack to se the weight, then shake it
             down. We're here to help you get outside.
-          </p>
-          <div className="first-line">
+            </h3>
+            <div className="first">
             <label className="form-label">
-              First Name:
-              <input
+                First Name:</label>
+            <input
                 className="form-input"
                 type="text"
                 name="firstName"
                 onChange={this._handleFirstName}
                 value={this.state.first_name}
-              />
-            </label>
-            <br />
+            />
             <label className="form-label">
-              Last Name:
-              <input
+            Last Name:</label>
+            <input
                 className="form-input"
                 type="text"
                 name="lastName"
                 onChange={this._handleLastName}
                 value={this.state.last_name}
-              />
-            </label>
-          </div>
-          <br />
-          <label className="form-label">
-            Create Username:
-            <input
-              className="form-input"
-              type="text"
-              name="email"
-              onChange={this._handleEmail}
-              value={this.state.email}
             />
-          </label>
-          <br />
-          <div className="password-input">
+            </div>
+            <div className="second">
             <label className="form-label">
-              Create Password:
-              <input
+            Create Username:</label>
+            <input
+                className="form-input"
+                type="text"
+                name="email"
+                onChange={this._handleEmail}
+                value={this.state.email}
+            />
+            </div>
+            <div className="password-input third">
+            <label className="form-label">
+                Create Password:</label>
+                <input
                 className="form-input"
                 type="password"
                 name="password"
                 onChange={this._handlePassword}
                 value={this.state.password}
-              />
-            </label>
-            <br />
+            />
             <label className="form-label">
-              Type Password Again:
-              <input
+                Type Password Again:</label>
+                <input
                 className="form-input"
                 type="password"
                 name="password2"
                 onChange={this._handlePassword2}
                 value={this.state.password2}
-              />
-            </label>
-          </div>
-          <br />
-          <input className="input-button hit-it" type="submit" />
+            />
+            </div>
+            <input className="input-button hit-it" type="submit" />
         </form>
-      </div>
+    </div>
     );
-  }
+}
 
-  _handleFirstName = event => {
+_handleFirstName = event => {
     const value = event.target.value;
 
     this.setState({
-      first_name: value
+        first_name: value
     });
-  };
+};
 
-  _handleLastName = event => {
+_handleLastName = event => {
     const value = event.target.value;
 
     this.setState({
-      last_name: value
+        last_name: value
     });
-  };
+};
 
-  _handleGender = event => {
+_handleGender = event => {
     const value = event.target.value;
 
     this.setState({
-      gender: value
+        gender: value
     });
-  };
+};
 
-  _handleEmail = event => {
+_handleEmail = event => {
     const value = event.target.value;
 
     this.setState({
-      email: value
+        email: value
     });
-  };
+};
 
-  _handlePassword = event => {
+_handlePassword = event => {
     const value = event.target.value;
 
     this.setState({
-      password: value
+        password: value
     });
-  };
+};
 
-  _handlePassword2 = event => {
+_handlePassword2 = event => {
     const value = event.target.value;
 
     this.setState({
-      password2: value
+        password2: value
     });
-  };
+};
 
-  _handleSubmit = event => {
+_handleSubmit = event => {
     event.preventDefault();
 
     axios
-      .post("/api/signup/", this.state)
-      .then(response => {
+        .post("/api/signup/", this.state)
+        .then(response => {
         console.log(response.data);
-      })
-      .catch(err => {
+    })
+        .catch(err => {
         console.log(err);
-      });
-  };
+    });
+};
 }
 
 export default Signup;
