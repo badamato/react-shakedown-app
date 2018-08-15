@@ -4,7 +4,7 @@ import { BrowserRouter as Router, Route, Link } from "react-router-dom";
 class WinterGearList extends React.Component {
   render() {
     return (
-      <div>
+      <div className="container">
         <h1>Winter Backpacking Gear</h1>
         <p>
           Brrrrrr! Don't underestimate the mountain environments in the Winter.

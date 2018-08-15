@@ -77,14 +77,48 @@ class About extends React.Component {
           <strong>Built with:</strong> React, Css, Bootstrap, Express, Node.js,
           PostgreSQL, Postico, little sleep, lots of coffee, and a lot of laughs{" "}
         </p>
-        <div className="container">
-          <h1>Beth D'Amato</h1>
-          <img
-            className=" img-thumbnail"
-            src="/Images/beth.jpeg"
-          />
-          <h1>Aylin DeBruyne</h1>
-          <img className="img-thumbnail" src="/Images/aylin.jpg" />
+        <div className="container img-container">
+          <div className="one-profile ">
+            <h1>
+              Beth D'Amato{" "}
+              <a
+                className="about-name-link"
+                href="https://www.linkedin.com/in/badamato/"
+                target="_blank"
+              >
+                <i class="icon-linkedin-sign" />
+              </a>{" "}
+              <a
+                className="about-name-link"
+                href="https://github.com/badamato"
+                target="_blank"
+              >
+                <i class="icon-github-sign" />
+              </a>
+            </h1>
+
+            <img className=" img-thumbnail about-img" src="/Images/beth.jpeg" />
+          </div>
+          <div className="one-profile">
+            <h1>
+              Aylin DeBruyne{" "}
+              <a
+                className="about-name-link"
+                href="https://www.linkedin.com/in/aylindebruyne/"
+                target="_blank"
+              >
+                <i class="icon-linkedin-sign" />
+              </a>{" "}
+              <a
+                className="about-name-link"
+                href="https://github.com/adebruyne"
+                target="_blank"
+              >
+                <i class="icon-github-sign" />
+              </a>
+            </h1>
+            <img className="img-thumbnail about-img" src="/Images/aylin.jpg" />
+          </div>
         </div>
       </div>
     );

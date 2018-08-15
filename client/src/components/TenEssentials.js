@@ -4,7 +4,7 @@ import { BrowserRouter as Router, Route, Link } from "react-router-dom";
 class TenEssentials extends React.Component {
   render() {
     return (
-      <div className="container ten-essentials">
+      <div className="container ten-essentials ">
         <div className="container">
         <h1>The Ten Essentials</h1>
         </div>
