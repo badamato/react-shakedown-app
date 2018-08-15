@@ -397,6 +397,17 @@ a:visited {
   padding-right: 25px;
   font-weight: bold;
 }
+/* About Page */
+.about-it {
+  color:white;
+  background-color: rgb(69, 109, 160);
+  
+}
+.about-it-link{
+  color:rgb(163, 201, 206);
+  font-weight: 900;
+  text-decoration: underline;
+}
 
 /* **************** MEDIA QUERIES ******************************** */
 /* IPAD */

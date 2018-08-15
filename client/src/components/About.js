@@ -4,7 +4,7 @@ import { BrowserRouter as Router, Route, Link } from "react-router-dom";
 class About extends React.Component {
   render() {
     return (
-      <div>
+      <div className="container about-it">
         <h1>About Shakedown</h1>
         <h5>Our Mission</h5>
         <p>
@@ -16,21 +16,21 @@ class About extends React.Component {
         <p>
           Check out some our our suggested checklists{" "}
           <span>
-            <Link to="/hikes">here</Link>
+            <Link to="/hikes"><span className="about-it-link">here</span></Link>
           </span>
           .
         </p>
         <p>
           Keep an inventory of the gear you already own{" "}
           <span>
-            <Link to="/mygear">here</Link>
+            <Link to="/mygear"><span className="about-it-link">here</span></Link>
           </span>
           .
         </p>
         <p>
           Put it all together by building your own pack{" "}
           <span>
-            <Link to="/buildapack">here</Link>
+            <Link to="/buildapack"><span className="about-it-link">here</span></Link>
           </span>
           . Pack it up. Shake it down. Get outside.{" "}
         </p>
