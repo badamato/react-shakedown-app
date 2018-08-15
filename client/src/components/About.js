@@ -16,21 +16,27 @@ class About extends React.Component {
         <p>
           Check out some our our suggested checklists{" "}
           <span>
-            <Link to="/hikes"><span className="about-it-link">here</span></Link>
+            <Link to="/hikes">
+              <span className="about-it-link">here</span>
+            </Link>
           </span>
           .
         </p>
         <p>
           Keep an inventory of the gear you already own{" "}
           <span>
-            <Link to="/mygear"><span className="about-it-link">here</span></Link>
+            <Link to="/mygear">
+              <span className="about-it-link">here</span>
+            </Link>
           </span>
           .
         </p>
         <p>
           Put it all together by building your own pack{" "}
           <span>
-            <Link to="/buildapack"><span className="about-it-link">here</span></Link>
+            <Link to="/buildapack">
+              <span className="about-it-link">here</span>
+            </Link>
           </span>
           . Pack it up. Shake it down. Get outside.{" "}
         </p>
@@ -63,9 +69,23 @@ class About extends React.Component {
           testing out what works best for you!
         </p>
 
-        <h5>The Ladies of Shakedown</h5>
-        <h6>Beth D'Amato</h6>
-        <h6>Aylin DeBruyne</h6>
+        <h5>The Builders of Shakedown</h5>
+        <p>
+          Just two ladies who really love to hike and really love to write code.
+        </p>
+        <p>
+          <strong>Built with:</strong> React, Css, Bootstrap, Express, Node.js,
+          PostgreSQL, Postico, little sleep, lots of coffee, and a lot of laughs{" "}
+        </p>
+        <div className="container">
+          <h1>Beth D'Amato</h1>
+          <img
+            className=" img-thumbnail"
+            src="/Images/beth.jpeg"
+          />
+          <h1>Aylin DeBruyne</h1>
+          <img className="img-thumbnail" src="/Images/aylin.jpg" />
+        </div>
       </div>
     );
   }
