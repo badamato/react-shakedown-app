@@ -4,8 +4,8 @@ import { BrowserRouter as Router, Route, Link } from "react-router-dom";
 class About extends React.Component {
   render() {
     return (
-      <div>
-        <h1>About Shakedown</h1>
+      <div className="container about-it">
+        <h1 className="about-header">About Shakedown</h1>
         <h5>Our Mission</h5>
         <p>
           At Shakedown, we are all about helping you get outside, faster.
@@ -16,21 +16,27 @@ class About extends React.Component {
         <p>
           Check out some our our suggested checklists{" "}
           <span>
-            <Link to="/hikes">here</Link>
+            <Link to="/hikes">
+              <span className="about-it-link">here</span>
+            </Link>
           </span>
           .
         </p>
         <p>
           Keep an inventory of the gear you already own{" "}
           <span>
-            <Link to="/mygear">here</Link>
+            <Link to="/mygear">
+              <span className="about-it-link">here</span>
+            </Link>
           </span>
           .
         </p>
         <p>
           Put it all together by building your own pack{" "}
           <span>
-            <Link to="/buildapack">here</Link>
+            <Link to="/buildapack">
+              <span className="about-it-link">here</span>
+            </Link>
           </span>
           . Pack it up. Shake it down. Get outside.{" "}
         </p>
@@ -63,9 +69,57 @@ class About extends React.Component {
           testing out what works best for you!
         </p>
 
-        <h5>The Ladies of Shakedown</h5>
-        <h6>Beth D'Amato</h6>
-        <h6>Aylin DeBruyne</h6>
+        <h5>The Builders of Shakedown</h5>
+        <p>
+          Just two ladies who really love to hike and really love to write code.
+        </p>
+        <p>
+          <strong>Built with:</strong> React, Css, Bootstrap, Express, Node.js,
+          PostgreSQL, Postico, little sleep, lots of coffee, and a lot of laughs{" "}
+        </p>
+        <div className="container img-container">
+          <div className="one-profile ">
+            <h1>
+              Beth D'Amato{" "}
+              <a
+                className="about-name-link"
+                href="https://www.linkedin.com/in/badamato/"
+                target="_blank"
+              >
+                <i class="icon-linkedin-sign" />
+              </a>{" "}
+              <a
+                className="about-name-link"
+                href="https://github.com/badamato"
+                target="_blank"
+              >
+                <i class="icon-github-sign" />
+              </a>
+            </h1>
+
+            <img className=" img-thumbnail about-img" src="/Images/beth.jpeg" />
+          </div>
+          <div className="one-profile">
+            <h1>
+              Aylin DeBruyne{" "}
+              <a
+                className="about-name-link"
+                href="https://www.linkedin.com/in/aylindebruyne/"
+                target="_blank"
+              >
+                <i class="icon-linkedin-sign" />
+              </a>{" "}
+              <a
+                className="about-name-link"
+                href="https://github.com/adebruyne"
+                target="_blank"
+              >
+                <i class="icon-github-sign" />
+              </a>
+            </h1>
+            <img className="img-thumbnail about-img" src="/Images/aylin.jpg" />
+          </div>
+        </div>
       </div>
     );
   }

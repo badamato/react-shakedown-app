@@ -48,7 +48,6 @@ body {
   background-color: #17a2b894;
 }
 
-
 /* SignUp */
 .signup-wrapper {
   display: flex;
@@ -64,9 +63,6 @@ body {
 .password-input {
   display: flex;
 }
-
-
-
 
 .navbar-brand {
   font-size: 1.7em;
@@ -116,9 +112,26 @@ body {
   background-repeat: no-repeat;
 }
 
+.ten-essentials {
+  font-size: 2.5rem;
+  font-weight: bold;
+  line-height: 2;
+}
+.ten-essentials h1,
+h4 {
+  font-size: 4rem;
+  font-weight: bold;
+  border-bottom: 1px solid;
+  color: rgb(69, 109, 160);
+}
+
 .card {
   margin-bottom: 10px;
   border: 5px white solid;
+}
+
+.card-title {
+  margin: 5px 25px;
 }
 
 .card-title,
@@ -279,6 +292,9 @@ h5 {
 .trash-it {
   color: red;
 }
+.icon-trash {
+  color: red;
+}
 
 /* BUILD A PACK STYLES */
 #pick-it {
@@ -397,6 +413,56 @@ a:visited {
   padding-right: 25px;
   font-weight: bold;
 }
+/* About Page */
+.about-it {
+  color: white;
+  background-color: rgb(69, 109, 160);
+  display: flex;
+  flex-direction: column;
+
+  align-items: center;
+}
+.about-header {
+  color: rgb(163, 201, 206);
+  font-size: 5rem;
+}
+.about-it-link {
+  color: pink;
+  font-weight: 900;
+  border-bottom: pink solid 1px;
+}
+
+.about-it h5 {
+  font-weight: bold;
+  border-bottom: 1px pink solid;
+}
+
+.about-it p {
+  font-size: 2rem;
+  padding-left: 25px;
+  padding-right: 25px;
+  /* font-weight: bold; */
+  line-height: 1.75;
+}
+
+/* ABout Images */
+.about-img {
+  width: 100%;
+}
+.img-container {
+  padding-bottom: 10%;
+}
+.about-name-link,
+.about-name-link:visited {
+  color: pink;
+}
+
+.one-profile {
+  display: flex;
+  flex-direction: column;
+  align-content: center;
+  justify-content: center;
+}
 
 /* **************** MEDIA QUERIES ******************************** */
 /* IPAD */
@@ -407,6 +473,10 @@ a:visited {
   }
   .card {
     margin-bottom: 20px;
+    height: 300px;
+  }
+  .card-title {
+    margin: 5px 100px;
   }
   .hikes-holder {
     width: 80%;
@@ -420,6 +490,12 @@ a:visited {
 
   .main-content {
     width: 45%;
+  }
+  .about-img {
+    width: 60%;
+  }
+  .one-profile {
+    margin-left: 25%;
   }
 }
 /* LAPTOP */

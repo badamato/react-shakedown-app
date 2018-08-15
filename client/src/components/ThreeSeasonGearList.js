@@ -4,7 +4,7 @@ import { BrowserRouter as Router, Route, Link } from "react-router-dom";
 class ThreeSeasonGearList extends React.Component {
   render() {
     return (
-      <div>
+      <div className="container ten-essentials">
         <h1>Three-Season Backpacking Gear</h1>
         <p>
           This checklist will help you get ready for Spring, Summer and Fall.

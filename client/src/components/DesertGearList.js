@@ -4,7 +4,7 @@ import { BrowserRouter as Router, Route, Link } from "react-router-dom";
 class DesertGearList extends React.Component {
   render() {
     return (
-      <div>
+      <div className="container ten-essentials">
         <h1>Desert Backpacking Gear</h1>
         <p>
           From the southwest U.S. desert to the Sahara, this list is designed to
