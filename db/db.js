@@ -16,10 +16,10 @@ const bcrypt = require('bcrypt');
 
 
 //USER AUTHENTICATE+++++++++++++++++
-function createUser(email, password) {
+function createUser(firstName, lastName, email, password) {
   let hash = bcrypt.hashSync(password, 10);
   // console.log(hash);
-  return db.one("insert into users (email, password) values ('$1#', '$2#') returning user_id", [email, hash]);
+  return db.one("insert into users (first_name, last_name, email, password) values ('$1#', '$2#', '$3#', '$4#') returning user_id", [firstName, lastName, email, hash]);
 }
 // createUser('milla', 'mow')
 //   .then((data) => { console.log(data); })

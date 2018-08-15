@@ -213,6 +213,8 @@ app.use(session({
 }));
 
 app.post('/api/signup', (req, res) => {
+  let firstName = req.body.first_name;
+  let lastName = req.body.last_name;
   let email = req.body.email;
   let password = req.body.password;
   let password2 = req.body.password2;
@@ -228,7 +230,7 @@ app.post('/api/signup', (req, res) => {
         res.json({status: 'taken'})
       } else if (password === password2) {
         // console.log('passwords matched');
-        shakedown.createUser(email, password)
+        shakedown.createUser(firstName, lastName, email, password)
           .then(u => {
             console.log(u);
             req.session.user = u.user_id;
@@ -238,6 +240,7 @@ app.post('/api/signup', (req, res) => {
             // res.send(`Your user id is ${u.id}`);
           })
           .catch(err => {
+            // console.log('hello bruce')
             res.send(err);
           })
       } else {
