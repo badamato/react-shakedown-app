@@ -29,6 +29,21 @@ body {
   margin-top: 160px;
   font-size: 75%;
 }
+/* SignUp */
+.signup-wrapper {
+  display: flex;
+  justify-content: center;
+  margin-top: 40px;
+  border: 3px solid red;
+}
+.signup-form {
+  display:flex;
+  flex-direction:column;
+  border-radius: 25px;
+  padding: 20px
+}
+
+
 
 /* Nav Bar */
 .home-icon {
@@ -53,21 +68,7 @@ body {
   background-color: #17a2b894;
 }
 
-/* SignUp */
-.signup-wrapper {
-  display: flex;
-  justify-content: center;
-  margin-top: 40px;
-  border: 3px solid red;
-}
 
-.first-line {
-  display: flex;
-}
-
-.password-input {
-  display: flex;
-}
 
 .navbar-brand {
   font-size: 1.7em;
