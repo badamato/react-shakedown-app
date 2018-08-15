@@ -25,6 +25,11 @@ body {
   margin-top: 25%;
 }
 
+.logo-saying{
+  margin-top: 160px;
+  font-size: 75%;
+}
+
 /* Nav Bar */
 .home-icon {
   width: 30px;
@@ -471,6 +476,12 @@ a:visited {
     height: 300px;
     margin-top: 15%;
   }
+
+  .logo-saying{
+    margin-top: 36%;
+    font-size: 100%;
+  }
+
   .card {
     margin-bottom: 20px;
     height: 300px;
@@ -503,9 +514,15 @@ a:visited {
   .header {
     height: 400px;
     margin-top: 10%;
+    font-weight:bold;
   }
 
   .my-gear-card {
     width: 35%;
+  }
+  .logo-saying{
+    font-size:100%;
+    margin-top:37%;
+
   }
 }
