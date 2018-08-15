@@ -5,7 +5,7 @@ class About extends React.Component {
   render() {
     return (
       <div className="container about-it">
-        <h1>About Shakedown</h1>
+        <h1 className="about-header">About Shakedown</h1>
         <h5>Our Mission</h5>
         <p>
           At Shakedown, we are all about helping you get outside, faster.
