@@ -43,6 +43,7 @@ class TotalWeight extends React.Component {
             </span>{" "}
             ounces
             <p>
+              <hr />
               Total Weight in pounds:{" "}
               <span className="weight-number">
                 {this._calculateOztoLb(this._calculateTotalWeight())}

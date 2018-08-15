@@ -1,5 +1,6 @@
 import React from "react";
 import axios from "axios";
+import { BrowserRouter as Router, Route, Link } from "react-router-dom";
 
 class Login extends React.Component {
   constructor(props) {
@@ -14,9 +15,9 @@ class Login extends React.Component {
     return (
       <div className="signup-wrapper">
         <form className="signup-form gear-form" onSubmit={this._handleSubmit}>
-         <h1>Welcome to Shakedown!</h1>
-         <p>Sign In</p>
-         <label for="">
+          <h1>Welcome to Shakedown!</h1>
+          <p>Sign In</p>
+          <label for="">
             username:
             <input
               type="text"
@@ -37,9 +38,11 @@ class Login extends React.Component {
           </label>
           <br />
           <input type="submit" className="hit-it" />
-         <p>New to Shakedown? Let's sign you up! </p> 
+          <p>
+            New to Shakedown?
+            <Link to="/signup"> Let's sign you up!</Link>{" "}
+          </p>
         </form>
-        
       </div>
     );
   }

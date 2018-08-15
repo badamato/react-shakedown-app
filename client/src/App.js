@@ -66,10 +66,10 @@ class App extends Component {
           </div>
 
           {/* Signup */}
-          <Signup />
+          <Route exact path="/signup" component={Signup} />
 
           {/* Login */}
-          <Login />
+          <Route exact path="/login" component={Login} />
 
           {/* Navigation */}
           <Navigation />
