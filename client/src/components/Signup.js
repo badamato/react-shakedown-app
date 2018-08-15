@@ -132,6 +132,13 @@ _handleSubmit = event => {
     axios
         .post("/api/signup/", this.state)
         .then(response => {
+            if (response.data.status !== 'okay') {
+                alert("Try again hiker trash!")
+            }
+
+            else {
+                this.props.history.push('/login')
+            }
         console.log(response.data);
     })
         .catch(err => {
