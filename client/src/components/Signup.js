@@ -140,7 +140,6 @@ _handleSubmit = event => {
             else {
                 this.props.history.push('/')
             }
-        console.log(response.data);
     })
         .catch(err => {
         console.log(err);
