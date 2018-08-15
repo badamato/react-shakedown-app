@@ -19,14 +19,14 @@ class TotalWeight extends React.Component {
         <div>
           <p>
             {singleGear.name} / {singleGear.weight} oz.
-          <button
-            onClick={e => {
-              this.props.removeOneGear(singleGear.name);
-            }}
-          >
-            <i class="icon-trash"></i>{" "}
-          </button> </p>
-         
+            <button
+              onClick={e => {
+                this.props.removeOneGear(singleGear.name);
+              }}
+            >
+              <i class="icon-trash" />{" "}
+            </button>{" "}
+          </p>
         </div>
       );
     });
@@ -36,12 +36,19 @@ class TotalWeight extends React.Component {
       <div className="">
         <div className=" container weight-div ">
           <h3 className=" btn weight-btn">
-            Total Weight:
+            Total Weight in Ounces:
             <span className="weight-number">
               {" "}
               {this._calculateTotalWeight()}
             </span>{" "}
             ounces
+            <p>
+              Total Weight in pounds:{" "}
+              <span className="weight-number">
+                {this._calculateOztoLb(this._calculateTotalWeight())}
+              </span>{" "}
+              lbs.
+            </p>
           </h3>
 
           <div className="modal-container" style={{ height: 50 }}>
@@ -88,6 +95,11 @@ class TotalWeight extends React.Component {
       weight = weight + parseFloat(item.weight);
     }
     return weight;
+  };
+
+  _calculateOztoLb = val => {
+    let lb = val * 0.0625;
+    return lb;
   };
 }
 
