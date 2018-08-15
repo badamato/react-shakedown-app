@@ -19,14 +19,14 @@ class TotalWeight extends React.Component {
         <div>
           <p>
             {singleGear.name} / {singleGear.weight} oz.
-          </p>
           <button
             onClick={e => {
               this.props.removeOneGear(singleGear.name);
             }}
           >
             <i class="icon-trash"></i>{" "}
-          </button>
+          </button> </p>
+         
         </div>
       );
     });
