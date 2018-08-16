@@ -106,13 +106,13 @@ Contributions: PostgreSQL Database Management, Querying User Preferences, AWS De
   };
 ```
 
-*Obstacle Two -*
+*Breakthrough One -*
 Lorem ipsum dolor sit amet, consectetur adipiscing elit. In eleifend enim at nunc aliquam, dapibus sodales libero malesuada. Maecenas non convallis arcu, quis molestie mi. Sed volutpat dignissim laoreet. Vestibulum lacinia faucibus pellentesque. Nullam et convallis mi, in rhoncus nisl. Suspendisse pretium, leo id venenatis porttitor, nulla libero sollicitudin elit, vel condimentum nisl lectus eu odio. Suspendisse in dictum mi, nec iaculis erat. Morbi eget tristique tortor. Nunc laoreet hendrerit lobortis. Nullam convallis commodo tellus, non efficitur ex finibus id.
 ```
 add code snippet here
 ```
 
-*Breakthrough One -*
+*Obstacle Two -*
 Lorem ipsum dolor sit amet, consectetur adipiscing elit. In eleifend enim at nunc aliquam, dapibus sodales libero malesuada. Maecenas non convallis arcu, quis molestie mi. Sed volutpat dignissim laoreet. Vestibulum lacinia faucibus pellentesque. Nullam et convallis mi, in rhoncus nisl. Suspendisse pretium, leo id venenatis porttitor, nulla libero sollicitudin elit, vel condimentum nisl lectus eu odio. Suspendisse in dictum mi, nec iaculis erat. Morbi eget tristique tortor. Nunc laoreet hendrerit lobortis. Nullam convallis commodo tellus, non efficitur ex finibus id.
 ```
 add code snippet here
@@ -126,7 +126,7 @@ add code snippet here
 * pitch to Apple to deploy for use...
 * add a contact or chat component so users can chat with us live for advice...
 * run demonstration videos in side navigation...
-* We would like to present Shakedown to interested outdoor, hiking, gear suppliers....
+* We would like to present Shakedown to interested vendors who positively support outdoor activities, gear suppliers, and 
 
 
 
