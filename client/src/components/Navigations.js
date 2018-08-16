@@ -88,13 +88,19 @@ class Navigation extends React.Component {
   _checkLoggedIn = () => {
     axios.get("/api/verify").then(res => {
       console.log(res);
-      this.setState({ isLoggedIn: res.data !== "" }, ()=>{
-        if(!this.state.isLoggedIn){
-          this.props.history.push("/")
+      this.setState(
+        {
+          isLoggedIn:
+            res.data !== "" ||
+            (this.props.location.pathname !== "/signup" ||
+              this.props.location.pathname !== "/about")
+        },
+        () => {
+          if (!this.state.isLoggedIn) {
+            this.props.history.push("/");
+          }
         }
-       
-        
-      });
+      );
     });
   };
 

@@ -53,7 +53,7 @@ class MyGear extends React.Component {
     console.log(gear);
     let inv_id = gear;
 
-    axios.post("/api/1/deletemygear", {inv_id}).then(res => {
+    axios.post("/api/1/deletemygear", { inv_id }).then(res => {
       console.log(res);
       this._getMyGear();
     });
@@ -61,19 +61,16 @@ class MyGear extends React.Component {
   componentDidMount() {
     this._getMyGear();
     console.log("WOOOO get that");
-    
   }
   _getMyGear = () => {
     //make an AJAX request to API and retrieve all categories and render array to page
-    // axios.get("/api/:user_id/mygear")  
+    // axios.get("/api/:user_id/mygear")
     axios.get("/api/1/mygear").then(res => {
       console.log(res);
       this.setState({
         myGear: res.data
       });
     });
-
-  }
-
+  };
 }
 export default MyGear;
