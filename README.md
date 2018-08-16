@@ -34,7 +34,7 @@ Contributions: PostgreSQL Database Management, Querying User Preferences, AWS De
 * Amazon Web Services Elastic Compute Cloud
 
 <p align='center'>
-    <img src='readme_imgs/#' alt='#'></img>
+    <img src='readme_imgs/two.png' alt='#'></img>
 </p>
 
 
@@ -128,6 +128,10 @@ add code snippet here
 * run demonstration videos in side navigation...
 * We would like to present Shakedown to interested vendors who positively support outdoor activities, gear suppliers, and 
 
+
+<p align='center'>
+    <img src='readme_imgs/four.png' alt='#'></img>&nbsp;<img src='readme_imgs/five.png' alt='#'></img>
+</p>
 
 
 ## License 
