@@ -53,9 +53,28 @@ Contributions: PostgreSQL Database Management, Querying User Preferences, AWS De
 ## Obstacles and Breakthroughs
 
 *Obstacle One -*
-Lorem ipsum dolor sit amet, consectetur adipiscing elit. In eleifend enim at nunc aliquam, dapibus sodales libero malesuada. Maecenas non convallis arcu, quis molestie mi. Sed volutpat dignissim laoreet. Vestibulum lacinia faucibus pellentesque. Nullam et convallis mi, in rhoncus nisl. Suspendisse pretium, leo id venenatis porttitor, nulla libero sollicitudin elit, vel condimentum nisl lectus eu odio. Suspendisse in dictum mi, nec iaculis erat. Morbi eget tristique tortor. Nunc laoreet hendrerit lobortis. Nullam convallis commodo tellus, non efficitur ex finibus id.
+    Understanding the relationship between components, state and and props was the hardest initial challenges. After building all the different components, we had to go back review which component was passing props to others and which ones had to keep track of state. Being new to React, all these moving pieces made it difficult to wrap our heads around. As we began building the weight component on the build-a-pack feature, everything started to click. The concepts of passing props and managing state became clearer.
+    
 ```
-add code snippet here
+        {/* Navigation */}
+          
+          <Route path="/" component={Navigation}/>
+          
+        {/* Total Weight */}
+          <Route
+            path="/buildapack"
+            render={props => {
+              return (
+                <TotalWeight
+                  chosenGear={this.state.selectedGear}
+                  clearWeight={this._clearWeight}
+                  removeOneGear={this._removeGearItem}
+                  {...props}
+                />
+              );
+            }}
+          />
+
 ```
 
 *Breakthrough One -*
