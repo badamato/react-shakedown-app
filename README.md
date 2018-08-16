@@ -118,7 +118,7 @@ add code snippet here
 Prior to this project, seeding the PostgreSQL files had been done via hardcoded .SQL files.  Given the amount of data we needed to incorporate and the frequency with which we would need to swap out certain pieces, it was decided to import our data via a .CSV file.  The difficulty was our schema.sql could read the import path on one computer but when Aylin needed to reset and reference that data, the import failed.  A load script in the package.json file was written to ensure the .CSV was held in each users's temp directory so the relevant/updated information could easily be shared.
 
 <p align='center'>
-    <img src='readme_imgs/scone.png' alt='code'></img>
+    <img src='readme_imgs/scone.jpg' alt='code'></img>
 </p>
 
 <br>
