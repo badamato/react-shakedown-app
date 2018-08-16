@@ -123,8 +123,7 @@ Still a rookie when it comes to writing React code, I could not get the logic ar
     } else {
       console.log("your credentials no good!");
       res.json({ status: "not okay" });
-    }
-    
+    }  
 ```
 
 *Breakthrough (Beth) -*
