@@ -33,21 +33,20 @@ Contributions: PostgreSQL Database Management, Querying User Preferences, AWS De
 * Nginx
 * Amazon Web Services Elastic Compute Cloud
 
-<p align='center'>
-    <img src='readme_imgs/two.png' alt='#'></img>
-</p>
-
-
-## Project Whiteboarding
 
 <p align='center'>
-    <img src='readme_imgs/trello.png' alt='project dashboard'></img>
+    <img src='readme_imgs/two.png' alt='#'></img>&nbsp;<img src='readme_imgs/five.png' alt='#'></img>
 </p>
 
 
 
 ## Minimum Viable Product:
 **User story:**  All users are able to access the application's main page and the Gear Checklists page.  An authenticated user can further access the My Gear section where they are able to inventory what hike gear they currently own in order to find out what each piece weighs.  An authenticated user can move onto the the Build-A-Pack feature to add or delete items of gear in order to determine current weight.
+
+
+<p align='center'>
+    <img src='readme_imgs/three.png' alt='#'></img>&nbsp;<img src='readme_imgs/four.png' alt='#'></img>
+</p>
 
 
 ## Obstacles and Breakthroughs
@@ -119,6 +118,13 @@ add code snippet here
 ```
 
 
+## Project Whiteboarding
+
+<p align='center'>
+    <img src='readme_imgs/trello.png' alt='project dashboard'></img>
+</p>
+
+
 ## Future Additions
 
 * users can save different packs they used for different trips
@@ -127,11 +133,6 @@ add code snippet here
 * add a contact or chat component so users can chat with us live for advice...
 * run demonstration videos in side navigation...
 * We would like to present Shakedown to interested vendors who positively support outdoor activities, gear suppliers, and 
-
-
-<p align='center'>
-    <img src='readme_imgs/four.png' alt='#'></img>&nbsp;<img src='readme_imgs/five.png' alt='#'></img>
-</p>
 
 
 ## License 
