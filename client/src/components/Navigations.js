@@ -70,13 +70,7 @@ class Navigation extends React.Component {
                     About
                   </a>
                 </li>
-                {this.state.isLoggedIn ? (
-                  <li class="nav-item active">
-                    <a class="nav-link" href="#" onClick={this._logOut}>
-                      Logout
-                    </a>
-                  </li>
-                ) : null}
+                {this._showLogoutButton()}
               </ul>
             </div>
           </div>
@@ -85,18 +79,58 @@ class Navigation extends React.Component {
     );
   }
 
+  _showLogoutButton = () => {
+    let shouldShowLogout = false;
+    if (this.props.location.pathname === "/signup") {
+      // it's fine. it's totally fine
+      shouldShowLogout = false;
+    } else if (this.props.location.pathname === "/about") {
+      // it's fine. it's totally fine
+      shouldShowLogout = false;
+    } else if (this.props.location.pathname === "/") {
+      // it's fine. it's totally fine
+      shouldShowLogout = false;
+    } else if (this.state.isLoggedIn) {
+      // it's fine. it's totally fine
+      shouldShowLogout = true;
+    } else {
+      // basic bitches go home.
+      shouldShowLogout = false;
+    }
+
+    if (shouldShowLogout) {
+      return (
+        <li class="nav-item active">
+          <a class="nav-link" href="#" onClick={this._logOut}>
+            Logout
+          </a>
+        </li>
+      );
+    } else {
+      return null;
+    }
+  };
+
   _checkLoggedIn = () => {
     axios.get("/api/verify").then(res => {
-      console.log(res);
+      // console.log(res);
       this.setState(
         {
-          isLoggedIn:
-            res.data !== "" ||
-            (this.props.location.pathname !== "/signup" ||
-              this.props.location.pathname !== "/about")
+          isLoggedIn: res.data !== "" // If it's not empty, then it's their user id, which means, they're logged in
         },
         () => {
-          if (!this.state.isLoggedIn) {
+          if (this.props.location.pathname === "/signup") {
+            // it's fine. it's totally fine
+            console.log("you are at signup you are ok");
+          } else if (this.props.location.pathname === "/about") {
+            // it's fine. it's totally fine
+            console.log("you are at about you are ok");
+          } else if (this.state.isLoggedIn) {
+            // it's fine. it's totally fine
+            console.log("you are at logged in you are ok");
+          } else {
+            console.log("go home");
+            // basic bitches go home.
             this.props.history.push("/");
           }
         }
