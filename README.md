@@ -109,7 +109,7 @@ Contributions: PostgreSQL Database Management, Querying User Preferences, AWS De
 <br>
 
 *Obstacle (Beth) -*
-Never ever assume that the code you serve up operates independently of your partners.  It was humbling to learn that even though I worked mostly with our database, what I was crafting had to dovetail smoothly with Aylin's 
+Never ever assume that the code you serve up operates independently of your partners.  It was humbling to learn that even though I worked mostly with our database, what I was crafting had to dovetail smoothly with Aylin's code for front-end functionality.  My server routes for passing JSON data were not dependent on the UI routes but I inadvertently created extra work for Aylin in that she had to pick through my code to wire the sides together.
 ```
 _handleSubmit = event => {
     event.preventDefault();
