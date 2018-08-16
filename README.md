@@ -49,6 +49,7 @@ Contributions: PostgreSQL Database Management, Querying User Preferences, AWS De
 </p>
 
 
+
 ## Obstacles and Breakthroughs
 
 *Obstacle One -*
@@ -125,6 +126,8 @@ add code snippet here
 </p>
 
 
+
+
 ## Future Additions
 
 * users can save different packs they used for different trips
@@ -133,6 +136,7 @@ add code snippet here
 * add a contact or chat component so users can chat with us live for advice...
 * run demonstration videos in side navigation...
 * We would like to present Shakedown to interested vendors who positively support outdoor activities, gear suppliers, and 
+
 
 
 ## License 
