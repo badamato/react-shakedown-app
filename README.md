@@ -16,7 +16,7 @@ Pack it up. Shake it down. Get outside.
 ## Built by:
 
 [Aylin DeBruyne](https://github.com/adebruyne)  
-Contributions: React/JavaScript, Node.js and Express Routing, UI/UX Responsive Design, README.md
+Contributions: React/JavaScript Framework, Node.js and Express Routing, UI/UX Responsive Design, README.md
 
 [Beth D'Amato](https://github.com/badamato)  
 Contributions: PostgreSQL Database Management, Querying User Preferences, AWS Deployment/Management, README.md, Trello Project Board
@@ -137,7 +137,7 @@ add code snippet here
 * run demonstration videos in side navigation...
 * We would like to present Shakedown to interested vendors who positively support outdoor activities, gear suppliers, and 
 
-
+<br>
 
 ## License 
 *Copyright 2018 Aylin DeBruyne, Beth D'Amato*
