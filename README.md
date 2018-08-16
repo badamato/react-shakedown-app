@@ -109,13 +109,13 @@ Contributions: PostgreSQL Database Management, Querying User Preferences, AWS De
 <br>
 
 *Obstacle (Beth) -*
-Lorem ipsum dolor sit amet, consectetur adipiscing elit. In eleifend enim at nunc aliquam, dapibus sodales libero malesuada. Maecenas non convallis arcu, quis molestie mi. Sed volutpat dignissim laoreet. Vestibulum lacinia faucibus pellentesque. Nullam et convallis mi, in rhoncus nisl. Suspendisse pretium, leo id venenatis porttitor, nulla libero sollicitudin elit, vel condimentum nisl lectus eu odio. Suspendisse in dictum mi, nec iaculis erat. Morbi eget tristique tortor. Nunc laoreet hendrerit lobortis. Nullam convallis commodo tellus, non efficitur ex finibus id.
+Still a rookie when it comes to writing React code, I could not get the logic around how 
 ```
 add code snippet here
 ```
 
 *Breakthrough (Beth) -*
-Prior to this project, seeding the PostgreSQL files had been done via hardcoded .SQL files.  Given the amount of data we needed to incorporate and the frequency with which we would need to swap out certain pieces, it was decided to import our data via a .CSV file.  The difficulty was our schema.sql could read the import path on one computer but when Aylin needed to reset and reference that data, the import failed.  A load script in the package.json file was written to ensure the .CSV was held in each users's temp directory so the relevant/updated information could easily be shared.  Below is a shot of the first successful import of data from the .CSV.
+Prior to this project, seeding the PostgreSQL files had been done via hardcoded .SQL files.  Given the amount of data we needed to incorporate and the frequency with which we would need to swap out certain pieces, it was decided to import our data via a .CSV file.  The difficulty was our schema.sql could read the import path on one computer but when Aylin needed to reset and reference that data, the import failed.  A load script in the package.json file was written to ensure the .CSV was held in each users's temp directory so the relevant/updated information could easily be shared.
 
 <p align='center'>
     <img src='readme_imgs/scone.png' alt='code'></img>
