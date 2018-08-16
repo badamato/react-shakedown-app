@@ -109,21 +109,27 @@ Contributions: PostgreSQL Database Management, Querying User Preferences, AWS De
 <br>
 
 *Obstacle (Beth) -*
-Still a rookie when it comes to writing React code, I could not get the logic around how 
+Never ever assume that the code you serve up operates independently of your partners.  It was humbling to learn that even though I worked mostly with our database, what I was crafting had to dovetail smoothly with Aylin's 
 ```
-  console.log(email, password);
-  shakedown.authenticateUser(email, password).then(isValid => {
-    if (isValid) {
-      shakedown.getUser(email).then(u => {
-        req.session.user = u.user_id;
-        console.log(`Your user id is ${u.user_id}`);
-        // res.redirect('/');
-        res.json({ status: "okay" });
-      });
-    } else {
-      console.log("your credentials no good!");
-      res.json({ status: "not okay" });
-    }  
+_handleSubmit = event => {
+    event.preventDefault();
+
+    axios
+        .post("/api/signup/", this.state)
+        .then(response => {
+            if (response.data.status !== 'okay') {
+                alert("Try again hiker trash!")
+            }
+
+            else {
+                this.props.history.push('/')
+            }
+    })
+        .catch(err => {
+        console.log(err);
+    });
+};
+
 ```
 
 *Breakthrough (Beth) -*
