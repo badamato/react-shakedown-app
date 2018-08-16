@@ -106,18 +106,20 @@ Contributions: PostgreSQL Database Management, Querying User Preferences, AWS De
     });
   };
 ```
-
-*Breakthrough One -*
-Lorem ipsum dolor sit amet, consectetur adipiscing elit. In eleifend enim at nunc aliquam, dapibus sodales libero malesuada. Maecenas non convallis arcu, quis molestie mi. Sed volutpat dignissim laoreet. Vestibulum lacinia faucibus pellentesque. Nullam et convallis mi, in rhoncus nisl. Suspendisse pretium, leo id venenatis porttitor, nulla libero sollicitudin elit, vel condimentum nisl lectus eu odio. Suspendisse in dictum mi, nec iaculis erat. Morbi eget tristique tortor. Nunc laoreet hendrerit lobortis. Nullam convallis commodo tellus, non efficitur ex finibus id.
-```
-add code snippet here
-```
+<br>
 
 *Obstacle Two -*
 Lorem ipsum dolor sit amet, consectetur adipiscing elit. In eleifend enim at nunc aliquam, dapibus sodales libero malesuada. Maecenas non convallis arcu, quis molestie mi. Sed volutpat dignissim laoreet. Vestibulum lacinia faucibus pellentesque. Nullam et convallis mi, in rhoncus nisl. Suspendisse pretium, leo id venenatis porttitor, nulla libero sollicitudin elit, vel condimentum nisl lectus eu odio. Suspendisse in dictum mi, nec iaculis erat. Morbi eget tristique tortor. Nunc laoreet hendrerit lobortis. Nullam convallis commodo tellus, non efficitur ex finibus id.
 ```
 add code snippet here
 ```
+
+*Breakthrough One -*
+Lorem ipsum dolor sit amet, consectetur adipiscing elit. In eleifend enim at nunc aliquam, dapibus sodales libero malesuada. Maecenas non convallis arcu, quis molestie mi. Sed volutpat dignissim laoreet. Vestibulum lacinia faucibus pellentesque. Nullam et convallis mi, in rhoncus nisl. Suspendisse pretium, leo id venenatis porttitor, nulla libero sollicitudin elit, vel condimentum nisl lectus eu odio. Suspendisse in dictum mi, nec iaculis erat. Morbi eget tristique tortor. Nunc laoreet hendrerit lobortis. Nullam convallis commodo tellus, non efficitur ex finibus id.
+<p align='center'>
+    <img src='readme_imgs/scone.png' alt='code'></img>
+</p>
+
 <br>
 
 ## Project Whiteboarding
