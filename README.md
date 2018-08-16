@@ -53,7 +53,7 @@ Contributions: PostgreSQL Database Management, Querying User Preferences, AWS De
 
 ## Obstacles and Breakthroughs
 
-*Obstacle One -*
+*Obstacle (Aylin) -*
     Understanding the relationship between components, state and and props was the hardest initial challenges. After building all the different components, we had to go back review which component was passing props to others and which ones had to keep track of state. Being new to React, all these moving pieces made it difficult to wrap our heads around. As we began building the weight component on the build-a-pack feature, everything started to click. The concepts of passing props and managing state became clearer.
     
 ```
@@ -78,7 +78,7 @@ Contributions: PostgreSQL Database Management, Querying User Preferences, AWS De
 
 ```
 
-*Breakthrough One -*
+*Breakthrough (Aylin) -*
     Once the backend had been all wired up, it was time to get axios to get to work. Understanding how the frontend and backend "exchanged" information via axios was a little confusing at first- especially with all the different routes we wanted to have control of. We kept confusing our frontend routes and backend routes when making our axios requests. Our mentor was able to clearly explain the "life-cycle" of axios to us through lots of drawings and analogies. When we wired up the two, and we got our first bit of data from the database rendered to the page, we were ecstatic. It made building the other routes a lot quicker and clearer. There still is some work that needs to be cleaned up, but we were pleased with the first version.
     
 ```
@@ -108,13 +108,13 @@ Contributions: PostgreSQL Database Management, Querying User Preferences, AWS De
 ```
 <br>
 
-*Obstacle Two -*
+*Obstacle (Beth) -*
 Lorem ipsum dolor sit amet, consectetur adipiscing elit. In eleifend enim at nunc aliquam, dapibus sodales libero malesuada. Maecenas non convallis arcu, quis molestie mi. Sed volutpat dignissim laoreet. Vestibulum lacinia faucibus pellentesque. Nullam et convallis mi, in rhoncus nisl. Suspendisse pretium, leo id venenatis porttitor, nulla libero sollicitudin elit, vel condimentum nisl lectus eu odio. Suspendisse in dictum mi, nec iaculis erat. Morbi eget tristique tortor. Nunc laoreet hendrerit lobortis. Nullam convallis commodo tellus, non efficitur ex finibus id.
 ```
 add code snippet here
 ```
 
-*Breakthrough One -*
+*Breakthrough (Beth) -*
 Lorem ipsum dolor sit amet, consectetur adipiscing elit. In eleifend enim at nunc aliquam, dapibus sodales libero malesuada. Maecenas non convallis arcu, quis molestie mi. Sed volutpat dignissim laoreet. Vestibulum lacinia faucibus pellentesque. Nullam et convallis mi, in rhoncus nisl. Suspendisse pretium, leo id venenatis porttitor, nulla libero sollicitudin elit, vel condimentum nisl lectus eu odio. Suspendisse in dictum mi, nec iaculis erat. Morbi eget tristique tortor. Nunc laoreet hendrerit lobortis. Nullam convallis commodo tellus, non efficitur ex finibus id.
 <p align='center'>
     <img src='readme_imgs/scone.png' alt='code'></img>
@@ -135,10 +135,9 @@ Lorem ipsum dolor sit amet, consectetur adipiscing elit. In eleifend enim at nun
 
 * users can save different packs they used for different trips
 * users can see how their friends or others packed for certain trips
-* pitch to Apple to deploy for use...
-* add a contact or chat component so users can chat with us live for advice...
-* run demonstration videos in side navigation...
-* We would like to present Shakedown to interested vendors who positively support outdoor activities, gear suppliers, and 
+* add a contact or chat component so users can chat for advice
+* run demonstration videos in side navigation
+* present this application to vendors who positively support hiking, and/or offer gear for sale, to showcase on their sites
 
 <br>
 
