@@ -11,7 +11,7 @@
 At Shakedown, we are all about helping you get outside, faster. Whether you're brand new to hiking or you're seasoned hiker trash (an embraced term given to thru-hikers), we want to help you keep track of your gear and lighten the load you carry. You’ll be surprised how much pack weight can effect your backpacking experience.  Check out some of our suggested checklists for different hikes. Keep inventory of the gear you already own. Mix and match your gear in our “Build your pack” feature, and see how much your pack weighs.
 
 Pack it up. Shake it down. Get outside.    
-
+<br>
 
 ## Built by:
 
@@ -20,7 +20,7 @@ Contributions: React/JavaScript Framework, Node.js and Express Routing, UI/UX Re
 
 [Beth D'Amato](https://github.com/badamato)  
 Contributions: PostgreSQL Database Management, Querying User Preferences, AWS Deployment/Management, README.md, Trello Project Board
-
+<br>
 
 ## Built with:
 
@@ -38,7 +38,7 @@ Contributions: PostgreSQL Database Management, Querying User Preferences, AWS De
     <img src='readme_imgs/two.png' alt='#'></img>&nbsp;<img src='readme_imgs/five.png' alt='#'></img>
 </p>
 
-
+<br>
 
 ## Minimum Viable Product:
 **User story:**  All users are able to access the application's main page and the Gear Checklists page.  An authenticated user can further access the My Gear section where they are able to inventory what hike gear they currently own in order to find out what each piece weighs.  An authenticated user can move onto the the Build-A-Pack feature to add or delete items of gear in order to determine current weight.
@@ -47,8 +47,7 @@ Contributions: PostgreSQL Database Management, Querying User Preferences, AWS De
 <p align='center'>
     <img src='readme_imgs/three.png' alt='#'></img>&nbsp;<img src='readme_imgs/four.png' alt='#'></img>
 </p>
-
-
+<br>
 
 ## Obstacles and Breakthroughs
 
@@ -117,7 +116,7 @@ Lorem ipsum dolor sit amet, consectetur adipiscing elit. In eleifend enim at nun
 ```
 add code snippet here
 ```
-
+<br>
 
 ## Project Whiteboarding
 
