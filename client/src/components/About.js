@@ -97,7 +97,7 @@ class About extends React.Component {
               </a>
             </h1>
 
-            <img className=" img-thumbnail about-img" src="/Images/beth.jpg" />
+            <img className=" img-thumbnail about-img" src="/Images/beth.jpeg" />
           </div>
           <div className="one-profile">
             <h1>
