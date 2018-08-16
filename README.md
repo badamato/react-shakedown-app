@@ -32,6 +32,7 @@ Contributions: PostgreSQL Database Management, Querying User Preferences, AWS De
 * Bootstrap
 * Nginx
 * Amazon Web Services Elastic Compute Cloud
+<br>
 
 
 <p align='center'>
@@ -43,6 +44,7 @@ Contributions: PostgreSQL Database Management, Querying User Preferences, AWS De
 ## Minimum Viable Product:
 **User story:**  All users are able to access the application's main page and the Gear Checklists page.  An authenticated user can further access the My Gear section where they are able to inventory what hike gear they currently own in order to find out what each piece weighs.  An authenticated user can move onto the the Build-A-Pack feature to add or delete items of gear in order to determine current weight.
 
+<br>
 
 <p align='center'>
     <img src='readme_imgs/three.png' alt='#'></img>&nbsp;<img src='readme_imgs/four.png' alt='#'></img>
