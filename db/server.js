@@ -283,6 +283,17 @@ app.post("/api/logout", (req, res) => {
   });
 });
 
+// fix from:
+// https://tylermcginnis.com/react-router-cannot-get-url-refresh/
+const path = require('path');
+app.get('/*', function(req, res) {
+  res.sendFile(path.join(__dirname, '../public/index.html'), function(err) {
+    if (err) {
+      res.status(500).send(err)
+    }
+  })
+})
+
 app.listen(3500, () => {
   console.log("The server is running on: 3500!");
 });
