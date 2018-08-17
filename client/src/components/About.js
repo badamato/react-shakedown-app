@@ -97,7 +97,7 @@ class About extends React.Component {
               </a>
             </h1>
 
-            <img className=" img-thumbnail about-img" src="/Images/beth.jpeg" />
+            <img className=" img-thumbnail about-img" src="/images/beth.jpeg" />
           </div>
           <div className="one-profile">
             <h1>
@@ -117,7 +117,7 @@ class About extends React.Component {
                 <i class="icon-github-sign" />
               </a>
             </h1>
-            <img className="img-thumbnail about-img" src="/Images/aylin.jpg" />
+            <img className="img-thumbnail about-img" src="/images/aylin.jpg" />
           </div>
         </div>
       </div>
