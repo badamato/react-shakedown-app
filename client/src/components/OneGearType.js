@@ -29,7 +29,7 @@ class OneGearType extends React.Component {
           }}
         >
           <img
-            src={`http://localhost:3500${singleGearItem.image}`}
+            src={singleGearItem.image}
             className="img-thumbnail gear-img"
           />
           <h4>
