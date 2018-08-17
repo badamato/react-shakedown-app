@@ -34,7 +34,7 @@ class Navigation extends React.Component {
                 <span class="icon-bar" />
                 <span class="icon-bar" />
               </button>
-              <a class="navbar-brand" href="/home">
+              <Link className="navbar-brand" to="/home">
                 <span>
                   <img
                     className="home-icon"
@@ -42,7 +42,7 @@ class Navigation extends React.Component {
                   />
                 </span>{" "}
                 Shakedown
-              </a>
+              </Link>
             </div>
 
             <div
@@ -51,24 +51,24 @@ class Navigation extends React.Component {
             >
               <ul class="nav navbar-nav">
                 <li class="nav-item active">
-                  <a class="nav-link" href="/hikes">
+                  <Link className="nav-link" to="/hikes">
                     Gear Checklists
-                  </a>
+                  </Link>
                 </li>
                 <li class="nav-item active">
-                  <a class="nav-link" href="/mygear">
+                  <Link className="nav-link" to="/mygear">
                     My Gear
-                  </a>
+                  </Link>
                 </li>
                 <li class="nav-item active">
-                  <a class="nav-link" href="/buildapack">
+                  <Link className="nav-link" to="/buildapack">
                     Build A Pack
-                  </a>
+                  </Link>
                 </li>
                 <li class="nav-item active">
-                  <a class="nav-link" href="/about">
+                  <Link className="nav-link" to="/about">
                     About
-                  </a>
+                  </Link>
                 </li>
                 {this._showLogoutButton()}
               </ul>
