@@ -30,9 +30,9 @@ class Hikes extends React.Component {
           <div class="card-body">
             <h5 class="card-title">The Ten Essentials</h5>
             <p class="card-text">The Gear You'll Need For Every Trip</p>
-            <a href="/hikes/tenessentials" class="btn btn-info">
+            <Link to="/hikes/tenessentials" className="btn btn-info">
               Go
-            </a>
+            </Link>
           </div>
         </div>
 
@@ -40,9 +40,9 @@ class Hikes extends React.Component {
           <div class="card-body">
             <h5 class="card-title">Three-Season Backpacking</h5>
             <p class="card-text">Get ready for Spring, Summer and Fall</p>
-            <a href="/hikes/threeseasongearlist" class="btn btn-info">
+            <Link to="/hikes/threeseasongearlist" className="btn btn-info">
               Go
-            </a>
+            </Link>
           </div>
         </div>
 
@@ -50,18 +50,18 @@ class Hikes extends React.Component {
           <div class="card-body">
             <h5 class="card-title">Winter Backpacking</h5>
             <p class="card-text">Lots of layers and big campfires</p>
-            <a href="/hikes/wintergearlist" class="btn btn-info">
+            <Link to="/hikes/wintergearlist" className="btn btn-info">
               Go
-            </a>
+            </Link>
           </div>
         </div>
         <div class="card text-center desert">
           <div class="card-body">
             <h5 class="card-title">Desert Backpacking</h5>
             <p class="card-text">Hydrate and meditate</p>
-            <a href="/hikes/desertgearlist" class="btn btn-info">
+            <Link to="/hikes/desertgearlist" className="btn btn-info">
               Go
-            </a>
+            </Link>
           </div>
         </div>
       </div>
