@@ -19,7 +19,7 @@ Pack it up. Shake it down. Get outside.
 Contributions: React/JavaScript Framework, Node.js and Express Routing, UI/UX Responsive Design, README.md
 
 [Beth D'Amato](https://github.com/badamato)  
-Contributions: PostgreSQL Database Management, Querying User Preferences, AWS Deployment/Management, README.md, Trello Project Board
+Contributions: PostgreSQL Database Management, Querying User Preferences, AWS Deployment/Management, Bcrypt Hash Authentication, README.md, Trello Project Board
 <br>
 
 ## Built with:
@@ -31,6 +31,7 @@ Contributions: PostgreSQL Database Management, Querying User Preferences, AWS De
 * JavaScript
 * Bootstrap
 * Nginx
+* Bcrypt Hash
 * Amazon Web Services Elastic Compute Cloud
 <br>
 
